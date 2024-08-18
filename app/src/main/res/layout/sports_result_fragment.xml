@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ListView
+        android:id="@+id/lst_sports_result_top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/divider"
+        android:cacheColorHint="@android:color/transparent"
+        android:divider="@color/spl_result_divider_game"
+        android:dividerHeight="0.5dp" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:layout_above="@+id/lst_sports_result_bottom"
+        android:background="@color/spl_result_divider_game" />
+
+    <ListView
+        android:id="@+id/lst_sports_result_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:cacheColorHint="@android:color/transparent"
+
+        android:dividerHeight="0dp" />
+
+</RelativeLayout>

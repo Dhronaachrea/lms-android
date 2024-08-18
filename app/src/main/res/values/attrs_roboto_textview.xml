@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RobotoTextView">
+        <attr name="typeface" />
+    </declare-styleable>
+    <declare-styleable name="AmountTextView">
+        <attr name="typeface" />
+        <attr name="currency_symbol" format="string" />
+        <attr name="isTransaction" format="boolean" />
+        <attr name="penny_text_size" format="dimension" />
+        <attr name="currency_text_size" format="dimension" />
+        <attr name="currency_text_color" format="color" />
+    </declare-styleable>
+
+
+</resources>

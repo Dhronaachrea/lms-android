@@ -1,0 +1,394 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/drawer_list"
+    android:layout_width="@dimen/drawer_width_layout"
+    android:layout_height="match_parent"
+
+    android:layout_gravity="start"
+    android:background="@color/second_half_bg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer_info">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="@dimen/layout_padding_top">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/profile_first_half_bg"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/layout_padding_top"
+                android:paddingTop="@dimen/layout_padding_top">
+
+                <com.skilrock.customui.CircleImageView
+                    android:id="@+id/user_pic"
+                    android:layout_width="@dimen/profile_pic_size"
+                    android:layout_height="@dimen/profile_pic_size"
+                    app:border_color="@color/profile_circle_color"
+                    app:border_width="@dimen/profile_pic_border" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/user_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/name_drawer_lay_main"
+                    android:textColor="@color/profile_name_text_color"
+                    android:textSize="@dimen/drawer_text_size" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/user_bal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="$10000"
+                    android:textColor="@color/bal_text_color"
+                    android:textSize="@dimen/drawer_text_high_size" />
+            </LinearLayout>
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/login"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/profile"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/login_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/login_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/my_account"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/profile"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/my_acc_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/my_account_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/promoCode"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/promo"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/my_acc_drawer_lay_promo"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/promoCode_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/inbox"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/profile"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/inbox_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/inbox_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/user_settings"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/profile"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/user_setting_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/user_settings_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/retailer_scan"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/profile"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/retailer_scan"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/retailer_scan_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/app_settings"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/profile"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/app_setting_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/app_settings_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/invite_a_friend"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/invitefriends"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/invit_friend_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/invite_a_friend_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/locate_ret"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/location"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/locate_retailer_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/locate_ret_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/change_pwd"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/change_password"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/change_pdw_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/change_pwd_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/lottoleague"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/lotto_league"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/lotto_league_text"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/lottoleague_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/faq"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/faq"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/faq_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/faq_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/contact_us"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/contact"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/contact_us_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/contact_us_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/app_tour"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/app_tour"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/app_tour_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/app_tour_line"
+                android:layout_width="fill_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="@dimen/drawer_item_line_margin_t_b"
+                android:layout_marginLeft="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginRight="@dimen/drawer_item_line_margin_l_r"
+                android:layout_marginTop="@dimen/drawer_item_line_margin_t_b"
+                android:background="@color/divide_two_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/logout"
+                android:layout_width="fill_parent"
+                android:layout_height="@dimen/drawer_items_height"
+                android:background="@drawable/menu_item_bg"
+                android:drawableLeft="@drawable/logout"
+                android:drawablePadding="@dimen/drawer_item_padding"
+                android:gravity="left|center"
+                android:text="@string/logout_drawer_lay_main"
+                android:textColor="@color/menu_text_color"
+                android:textSize="@dimen/drawer_item_text_size" />
+        </LinearLayout>
+    </ScrollView>
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/footer_info"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="@color/divide_two_color"
+        android:gravity="center"
+        android:padding="@dimen/drawer_item_padding"
+        android:text="@string/copyright"
+        android:textColor="#fff"
+        android:textSize="@dimen/drawer_item_text_size"
+        android:visibility="gone" />
+
+</RelativeLayout>

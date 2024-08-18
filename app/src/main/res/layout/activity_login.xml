@@ -1,0 +1,166 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/dialog_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+
+                <com.weidget.LotteryEditText
+                    android:id="@+id/username"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="25dp"
+                    android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                    android:hint="@string/username"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/edit_text_underline_color"
+                    android:textColorHint="@color/edit_text_underline_color_d"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/login_edit_text_size"
+                    app:met_floatingLabel="normal"
+                    app:met_primaryColor="@color/edit_text_underline_color"
+                    app:met_underlineColor="@color/edit_text_underline_color_d">
+
+                    <requestFocus />
+                </com.weidget.LotteryEditText>
+
+                <com.weidget.LotteryEditText
+                    android:id="@+id/password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="15dp"
+                    android:hint="@string/password"
+                    android:imeOptions="actionDone"
+                    android:inputType="numberPassword"
+                    android:maxLength="20"
+                    android:singleLine="true"
+                    android:textColor="@color/dialog_edit_text_color"
+                    android:textColorHint="@color/edit_text_underline_color_d"
+                    android:textCursorDrawable="@null"
+
+                    android:textSize="@dimen/login_edit_text_size"
+                    app:met_floatingLabel="normal"
+                    app:met_underlineColor="@color/edit_text_underline_color_d" />
+            </LinearLayout>
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/forgotpassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="right"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/lost_password"
+                android:textColor="@color/forgot_password_color"
+                android:textSize="@dimen/login_forgot_pass_text_size" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:orientation="horizontal">
+
+            </RelativeLayout>
+
+            <com.skilrock.customui.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/use_otp"
+                android:textColor="@color/five_color_one"
+                android:visibility="gone" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:orientation="horizontal"
+                android:paddingLeft="25dp"
+                android:paddingRight="25dp">
+
+                <Button
+                    android:id="@+id/login"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/login_button_margin_bottom"
+                    android:layout_marginLeft="@dimen/login_button_margin_l_r"
+                    android:layout_marginRight="@dimen/login_button_margin_l_r"
+                    android:layout_marginTop="@dimen/login_button_margin_top"
+                    android:background="@drawable/dialog_button_bg"
+                    android:text="@string/login"
+                    android:textColor="@color/dialog_button_text_color"
+                    android:textSize="@dimen/login_button_text_size" />
+
+                <Button
+                    android:id="@+id/register"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login"
+                    android:layout_marginBottom="@dimen/login_button_margin_bottom_end"
+                    android:layout_marginLeft="@dimen/login_button_margin_l_r"
+                    android:layout_marginRight="@dimen/login_button_margin_l_r"
+                    android:layout_marginTop="20dp"
+                    android:background="@drawable/dialog_button_bg"
+                    android:text="@string/register"
+                    android:textColor="@color/dialog_button_text_color"
+                    android:textSize="@dimen/login_button_text_size" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/oTPButtonLogin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical"></LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/bannerView"
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2.2"
+        android:adjustViewBounds="true"
+        android:orientation="vertical"
+        android:scaleType="fitXY" />
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/pre_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

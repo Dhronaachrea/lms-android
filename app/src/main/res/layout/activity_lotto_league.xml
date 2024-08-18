@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/main_header" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <LinearLayout
+            android:id="@+id/main_league"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="visible">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/_2sdp"
+                android:paddingTop="@dimen/_2sdp">
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/rank"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/lotto_rank"
+                    android:textColor="#000"
+                    android:textSize="@dimen/stats_ball_text"
+                    app:text_style="bold" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/lotto_name"
+                    android:textColor="#000"
+                    android:textSize="@dimen/stats_ball_text"
+                    app:text_style="bold" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/points"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:text="@string/lotto_points"
+                    android:textColor="#000"
+                    android:textSize="@dimen/stats_ball_text"
+                    app:text_style="bold" />
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lotto_league_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#fff"
+                android:listSelector="@android:color/transparent"></ListView>
+
+        </LinearLayout>
+
+        <com.skilrock.customui.RobotoTextView
+            android:id="@+id/lotto_legue_txt_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:gravity="center"
+            android:text="@string/lotto_league_avl"
+            android:textSize="@dimen/_24sdp"
+            android:visibility="gone"
+            app:typeface="roboto_bold" />
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+</RelativeLayout>

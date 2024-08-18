@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_2sdp"
+            android:paddingTop="@dimen/_2sdp">
+
+            <com.skilrock.customui.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/ball_common_stats"
+                android:textColor="#000"
+                android:textSize="@dimen/stats_ball_text" />
+
+            <com.skilrock.customui.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/freq_common_stats"
+                android:textColor="#000"
+                android:textSize="@dimen/stats_ball_text" />
+
+            <com.skilrock.customui.CustomTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/last_seen_common_stats"
+                android:textColor="#000"
+                android:textSize="@dimen/stats_ball_text" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:id="@+id/show"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="#a0000000"
+            android:visibility="gone">
+
+            <RelativeLayout
+                android:id="@+id/data_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/scratch_theme_color">
+
+                <LinearLayout
+                    android:id="@+id/result_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal"
+                        android:weightSum="1.0"></LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <ListView
+            android:id="@+id/item_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:listSelector="@android:color/transparent"></ListView>
+    </LinearLayout>
+
+</RelativeLayout>

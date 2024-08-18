@@ -1,0 +1,289 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SportsLotteryActivity">
+
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/main_header" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <!-- The main content view -->
+        <com.skilrock.customui.RobotoTextView
+            android:id="@+id/txt_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:gravity="center"
+            android:text="Sports Data not available"
+            android:textSize="@dimen/_24sdp"
+            android:visibility="gone"
+            app:typeface="roboto_bold" />
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="visible">
+
+            <RelativeLayout
+                android:id="@+id/rl_container"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:visibility="visible">
+
+                <com.viewpager.indicator.TitlePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/tab_strip_bg_color"
+                    android:padding="10dip"
+                    android:textColor="@color/spl_match_text_unselected"
+                    app:footerColor="@color/spl_match_indicator_selected"
+                    app:footerIndicatorHeight="5dp"
+                    app:footerIndicatorStyle="triangle"
+                    app:footerLineHeight="0dp"
+                    app:footerPadding="@dimen/_5sdp"
+                    app:selectedBold="true"
+                    app:selectedColor="@color/spl_match_text_selected" />
+
+                <View
+                    android:id="@+id/divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@+id/indicator"
+                    android:background="@color/spl_match_divider_indicator" />
+
+                <com.viewpager.SliderLayout
+                    android:id="@+id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/ll_bottom"
+                    android:layout_below="@+id/divider"
+                    android:background="@drawable/pattern_bg" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ll_bottom"
+                    android:background="@drawable/sle_storke" />
+
+                <LinearLayout
+                    android:id="@+id/ll_bottom"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/spl_bottom_bg"
+                    android:orientation="vertical"
+                    android:paddingBottom="10dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="5dp"
+                        android:orientation="horizontal">
+
+                        <com.skilrock.customui.RobotoTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="No. of lines"
+                            android:textColor="@color/spl_text_btn_proceed_selected"
+                            app:typeface="roboto_regular" />
+
+                        <com.skilrock.customui.RobotoTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="@string/bet_amount_txt"
+                            android:textColor="@color/spl_text_btn_proceed_selected"
+                            app:typeface="roboto_regular" />
+
+                        <com.skilrock.customui.RobotoTextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="Ticket Amt."
+                            android:textColor="@color/spl_text_btn_proceed_selected"
+                            app:typeface="roboto_regular" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:orientation="horizontal">
+
+                        <com.skilrock.customui.RobotoTextView
+                            android:id="@+id/txt_line_no"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textColor="@color/spl_text_btn_proceed_selected"
+                            android:textSize="21sp"
+                            app:typeface="roboto_regular" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/img_bet_dec"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/spl_decrease" />
+
+                            <com.skilrock.customui.AutoResizeTextView
+                                android:id="@+id/txt_bet_amount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="0.00"
+                                android:textColor="@color/spl_text_btn_proceed_selected"
+                                android:textSize="21sp"
+                                app:typeface="roboto_regular" />
+
+                            <ImageView
+                                android:id="@+id/img_bet_inc"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/spl_increase" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <com.skilrock.customui.AutoResizeTextView
+                                android:id="@+id/txt_ticket_amount"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:minHeight="21sp"
+                                android:text="$0"
+                                android:textColor="@color/spl_text_btn_proceed_selected"
+                                android:textSize="21sp"
+                                app:typeface="roboto_regular" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <com.skilrock.customui.RobotoButton
+                        android:id="@+id/btn_proceed"
+                        android:layout_width="240dp"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/activity_button_bg"
+                        android:gravity="center"
+                        android:text="@string/play_now_text"
+                        android:textColor="@color/activity_button_text_color"
+                        android:textSize="24sp"
+                        app:typeface="roboto_bold" />
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/rl_draw_not_avail"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/pattern_bg"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="gone">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:orientation="vertical">
+
+                    <com.skilrock.customui.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="NEXT SALE"
+                        android:textSize="@dimen/_20sdp"
+                        app:typeface="roboto_bold" />
+
+                    <com.skilrock.customui.RobotoTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="STARTS FROM"
+                        android:textSize="@dimen/_20sdp"
+                        app:typeface="roboto_light" />
+
+                    <com.skilrock.customui.RobotoTextView
+                        android:id="@+id/txt_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:text=""
+                        android:textSize="@dimen/_24sdp"
+                        app:typeface="roboto_bold" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:src="@drawable/img_clock" />
+
+                        <com.skilrock.customui.RobotoTextView
+                            android:id="@+id/txt_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textSize="@dimen/_24sdp"
+                            app:typeface="roboto_light" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <ImageView
+                    android:layout_width="@dimen/_80sdp"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_marginRight="@dimen/_30sdp"
+                    android:src="@drawable/img_player" />
+
+            </LinearLayout>
+        </FrameLayout>
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/post_footer" />
+
+</RelativeLayout>
+
+

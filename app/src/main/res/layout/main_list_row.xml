@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/linLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/drawerListText"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:gravity="center_vertical"
+        android:paddingLeft="2dp"
+        android:textColor="#4a4a4a" />
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="#a4a4a4" />
+
+</LinearLayout>

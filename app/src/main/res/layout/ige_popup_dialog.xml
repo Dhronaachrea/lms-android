@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal">
+    <!--  Left side Thumbnail image
+ -->
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_header_bg"
+        android:gravity="center"
+        android:padding="@dimen/_7sdp"
+        android:text="Flight Sim Transport"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_18sdp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:text_style="medium" />
+
+    <RelativeLayout
+        android:id="@+id/head"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/title"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:layout_marginTop="@dimen/_7sdp">
+
+
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:padding="@dimen/_1sdp">
+
+            <ImageView
+                android:id="@+id/list_image"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_vertical"
+                android:minHeight="@dimen/_60sdp"
+                android:minWidth="@dimen/_60sdp" />
+        </LinearLayout>
+        <!--  Title Of Game
+ -->
+        <!--<com.skilrock.customui.CustomTextViewTop-->
+        <!--android:id="@+id/title"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_alignTop="@+id/thumbnail"-->
+        <!--android:layout_toRightOf="@+id/thumbnail"-->
+        <!--android:gravity="top"-->
+        <!--android:text="Flight Sim Transport"-->
+        <!--android:textColor="@android:color/black"-->
+        <!--android:textSize="@dimen/_16sdp"-->
+        <!--android:textStyle="bold"-->
+        <!--android:typeface="sans" />-->
+        <!--  Game short description
+ -->
+        <com.skilrock.customui.AutoResizeTextView
+            android:id="@+id/desc"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/_72sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Treasure Hunt is a instant win scratch game where player has to click on scratch area to reveal the symbols. Match three same symbols to win the prize."
+            android:textColor="#80323232"
+            android:textSize="@dimen/_12sdp" />
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:id="@+id/btnPlayCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/head"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/_17sdp"
+        android:layout_marginRight="@dimen/_17sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:background="@drawable/btn_bg"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_3sdp">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/btn_bg_red"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.7"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_11sdp"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:paddingTop="@dimen/_11sdp"
+                android:singleLine="true"
+                android:text="$2.0"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_20sdp" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:layout_marginTop="@dimen/_3sdp"
+                android:background="@color/red_shadow" />
+
+            <com.skilrock.customui.AutoResizeTextView
+                android:id="@+id/playForCash"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_42sdp"
+                android:layout_weight="0.3"
+                android:gravity="center"
+                android:paddingBottom="@dimen/_11sdp"
+                android:paddingLeft="@dimen/_6sdp"
+                android:paddingRight="@dimen/_6sdp"
+                android:paddingTop="@dimen/_11sdp"
+                android:singleLine="true"
+                android:text="PLAY FOR CASH !!"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_19sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.skilrock.customui.AutoResizeTextView
+        android:id="@+id/txt_try_free"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnPlayCash"
+        android:layout_marginLeft="@dimen/_12sdp"
+        android:layout_marginRight="@dimen/_12sdp"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:singleLine="true"
+        android:text="@string/try_free"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_14sdp"
+        android:typeface="normal" />
+
+    <com.skilrock.customui.AutoResizeTextView
+        android:id="@+id/txt_unfinish"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txt_try_free"
+        android:gravity="center"
+        android:paddingBottom="@dimen/_12sdp"
+        android:paddingLeft="@dimen/_8sdp"
+        android:paddingRight="@dimen/_8sdp"
+        android:text="@string/unfinish"
+        android:textColor="@color/dark_grey"
+        android:textSize="@dimen/_14sdp"
+        android:typeface="normal"
+        android:visibility="gone"
+        app:text_style="light" />
+</RelativeLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?><!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" --><!-- android:layout_width="match_parent" --><!-- android:layout_height="wrap_content" --><!-- android:background="@drawable/widget_progress_dialog_bg" --><!-- android:orientation="vertical" > -->
+
+
+<!-- <com.skilrock.customui.CustomTextView --><!-- android:id="@+id/dialogHeaderText" --><!-- android:layout_width="match_parent" --><!-- android:layout_height="wrap_content" --><!-- android:ems="16" --><!-- android:padding="10dp" --><!-- android:textStyle="bold" /> -->
+
+
+<!-- <View --><!-- android:layout_width="match_parent" --><!-- android:layout_height="0.1dip" --><!-- android:background="@android:color/darker_gray" /> -->
+
+
+<!-- <com.skilrock.customui.CustomTextView --><!-- android:id="@+id/dialogTextContent" --><!-- android:layout_width="match_parent" --><!-- android:layout_height="0dp" --><!-- android:layout_marginBottom="10dip" --><!-- android:layout_marginLeft="5dip" --><!-- android:layout_marginRight="5dip" --><!-- android:layout_marginTop="10dip" --><!-- android:layout_weight="1" /> -->
+
+
+<!-- <LinearLayout --><!-- android:layout_width="match_parent" --><!-- android:layout_height="wrap_content" --><!-- android:gravity="center" --><!-- android:orientation="horizontal" > -->
+
+
+<!-- <Button --><!-- android:id="@+id/dialogDone" --><!-- android:layout_width="match_parent" --><!-- android:layout_height="wrap_content" --><!-- android:layout_marginLeft="0.1dip" --><!-- android:layout_weight="1" --><!-- android:background="@drawable/buttons_blue" --><!-- android:padding="2dip" --><!-- android:text="Done" --><!-- android:textColor="@android:color/white" --><!-- android:textStyle="bold" /> --><!-- </LinearLayout> -->
+
+
+<!-- </LinearLayout> -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/dialogHeaderText"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/wid_dia_header_height"
+        android:background="@drawable/dialog_header_bg"
+        android:gravity="center"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:text="hide"
+        android:textColor="@color/dialog_header_text_color"
+        android:textSize="@dimen/wid_dia_header_text_size"
+        android:textStyle="bold" />
+
+    <View
+        android:id="@+id/under_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:background="@android:color/darker_gray" />
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/dialogTextContent"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:gravity="center_vertical"
+        android:paddingBottom="@dimen/wid_dia_text_padding_top_bottom"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingTop="@dimen/wid_dia_text_padding_top_bottom"
+        android:textColor="@color/dialog_message_text_color"
+        android:textSize="@dimen/_16sdp" />
+
+    <EditText
+        android:id="@+id/dialogUrlContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:gravity="center_vertical"
+        android:hint="Enter Ip Address with port"
+        android:inputType="text"
+        android:paddingBottom="@dimen/wid_dia_text_padding_top_bottom"
+        android:paddingLeft="@dimen/_2sdp"
+        android:paddingRight="@dimen/_2sdp"
+        android:paddingTop="@dimen/wid_dia_text_padding_top_bottom"
+        android:textColor="@color/dialog_message_text_color"
+        android:textSize="@dimen/_16sdp"
+        android:visibility="gone" />
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/header_text_color_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:splitMotionEvents="false">
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/dialogcancel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+
+            android:padding="@dimen/_10sdp"
+            android:text="@string/cancel"
+            android:textColor="@color/dialog_header_color"
+            android:textSize="@dimen/wid_dia_text_size"
+            android:textStyle="bold" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/lineHoriz"
+            android:layout_width="0.2dp"
+            android:layout_height="match_parent"
+            android:background="@color/header_text_color_line" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/dialogDone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/ok"
+            android:textColor="@color/dialog_header_color"
+            android:textSize="@dimen/wid_dia_text_size"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/header_text_color_line" />
+</LinearLayout>

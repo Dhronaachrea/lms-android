@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical" >
+
+     <com.weidget.LotteryEditText
+        android:id="@+id/accnt_no"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_bg_login"
+        android:gravity="center"
+        android:hint="account number"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/five_color_two" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:entries="@array/banks"
+        android:gravity="right" />
+
+     <com.weidget.LotteryEditText
+        android:id="@+id/accnt_name"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_bg_login"
+        android:gravity="center"
+        android:hint="account name"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/five_color_two" />
+
+     <com.weidget.LotteryEditText
+        android:id="@+id/branch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/edit_bg_login"
+        android:gravity="center"
+        android:hint="branch"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:textColor="@color/five_color_two" />
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/login"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_bg_login"
+        android:gravity="center"
+        android:padding="5dp"
+        android:text="SUBMIT"
+        android:textColor="#fff"
+        android:textSize="17sp" />
+
+</LinearLayout>

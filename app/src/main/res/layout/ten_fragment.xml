@@ -1,0 +1,359 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/banner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/sub_banner_ten_by_20" />
+
+            <LinearLayout
+                android:id="@+id/aa"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/play_now_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/play_now_bg"
+                    android:gravity="center"
+                    android:visibility="gone">
+
+                    <LinearLayout
+                        android:id="@+id/ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="5dp"
+                        android:orientation="vertical">
+
+                        <com.skilrock.customui.CustomTextViewDown
+                            android:id="@+id/play"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="PLAY"
+                            android:textColor="#fff"
+                            android:textSize="20sp"
+                            android:textStyle="bold" />
+
+                        <com.skilrock.customui.CustomTextViewTop
+                            android:id="@+id/now"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:paddingTop="0.5dp"
+                            android:text="NOW"
+                            android:textColor="#fff"
+                            android:textSize="20sp" />
+                    </LinearLayout>
+
+                    <ImageView
+                        android:id="@+id/imageView1"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/ll"
+                        android:src="@drawable/bet_arrow" />
+                </RelativeLayout>
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/next_draw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="right"
+                    android:text="20:30:52"
+                    android:textColor="#fff"
+                    android:textSize="20sp"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/data_lay"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.66">
+
+
+            <LinearLayout
+                android:id="@+id/result_box"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/last_draw"
+                android:background="@color/five_last_bg_color"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <LinearLayout
+                        android:id="@+id/win_num_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:weightSum="1.0">
+
+                    <LinearLayout
+                        android:id="@+id/win_num_lay1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal">
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="2dp"
+                            android:background="@drawable/circle_back_twelve"
+                            android:gravity="center"
+                            android:text="25"
+                            android:textColor="@color/five_last_no_txt_color" />
+
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/last_draw"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/five_win_no_bg_color"
+                android:padding="2dp">
+
+                <com.skilrock.customui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:text="@string/win_number_five_frag"
+                    android:textColor="@color/five_win_no_txt_color" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/draw_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Wed, 24 Sept 2014"
+                    android:textColor="@color/five_win_no_time_txt_color" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <GridView
+            android:id="@+id/item_grid"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="6"
+            android:background="#fff"
+            android:numColumns="2"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4.33"
+            android:background="#fff"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight=".75"
+                android:orientation="horizontal"
+                android:splitMotionEvents="false">
+
+                <LinearLayout
+                    android:id="@+id/stats_view"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/grid_item_bg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/menu_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/twelve_menu_bg"
+                        android:padding="12dp"
+                        android:src="@drawable/stats" />
+
+                    <com.skilrock.customui.CustomTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/static_five_frag"
+                        android:textColor="@color/five_menu_txt_color"
+                        android:textSize="@dimen/main_grid_text_size" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="1dp"
+                    android:layout_height="match_parent"
+                    android:background="@color/grid_divider_color" />
+
+                <LinearLayout
+                    android:id="@+id/result_view"
+                    android:layout_width="0dp"
+                    android:layout_height="fill_parent"
+                    android:layout_weight="1"
+                    android:background="@drawable/grid_item_bg"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/twelve_menu_bg"
+                        android:padding="12dp"
+                        android:src="@drawable/result" />
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/menu_name"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="5dp"
+                        android:gravity="center"
+                        android:text="@string/chk_result_five_frag"
+                        android:textColor="@color/five_menu_txt_color"
+                        android:textSize="@dimen/main_grid_text_size" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/buy_now"
+                android:layout_width="fill_parent"
+                android:layout_height="0dp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:layout_weight=".25"
+                android:background="@drawable/activity_button_bg"
+                android:gravity="center"
+                android:text="@string/play_now_text"
+                android:textColor="@color/activity_button_text_color"
+                android:textSize="@dimen/buy_now_text_size" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

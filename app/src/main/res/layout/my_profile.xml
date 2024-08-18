@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:orientation="vertical" >
+
+    <ScrollView
+        android:id="@+id/sv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#fff" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="5dp"
+            android:paddingRight="5dp"
+            android:paddingTop="5dp" >
+
+            <com.skilrock.customui.CircleImageView
+                android:id="@+id/user_pic"
+                android:layout_width="@dimen/profile_pic_size"
+                android:layout_height="@dimen/profile_pic_size"
+                  />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="VIJAY JOSHI"
+                android:textColor="@color/five_color_three"
+                android:textSize="17sp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/user_bal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Available Bal: &lt;b>$10000&lt;/b>"
+                android:textColor="@color/five_color_two"
+                android:textSize="15sp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/login_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/five_color_one" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:drawablePadding="5dp"
+                    android:text="winlot@gmail.com"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/edit_email"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:visibility="gone"
+                    android:text="Edit"
+                    android:textColor="@color/five_color_three"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/mobile"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:text="+91 8802537403"
+                android:textColor="@color/five_color_one"
+                android:textSize="15sp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/my_account_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/five_color_one"
+                android:textSize="15sp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/address"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawablePadding="5dp"
+                android:gravity="left|center"
+                android:text="Building no. 14, 4th floor\nGurgaon-122002"
+                android:textColor="@color/five_color_one"
+                android:textSize="15sp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/inbox_line"
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/five_color_one"
+                android:textSize="15sp" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.skilrock.customui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:text="Winning Bal:"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/winning_bal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="5dp"
+                    android:text="$50"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.skilrock.customui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:text="Bonus Bal:"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/bonus_bal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="5dp"
+                    android:text="$75"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.skilrock.customui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:text="Deposit Bal:"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/depo_bal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="5dp"
+                    android:text="$62"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content" >
+
+                <com.skilrock.customui.CustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:drawablePadding="5dp"
+                    android:gravity="left|center"
+                    android:text="Redeemable Bal:"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/red_bal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:drawablePadding="5dp"
+                    android:text="$90"
+                    android:textColor="@color/five_color_one"
+                    android:textSize="15sp" />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/deposit"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/sv"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="10dp"
+        android:layout_marginLeft="35dp"
+        android:layout_marginRight="35dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/button_bg_login_s"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="DEPOSIT"
+        android:textColor="#fff"
+        android:textSize="22sp" />
+
+</RelativeLayout>

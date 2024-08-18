@@ -1,0 +1,193 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/main_header"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <!-- The main content view -->
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/customTextView1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="5dp"
+                        android:gravity="center"
+                        android:text="@string/amount_deposit"
+                        android:textColor="@color/txn_date_bg_color"
+                        android:textSize="22sp"
+                        app:text_style="thin" />
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/currencySymbol"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/customTextView1"
+                        android:enabled="false"
+                        android:gravity="center"
+                        android:text="$"
+                        android:textColor="@color/txn_date_text_color"
+                        android:textSize="22sp" />
+
+                    <EditText
+                        android:id="@+id/amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/currencySymbol"
+                        android:background="@android:color/transparent"
+                        android:ems="12"
+                        android:gravity="left"
+                        android:hint="enter amount"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:longClickable="false"
+                        android:paddingBottom="@dimen/_8sdp"
+                        android:paddingRight="@dimen/_8sdp"
+                        android:paddingTop="@dimen/_8sdp"
+                        android:text="500"
+                        android:textColor="@color/txn_date_text_color"
+                        android:textColorHint="@color/edit_text_underline_color_d"
+                        android:textCursorDrawable="@null"
+                        android:textSize="22sp">
+
+                        <requestFocus />
+                    </EditText>
+
+                    <ImageView
+                        android:id="@+id/edit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerVertical="true"
+                        android:background="@drawable/edit_nos"
+                        android:gravity="center" />
+                </RelativeLayout>
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/payment_header"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_marginTop="15dp"
+                    android:checked="true"
+                    android:gravity="center"
+                    android:text="Header For Single PG"
+                    android:textColor="@color/txn_date_text_color"
+                    android:textSize="22sp"
+                    android:visibility="gone" />
+
+                <!-- <HorizontalScrollView -->
+                <!-- android:id="@+id/hsv" -->
+                <!-- android:layout_width="match_parent" -->
+                <!-- android:layout_height="50dp" -->
+                <!-- android:layout_marginTop="10dp" -->
+                <!-- android:fillViewport="true" -->
+                <!-- android:scrollbars="none" > -->
+
+                <LinearLayout
+                    android:id="@+id/custom_tabs"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/withdraw_option"
+                    android:orientation="horizontal"
+                    android:weightSum="1">
+
+                    <com.skilrock.customui.CustomCheckedTextView
+                        android:id="@+id/tab_views"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:checked="true"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/fav_num_withdrawal_scrn"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"></com.skilrock.customui.CustomCheckedTextView>
+
+                    <com.skilrock.customui.CustomCheckedTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:checked="true"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/fav_num_withdrawal_scrn"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"></com.skilrock.customui.CustomCheckedTextView>
+
+                    <com.skilrock.customui.CustomCheckedTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:checked="true"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/fav_num_withdrawal_scrn"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"></com.skilrock.customui.CustomCheckedTextView>
+
+                    <com.skilrock.customui.CustomCheckedTextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.25"
+                        android:checked="true"
+                        android:drawablePadding="10dp"
+                        android:gravity="center"
+                        android:paddingTop="10dp"
+                        android:text="@string/fav_num_withdrawal_scrn"
+                        android:textColor="@color/white"
+                        android:textSize="15sp"></com.skilrock.customui.CustomCheckedTextView>
+                </LinearLayout>
+                <!-- </HorizontalScrollView> -->
+
+
+                <ListView
+                    android:id="@+id/list_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:cacheColorHint="#00000000"
+                    android:descendantFocusability="beforeDescendants"
+                    android:visibility="visible" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/post_footer" />
+
+</RelativeLayout>

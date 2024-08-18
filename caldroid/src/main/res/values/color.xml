@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<resources>
+    <color name="blue">#ff33b5e5</color>
+    <color name="cal_bg_color">#ff1b2836</color>
+    <!--for zim and ghana-->
+    <color name="cal_header">#ff00a06d</color>
+    <!--for only lagos -->
+    <!--<color name="cal_header">#ff0077b9</color>-->
+
+    <color name="cal_text_color">#ffffffff</color>
+    <color name="cal_text_dis_color">#ff3d4957</color>
+    <color name="caldroid_333">#ff333333</color>
+    <color name="caldroid_555">#ff555555</color>
+    <color name="caldroid_black">#ff000000</color>
+    <color name="caldroid_darker_gray">#ffaaaaaa</color>
+    <color name="caldroid_gray">#ffcccccc</color>
+    <color name="caldroid_holo_blue_dark">#ff0099cc</color>
+    <color name="caldroid_holo_blue_light">#ff33b5e5</color>
+    <color name="caldroid_light_red">#ffff7f7f</color>
+    <color name="caldroid_lighter_gray">#ffdddddd</color>
+    <color name="caldroid_middle_gray">#ff888888</color>
+    <color name="caldroid_sky_blue">#ffa3e8f7</color>
+    <color name="caldroid_transparent">#00000000</color>
+    <color name="caldroid_white">#ffffffff</color>
+    <color name="green">#ff8fcc85</color>
+    <color name="trans">#00000000</color>
+    <color name="white">#ffffffff</color>
+</resources>

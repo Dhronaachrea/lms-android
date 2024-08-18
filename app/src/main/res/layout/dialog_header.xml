@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/sub_header"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dialog_heder_height"
+    android:background="@drawable/dialog_header_bg">
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/header_name"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/dialog_heder_height"
+        android:layout_toLeftOf="@+id/done"
+        android:layout_toRightOf="@+id/close"
+        android:gravity="center"
+        android:text="@string/header_dialog"
+        android:textAllCaps="true"
+        android:textColor="@color/dialog_header_text_color"
+        android:textSize="@dimen/dialog_heder_height_textsize" />
+
+    <ImageView
+        android:id="@+id/close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/close" />
+
+    <ImageView
+        android:id="@+id/done"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:src="@drawable/done" />
+
+</RelativeLayout>

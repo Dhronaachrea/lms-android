@@ -1,0 +1,240 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/dialog_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/tele_cash_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/txn_amt_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:layout_gravity="left"
+                android:layout_weight=".5"
+                android:text="Deposit\nAmount"
+                android:textColor="@color/dialog_edit_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/txn_amt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginRight="5dp"
+                android:layout_weight=".5"
+                android:gravity="right|center_vertical"
+                android:text="txnAmount"
+                android:textColor="@color/dialog_edit_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/fee_Amount_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight=".5"
+                android:text="Transaction\nCharges"
+                android:textColor="@color/dialog_edit_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/fee_Amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginRight="5dp"
+                android:layout_weight=".5"
+                android:gravity="right|center_vertical"
+                android:text="feeAmount"
+                android:textColor="@color/dialog_edit_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/total_amount_tx"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginLeft="5dp"
+                android:text="Payable\nAmount"
+                android:layout_weight=".5"
+                android:textColor="@color/dialog_edit_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/total_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginRight="5dp"
+                android:layout_weight=".5"
+                android:text="totalAmount"
+                android:textColor="@color/dialog_edit_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+
+
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/mobile_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginLeft="5dp"
+                android:layout_weight=".5"
+                android:text="Mobile\nNumber"
+                android:textColor="@color/dialog_edit_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/mobile_second_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right|center_vertical"
+                android:padding="@dimen/_5sdp"
+                android:layout_marginRight="5dp"
+                android:layout_weight=".5"
+                android:text="mobile"
+                android:textColor="@color/dialog_edit_text_color"
+                android:textSize="@dimen/_18sdp" />
+
+
+        </LinearLayout>
+
+
+
+
+        <com.weidget.LotteryEditText
+            android:id="@+id/otp_second"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/withdraw_amnt_bg"
+            android:hint="otp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:inputType="number"
+            android:maxLength="10"
+            android:textColor="@color/txn_date_text_color"
+            android:textColorHint="@color/edit_text_underline_color_d"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_16sdp"
+            app:met_floatingLabel="normal"
+            app:met_primaryColor="@color/edit_text_underline_color"
+            app:met_underlineColor="@color/edit_text_underline_color_d"/>
+
+
+
+
+
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/txt_submit_second"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/activity_button_bg"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_7sdp"
+            android:text="Submit"
+            android:layout_margin="2dp"
+            android:textColor="@color/activity_button_text_color"
+            android:textSize="@dimen/_18sdp"
+            />
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="20dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/resp_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:layout_gravity="left"
+            android:layout_weight="1"
+            android:text="txnAmount"
+            android:textColor="@color/dialog_edit_text_color"
+            android:textSize="@dimen/_18sdp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

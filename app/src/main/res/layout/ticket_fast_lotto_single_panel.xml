@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:src="@drawable/dotted_line" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_4sdp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/first_selected_nos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center_vertical"
+            android:orientation="vertical"></LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <com.skilrock.customui.CustomTextViewDown
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Bet"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/five_color_one" />
+
+                    <com.skilrock.customui.CustomTextViewTop
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Amount"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/five_color_one" />
+                </LinearLayout>
+
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/unit_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:text="100"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/tkt_no_of_lines_val"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <com.skilrock.customui.CustomTextViewDown
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Numbers"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/five_color_one" />
+
+                    <com.skilrock.customui.CustomTextViewTop
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Count"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/five_color_one" />
+                </LinearLayout>
+
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/no_of_lines"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:text="62"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/tkt_no_of_lines_val"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="left"
+                    android:orientation="vertical">
+
+                    <com.skilrock.customui.CustomTextViewDown
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Panel"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/five_color_one" />
+
+                    <com.skilrock.customui.CustomTextViewTop
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="left"
+                        android:text="Price"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/five_color_one" />
+                </LinearLayout>
+
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/panel_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/_4sdp"
+                    android:gravity="left|center_vertical"
+                    android:maxLines="1"
+                    android:text="12"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/tkt_no_of_lines_val"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

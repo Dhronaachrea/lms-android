@@ -1,0 +1,114 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        layout="@layout/pre_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:orientation="vertical" >
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1" >
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" >
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical" >
+
+                    <com.skilrock.customui.CustomTextView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="20dp"
+                        android:paddingLeft="25dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="20dp"
+                        android:text="@string/otp_message"
+                        android:textColor="@color/text_view_text_color"
+                        android:textSize="20sp" />
+
+                     <com.weidget.LotteryEditText
+                        android:id="@+id/otp"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="30dp"
+                        android:layout_marginRight="30dp"
+                        android:digits="0123456789"
+                        android:ems="6"
+                        android:gravity="center"
+                        android:inputType="numberPassword"
+                        android:maxLength="6"
+                        android:nextFocusDown="@+id/password"
+                        android:singleLine="true" >
+
+                        <requestFocus />
+                    </com.weidget.LotteryEditText>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp" >
+
+                    <Button
+                        android:id="@+id/sendOTP"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:background="@drawable/basic_button_bg"
+                        android:text="@string/send_otp"
+                        android:textColor="@color/basic_btn_text_color"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:id="@+id/regenerateOTP"
+                        android:layout_width="120dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/basic_button_bg"
+                        android:text="@string/regenerate_otp"
+                        android:textColor="@color/basic_btn_text_color"
+                        android:textStyle="bold" />
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <!-- <LinearLayout -->
+        <!-- android:id="@+id/bannerView" -->
+        <!-- android:layout_width="fill_parent" -->
+        <!-- android:layout_height="fill_parent" -->
+        <!-- android:layout_weight="2.2" -->
+        <!-- android:adjustViewBounds="true" -->
+        <!-- android:orientation="vertical" -->
+        <!-- android:scaleType="fitXY" /> -->
+
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footer"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        layout="@layout/pre_footer" />
+
+</RelativeLayout>

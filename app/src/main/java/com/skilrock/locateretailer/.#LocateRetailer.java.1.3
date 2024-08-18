@@ -1,0 +1,1380 @@
+package com.skilrock.locateretailer;
+
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.Context;
+import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.graphics.Canvas;
+import android.graphics.Color;
+import android.graphics.Paint;
+import android.graphics.Paint.Align;
+import android.graphics.Paint.Style;
+import android.graphics.PorterDuff.Mode;
+import android.graphics.Rect;
+import android.graphics.Typeface;
+import android.os.AsyncTask;
+import android.os.Bundle;
+import android.provider.Settings;
+import android.support.v4.widget.DrawerLayout;
+import android.view.LayoutInflater;
+import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.ViewGroup;
+import android.view.Window;
+import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.ArrayAdapter;
+import android.widget.GridView;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.ListView;
+import android.widget.RelativeLayout;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.android.gms.maps.CameraUpdateFactory;
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.GoogleMap.InfoWindowAdapter;
+import com.google.android.gms.maps.GoogleMap.OnMapClickListener;
+import com.google.android.gms.maps.GoogleMap.OnMarkerClickListener;
+import com.google.android.gms.maps.MapsInitializer;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.BitmapDescriptorFactory;
+import com.google.android.gms.maps.model.CameraPosition;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
+import com.google.gson.Gson;
+import com.skilrock.adapters.CityAdapter;
+import com.skilrock.adapters.RetailerAdapter;
+import com.skilrock.adapters.StateAdapter;
+import com.skilrock.bean.CityModal;
+import com.skilrock.bean.CityModal.CityList;
+import com.skilrock.bean.RetailerListModal;
+import com.skilrock.bean.RetailerListModal.RetailerList;
+import com.skilrock.bean.RetailerValueBean;
+import com.skilrock.bean.StateModal;
+import com.skilrock.bean.StateModal.StateList;
+import com.skilrock.customui.CustomCheckedTextView;
+import com.skilrock.customui.CustomTextView;
+import com.skilrock.customui.DrawerBaseActivity;
+import com.skilrock.lms.communication.GPSTracker;
+import com.skilrock.lms.communication.WebServicesListener;
+import com.skilrock.lottery.R;
+import com.skilrock.utils.DataSource;
+import com.skilrock.utils.GlobalVariables;
+
+public class LocateRetailer extends DrawerBaseActivity implements
+		WebServicesListener {
+	private String fakeJson = "{\"retailerList\":[{\"addr_1\":\"PO BOX 171\",\"phoneNbr\":\"0\",\"lastName\":\"AMOAH\",\"mobileNbr\":\"+441234567890\",\"addr_2\":\"BOLGA\",\"longitude\":\"-0.101023\",\"latitude\":\"51.501817\",\"firstName\":\"BEATRICE\",\"email_id\":\"BEATRICE@skilrock.com\",\"type\":\"Agent\",\"services\":\"High Winning\"},{\"addr_1\":\"N B C 63\",\"phoneNbr\":\"0\",\"lastName\":\"FRANCIS\",\"mobileNbr\":\"+441234567891\",\"addr_2\":\"NABRONGO\",\"longitude\":\"-0.106859\",\"latitude\":\"51.475950\",\"firstName\":\"AKABANGE\",\"email_id\":\"AKABANGE@skilrock.com\",\"type\":\"Back Office\",\"services\":\"DG Sale,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"BOX HH547 HOHOE\",\"phoneNbr\":\"0\",\"lastName\":\"ADZATI\",\"mobileNbr\":\"+441234567892\",\"addr_2\":\"AKPOFO SOKPO\",\"longitude\":\"-0.187712\",\"latitude\":\"51.474240\",\"firstName\":\"AWUDU\",\"email_id\":\"AWUDU@skilrock.com\",\"type\":\"Head Quarter\",\"services\":\"DG Sale,SportsLottery,Cash in, High Winning\"},{\"addr_1\":\" BOX 335\",\"phoneNbr\":\"0\",\"lastName\":\"Darko\",\"mobileNbr\":\"+441234567893\",\"addr_2\":\"HOHOE\",\"longitude\":\"0.079222\",\"latitude\":\"51.483862\",\"firstName\":\"DanielMawuli\",\"email_id\":\"DanielMawuli@skilrock.com\",\"type\":\"Agent\",\"services\":\"DG Winning Claim,Scratch Sale,Scratch Winning,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"P O BOX 74 AKATSI \",\"phoneNbr\":\"0\",\"lastName\":\"AHO\",\"mobileNbr\":\"+441234567894\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.072699\",\"latitude\":\"51.471032\",\"firstName\":\"GEORGEYAO\",\"email_id\":\"GEORGEYAO@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale,DG Winning Claim,Scratch Sale,Scratch Winning,SportsLottery,Cash in, Cash out\"},{\"addr_1\":\"BOX 3 GBI - WEGBE\",\"phoneNbr\":\"0\",\"lastName\":\"TSETSE\",\"mobileNbr\":\"+441234567895\",\"addr_2\":\"GBI - WEGBE\",\"longitude\":\"-0.145655\",\"latitude\":\"51.507801\",\"firstName\":\"REBECCA\",\"email_id\":\"REBECCA@skilrock.com\",\"type\":\"Head Quarter\",\"services\":\"DG Sale,DG Winning Claim,Scratch Sale,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"BOX 2 VE - GOLOKWATI\",\"phoneNbr\":\"0\",\"lastName\":\"AYATEY\",\"mobileNbr\":\"+441234567896\",\"addr_2\":\"VE-GOLOKWATI\",\"longitude\":\"-0.121450\",\"latitude\":\"51.461086\",\"firstName\":\"MOSES\",\"email_id\":\"MOSES@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale,Scratch Sale,Scratch Winning,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"HSE NO D 248\",\"phoneNbr\":\"0\",\"lastName\":\"Agbodogli\",\"mobileNbr\":\"+441234567897\",\"addr_2\":\"NALERIGU\",\"longitude\":\"-0.043688\",\"latitude\":\"51.462049\",\"firstName\":\"FelixKwami\",\"email_id\":\"FelixKwami@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale,DG Winning Claim,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"BOX 89\",\"phoneNbr\":\"0\",\"lastName\":\"Amoah\",\"mobileNbr\":\"+441234567898\",\"addr_2\":\"TAMALE\",\"longitude\":\"-0.126772\",\"latitude\":\"51.443757\",\"firstName\":\"Kwame\",\"email_id\":\"Kwame@skilrock.com\",\"type\":\"Head Quarter\",\"services\":\"Cash in, Cash out\"},{\"addr_1\":\"P O BOX 831 HO \",\"phoneNbr\":\"0\",\"lastName\":\"HUGHES\",\"mobileNbr\":\"+441234567899\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.152178\",\"latitude\":\"51.446538\",\"firstName\":\"RICHARD\",\"email_id\":\"RICHARD@skilrock.com\",\"type\":\"Retailer\",\"services\":\"Cash in, Cash out, High Winning\"},{\"addr_1\":\"P O BOX 100\",\"phoneNbr\":\"0\",\"lastName\":\"WILLIAMS\",\"mobileNbr\":\"+441234567881\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.116472\",\"latitude\":\"51.439691\",\"firstName\":\"BRETT\",\"email_id\":\"BRETT@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale\"},{\"addr_1\":\"P O BOX 101\",\"phoneNbr\":\"0\",\"lastName\":\"ROBINSON\",\"mobileNbr\":\"+441234567882\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.097418\",\"latitude\":\"51.440975\",\"firstName\":\"PETER\",\"email_id\":\"PETER@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale,DG Winning Claim\"},{\"addr_1\":\"P O BOX 102 \",\"phoneNbr\":\"0\",\"lastName\":\"MENSAH\",\"mobileNbr\":\"+441234567883\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.216937\",\"latitude\":\"51.509981\",\"firstName\":\"FELIX\",\"email_id\":\"FELIX@skilrock.com\",\"type\":\"Agent\",\"services\":\"DG Sale,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"P O BOX 103\",\"phoneNbr\":\"0\",\"lastName\":\"PARKER\",\"mobileNbr\":\"+441234567884\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.229383\",\"latitude\":\"51.508379\",\"firstName\":\"ROBIN\",\"email_id\":\"ROBIN@skilrock.com\",\"type\":\"Retailer\",\"services\":\"Scratch Winning,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"P O BOX 104\",\"phoneNbr\":\"0\",\"lastName\":\"TWAIN\",\"mobileNbr\":\"+441234567885\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.212216\",\"latitude\":\"51.502181\",\"firstName\":\"BRAD\",\"email_id\":\"BRAD@skilrock.com\",\"type\":\"Retailer\",\"services\":\"Scratch Sale,Scratch Winning,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"P O BOX 105\",\"phoneNbr\":\"0\",\"lastName\":\"HOGG\",\"mobileNbr\":\"+441234567886\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.206208\",\"latitude\":\"51.500365\",\"firstName\":\"MORRIS\",\"email_id\":\"MORRIS@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale,DG Winning Claim\"},{\"addr_1\":\"P O BOX 106\",\"phoneNbr\":\"0\",\"lastName\":\"FERNANDIS\",\"mobileNbr\":\"+441234567887\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.188699\",\"latitude\":\"51.501326\",\"firstName\":\"MARK\",\"email_id\":\"MARK@skilrock.com\",\"type\":\"Retailer\",\"services\":\"SportsLottery\"},{\"addr_1\":\"P O BOX 107\",\"phoneNbr\":\"0\",\"lastName\":\"DSOUZA\",\"mobileNbr\":\"+441234567888\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.241914\",\"latitude\":\"51.516872\",\"firstName\":\"PHILIP\",\"email_id\":\"PHILIP@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale,DG Winning Claim,Scratch Sale,Scratch Winning,SportsLottery,Cash in, Cash out, High Winning\"},{\"addr_1\":\"P O BOX 108\",\"phoneNbr\":\"0\",\"lastName\":\"MENSAH\",\"mobileNbr\":\"+4412345678989\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.222237\",\"latitude\":\"51.516733\",\"firstName\":\"HARRIS\",\"email_id\":\"HARRIS@skilrock.com\",\"type\":\"Agent\",\"services\":\"DG Sale,DG Winning Claim,Scratch Winning,Cash in, Cash out\"},{\"addr_1\":\"P O BOX 109\",\"phoneNbr\":\"0\",\"lastName\":\"MORRISON\",\"mobileNbr\":\"+441234567871\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.089436\",\"latitude\":\"51.441637\",\"firstName\":\"HARRY\",\"email_id\":\"HARRY@skilrock.com\",\"type\":\"Back Office\",\"services\":\"DG Winning Claim,Scratch Winning,Cash in, High Winning\"},{\"addr_1\":\"P O BOX 110\",\"phoneNbr\":\"0\",\"lastName\":\"HENRY\",\"mobileNbr\":\"+441234567872\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.095401\",\"latitude\":\"51.436738\",\"firstName\":\"CHRIS\",\"email_id\":\"CHRIS@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale,Scratch Sale,SportsLottery, Cash out\"},{\"addr_1\":\"P O BOX 111\",\"phoneNbr\":\"0\",\"lastName\":\"PETERSON\",\"mobileNbr\":\"+441234567873\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.114026\",\"latitude\":\"51.437648\",\"firstName\":\"MAC\",\"email_id\":\"MAC@skilrock.com\",\"type\":\"Back Office\",\"services\":\"DG Sale,DG Winning Claim,Scratch Sale,SportsLottery,Cash in, Cash out\"},{\"addr_1\":\"P O BOX 112\",\"phoneNbr\":\"0\",\"lastName\":\"WRIGHT\",\"mobileNbr\":\"+441234567874\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.093513\",\"latitude\":\"51.436364\",\"firstName\":\"JOHN\",\"email_id\":\"JOHN@skilrock.com\",\"type\":\"Agent\",\"services\":\"DG Sale,DG Winning Claim,Scratch Sale,Scratch Winning,SportsLottery\"},{\"addr_1\":\"P O BOX 113\",\"phoneNbr\":\"0\",\"lastName\":\"BONN\",\"mobileNbr\":\"+441234567875\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.050941\",\"latitude\":\"51.441018\",\"firstName\":\"MARC\",\"email_id\":\"MARC@skilrock.com\",\"type\":\"Retailer\",\"services\":\"DG Sale,DG Winning Claim,Scratch Winning,SportsLottery,Cash out, High Winning\"},{\"addr_1\":\"P O BOX 114\",\"phoneNbr\":\"0\",\"lastName\":\"DSOUZA\",\"mobileNbr\":\"+441234567876\",\"addr_2\":\"LONDON, UK\",\"longitude\":\"-0.137544\",\"latitude\":\"51.451771\",\"firstName\":\"PETER\",\"email_id\":\"PETER@skilrock.com\",\"type\":\"Back Office\",\"services\":\"DG Sale,DG Winning Claim,Scratch Sale,Scratch Winning,SportsLottery,Cash in, Cash out, High Winning\"}],\"lng\":\"0.127820\",\"errorMsg\":\"\",\"isSuccess\":true,\"lat\":\"51.508266\"}";
+
+	private LatLng localRouteBase;
+	private boolean isMarkerClickable = false;
+	public HashMap<LatLng, List<RetailerValueBean>> mapData;
+	private GoogleMap googleMap;
+	private CameraPosition position;
+	private LatLng latLng;
+	private CustomTextView state;
+	private CustomTextView city;
+	private Dialog dialog;
+	private View stateDialogView, cityDialogView;
+	private ListView stateListView, cityListView;
+	private StateModal stateModal;
+	private CityModal cityModal;
+	private RetailerListModal retailerListModal;
+	private ArrayList<RetailerList> retailerListModals = new ArrayList<RetailerList>();
+	private StateAdapter stateAdapter;
+	private CityAdapter cityAdapter;
+	private LatLng myCurrentLatLong;
+	private RelativeLayout mapLay;
+	private LinearLayout listLay;
+	private LinearLayout tabLay;
+	private ImageView currentLoc;
+	private RelativeLayout infoView;
+	private CustomTextView okay;
+	private LatLng latLongs[] = new LatLng[] {
+			new LatLng(28.624439, 77.135508), new LatLng(28.475763, 77.058604),
+			new LatLng(28.635308, 77.22496), new LatLng(28.546185, 77.264409),
+			new LatLng(28.483134, 77.081576), new LatLng(28.494061, 77.087822) };
+	private GPSTracker tracker;
+	// private float[] results = new float[3];
+	// private float[] minResult = new float[3];
+	protected MarkerOptions marker;
+	private Animation slideDown;
+	private Animation slideUp;
+	private ListView retailerListView;
+	private boolean isClickable;
+	private JSONObject data;
+	private Context context;
+	public PolylineOptions polyLineOptions;
+	public Polyline polyline;
+	private boolean isRetailerAddressClickabale = false;
+	private RelativeLayout stateLay, cityLay;
+	private RelativeLayout locationDesclay;
+	private CustomTextView name, add, contact, distance;
+	private CustomCheckedTextView retList, retMap;
+	private boolean isScratchRet;
+
+	private SharedPreferences preferences;
+
+	private SharedPreferences.Editor editor;
+	private GridView servicesGrid;
+
+	@Override
+	protected void onCreate(Bundle savedInstanceState) {
+		super.onCreate(savedInstanceState);
+		setContentView(R.layout.locate_retailer);
+		isScratchRet = getIntent().getBooleanExtra("isScratchRet", false);
+		setLRHeader();
+		setDrawerItems();
+		bindViewIds();
+		preferences = getSharedPreferences("name", 0);
+		if (preferences.getBoolean("show", false)) {
+			// Do Nothing
+		} else {
+			infoView.setVisibility(View.VISIBLE);
+			editor = getSharedPreferences("name", 0).edit();
+			editor.putBoolean("show", true);
+			editor.commit();
+
+		}
+
+		context = this;
+		headerNavigation.setImageResource(R.drawable.back);
+		headerNavigation.setOnTouchListener(null);
+		headerNavigation.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				finish();
+			}
+		});
+		filter.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				Toast.makeText(context, "Filter", 1000).show();
+			}
+		});
+		infoIcon.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				infoView.setVisibility(View.VISIBLE);
+			}
+		});
+		okay.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View v) {
+				infoView.setVisibility(View.GONE);
+			}
+		});
+		mapLay = (RelativeLayout) findViewById(R.id.mapLay);
+		retailerListView = (ListView) findViewById(R.id.ret_list_view);
+
+		retailerListView.setOnItemClickListener(new OnItemClickListener() {
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+
+				if (isRetailerAddressClickabale) {
+					showInfoAnim(locationDesclay, false, null);
+					headerSubText.setText("MAP VIEW");
+					listLay.setVisibility(View.GONE);
+					mapLay.setVisibility(View.VISIBLE);
+					retMap.setTextColor(getResources().getColor(
+							R.color.five_color_three));
+					retMap.setCompoundDrawablesWithIntrinsicBounds(null, null,
+							null,
+							getResources().getDrawable(R.drawable.strip_down));
+					retList.setTextColor(getResources().getColor(
+							R.color.five_color_one));
+					retList.setCompoundDrawablesWithIntrinsicBounds(null, null,
+							null,
+							getResources().getDrawable(R.drawable.strip_down_d));
+					listLay.setVisibility(View.GONE);
+					mapLay.setVisibility(View.VISIBLE);
+					LatLng latLng = new LatLng(Double
+							.parseDouble(retailerListModals.get(position)
+									.getLatitude()), Double
+							.parseDouble(retailerListModals.get(position)
+									.getLongitude()));
+					locateMap(latLng, 20);
+					RetailerList list = retailerListModals.get(position);
+					RetailerValueBean bean = new RetailerValueBean(list
+							.getAddr_1(), list.getPhoneNbr(), list
+							.getLastName(), list.getMobileNbr(), list
+							.getAddr_2(), list.getFirstName(), list
+							.getEmail_id());
+					showInfoAnim(locationDesclay, true, bean);
+				}
+			}
+		});
+		retList.setOnClickListener(new OnClickListener() {
+			@Override
+			public void onClick(View view) {
+				if (isClickable) {
+					headerSubText.setText("LIST VIEW");
+					listLay.setVisibility(View.VISIBLE);
+					mapLay.setVisibility(View.GONE);
+					retList.setTextColor(getResources().getColor(
+							R.color.five_color_three));
+					retList.setCompoundDrawablesWithIntrinsicBounds(null, null,
+							null,
+							getResources().getDrawable(R.drawable.strip_down));
+					retMap.setTextColor(getResources().getColor(
+							R.color.five_color_one));
+					retMap.setCompoundDrawablesWithIntrinsicBounds(null, null,
+							null,
+							getResources().getDrawable(R.drawable.strip_down_d));
+				} else {
+					Toast.makeText(getApplicationContext(),
+							"Select state and/or city first", 1000).show();
+				}
+			}
+		});
+		retMap.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View view) {
+				headerSubText.setText("MAP VIEW");
+				listLay.setVisibility(View.GONE);
+				mapLay.setVisibility(View.VISIBLE);
+				retMap.setTextColor(getResources().getColor(
+						R.color.five_color_three));
+				retMap.setCompoundDrawablesWithIntrinsicBounds(null, null,
+						null, getResources().getDrawable(R.drawable.strip_down));
+				retList.setTextColor(getResources().getColor(
+						R.color.five_color_one));
+				retList.setCompoundDrawablesWithIntrinsicBounds(null, null,
+						null,
+						getResources().getDrawable(R.drawable.strip_down_d));
+			}
+		});
+		currentLoc.setOnClickListener(new OnClickListener() {
+
+			@Override
+			public void onClick(View v) {
+				isMarkerClickable = false;
+				getNearestLocation();
+			}
+		});
+		listLay = (LinearLayout) findViewById(R.id.listLay);
+		MapsInitializer.initialize(getApplicationContext());
+		slideDown = AnimationUtils.loadAnimation(getApplicationContext(),
+				R.anim.slide_down);
+
+		slideUp = AnimationUtils.loadAnimation(getApplicationContext(),
+				R.anim.slide_up);
+
+		setUpMapIfNeeded();
+
+		stateDialogView = ((LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE))
+				.inflate(R.layout.custom_state_dialog, null);
+		cityDialogView = ((LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE))
+				.inflate(R.layout.custom_city_dialog, null);
+
+		stateListView = (ListView) stateDialogView
+				.findViewById(R.id.state_dialog_list);
+		stateListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				dialog.dismiss();
+			}
+		});
+		// stateListView.setOnItemClickListener(new OnItemClickListener() {
+		// @Override
+		// public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
+		// long arg3) {
+		// dialog.dismiss();
+		// state.setText(((TextView) ((LinearLayout) arg1).getChildAt(0))
+		// .getText().toString());
+		// // if (GlobalVariables.isLive) {
+		// String path =
+		// "com/skilrock/pms/mobile/lmsMgmt/action/fetchCityList.action?";
+		// JSONObject data = null;
+		// try {
+		// data = new JSONObject("{\"stateCode\":\""
+		// + stateModal.getStateList().get(pos).getStateCode()
+		// + "\",\"playerName\":\""
+		// + DataSource.Login.username + "\"}");
+		// } catch (JSONException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		// new WebTask(LocateRetailer.this, path, data, "CL",
+		// CityModal.class, "Getting city list").execute();
+		//
+		// // } else {
+		// // cityModal = (CityModal) GlobalVariables.fakeParser(
+		// // LocalJsons.cityJson, CityModal.class);
+		// // cityAdapter = new CityAdapter(LocateRetailer.this,
+		// // R.layout.main_list_row, cityModal.getCityList());
+		// // cityListView.setAdapter(cityAdapter);
+		// // city.setEnabled(true);
+		// //
+		// // }
+		// }
+		// });
+		cityListView = (ListView) cityDialogView
+				.findViewById(R.id.city_dialog_list);
+		cityListView.setOnItemClickListener(new OnItemClickListener() {
+
+			@Override
+			public void onItemClick(AdapterView<?> parent, View view,
+					int position, long id) {
+				dialog.dismiss();
+			}
+		});
+		// cityListView.setOnItemClickListener(new OnItemClickListener() {
+		// @Override
+		// public void onItemClick(AdapterView<?> arg0, View arg1, int pos,
+		// long arg3) {
+		// dialog.dismiss();
+		// city.setText(((TextView) ((LinearLayout) arg1).getChildAt(0))
+		// .getText().toString());
+		// // if (GlobalVariables.isLive) {
+		// String path =
+		// "com/skilrock/pms/mobile/lmsMgmt/action/fetchRetailerInfo.action?";
+		// JSONObject data = null;
+		// try {
+		// data = new JSONObject("{\"cityCode\":\""
+		// + cityModal.getCityList().get(pos).getCityCode()
+		// + "\",\"isRetailer\":true, \"playerName\":\""
+		// + DataSource.Login.username + "\"}");
+		// } catch (JSONException e) {
+		// // TODO Auto-generated catch block
+		// e.printStackTrace();
+		// }
+		// if (GooglePlayServicesUtil
+		// .isGooglePlayServicesAvailable(getApplicationContext()) !=
+		// ConnectionResult.SUCCESS) {
+		//
+		// new AlertDialog.Builder(LocateRetailer.this)
+		// .setIcon(android.R.drawable.ic_dialog_alert)
+		// .setTitle("Wait...!")
+		// .setMessage("Please install google play services.")
+		// .setCancelable(false)
+		// .setPositiveButton("Ok",
+		// new DialogInterface.OnClickListener() {
+		// @Override
+		// public void onClick(
+		// DialogInterface dialog,
+		// int which) {
+		// dialog.dismiss();
+		// }
+		// }).show();
+		//
+		// } else {
+		// new WebTask(LocateRetailer.this, path, data, "RL",
+		// RetailerListModal.class, "Getting Retailer list")
+		// .execute();
+		// }
+		//
+		// }
+		// });
+		dialog = new Dialog(LocateRetailer.this);
+		dialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
+		state = (CustomTextView) findViewById(R.id.state);
+		city = (CustomTextView) findViewById(R.id.city);
+		city.setEnabled(false);
+		stateLay.setOnClickListener(commonClickListener);
+		cityLay.setOnClickListener(commonClickListener);
+		city.setEnabled(false);
+		try {
+			data = new JSONObject("{\"playerName\":\""
+					+ DataSource.Login.username + "\"}");
+		} catch (JSONException e) {
+			e.printStackTrace();
+		}
+		googleMap.setOnMapClickListener(new OnMapClickListener() {
+
+			@Override
+			public void onMapClick(LatLng arg0) {
+				if (locationDesclay.getVisibility() == View.VISIBLE) {
+					showInfoAnim(locationDesclay, false, null);
+				}
+			}
+		});
+		googleMap.setOnMarkerClickListener(retailersClick);
+		// new WebTask(LocateRetailer.this, path, data, "SL", StateModal.class,
+		// "Getting State List").execute();
+	}
+
+	@Override
+	public void onResume() {
+		super.onResume();
+		selectedItemId = R.id.locate_ret;
+		setUpMapIfNeeded();
+		if (isScratchRet) {
+			drawerLayout
+					.setDrawerLockMode(DrawerLayout.LOCK_MODE_LOCKED_CLOSED);
+			googleMap.setOnMarkerClickListener(null);
+			RetailerValueBean modal = (RetailerValueBean) getIntent()
+					.getSerializableExtra("modal");
+			if (locationDesclay.getVisibility() != View.VISIBLE) {
+				showInfoAnim(locationDesclay, true, modal);
+			}
+			googleMap.setOnMarkerClickListener(scratchRetailersClick);
+			tabLay.setVisibility(View.GONE);
+			currentLoc.setVisibility(View.GONE);
+			filter.setVisibility(View.GONE);
+			headerText.setText("LOCATE RETAILER");
+			headerSubText.setText("SCRATCH RETAILER");
+			localRouteBase = new LatLng(Double.parseDouble(getIntent()
+					.getStringExtra("lat")), Double.parseDouble(getIntent()
+					.getStringExtra("lng")));
+			MarkerOptions markerOptions = new MarkerOptions();
+			markerOptions.position(localRouteBase);
+			markerOptions.icon(BitmapDescriptorFactory
+					.fromResource(R.drawable.sports));
+
+			googleMap.addMarker(markerOptions);
+			locateMap(localRouteBase, 12);
+			// getNearestLocation();
+		} else {
+			drawerLayout.setDrawerLockMode(DrawerLayout.LOCK_MODE_UNLOCKED);
+			googleMap.setOnMarkerClickListener(null);
+			googleMap.setOnMarkerClickListener(retailersClick);
+			tabLay.setVisibility(View.VISIBLE);
+			currentLoc.setVisibility(View.GONE);
+			filter.setVisibility(View.VISIBLE);
+			headerText.setText("LOCATE RETAILER");
+			headerSubText.setText("MAP VIEW");
+			getNearestLocation();
+			// if (locationDesclay.getVisibility() != View.VISIBLE) {
+			// showInfoAnim(locationDesclay, true, new RetailerValueBean(
+			// "London", "", "", "", "UK", "Your Current Location"
+			// + "", ""));
+			// }
+		}
+	}
+
+	private OnClickListener commonClickListener = new OnClickListener() {
+		@Override
+		public void onClick(View v) {
+			switch (v.getId()) {
+			case R.id.state_lay:
+				// new WebTask(
+				// LocateRetailer.this,
+				// "com/skilrock/pms/mobile/lmsMgmt/action/fetchStateList.action?",
+				// data, "SL", StateModal.class, "Getting State List")
+				// .execute();
+				// if (stateModal != null) {
+				// city.setEnabled(false);
+				dialog.setContentView(stateDialogView);
+				dialog.setTitle("Select State");
+				dialog.show();
+				// }
+				break;
+			case R.id.city_lay:
+				// if (cityModal != null) {
+				dialog.setContentView(cityDialogView);
+				dialog.setTitle("Select City");
+				dialog.show();
+				// }
+				break;
+			default:
+				break;
+			}
+		}
+	};
+
+	private void setUpMapIfNeeded() {
+		// Do a null check to confirm that we have not already instantiated the
+		// map.
+		if (googleMap == null) {
+			// Try to obtain the map from the SupportMapFragment.
+			googleMap = ((SupportMapFragment) getSupportFragmentManager()
+					.findFragmentById(R.id.map)).getMap();
+			// googleMap.getUiSettings().setZoomControlsEnabled(true);
+			// Check if we were successful in obtaining the map.
+			if (googleMap != null) {
+				setUpMap();
+			}
+		}
+	}
+
+	private void setUpMap() {
+		// googleMap.setMyLocationEnabled(true);
+		googleMap.getUiSettings().setMyLocationButtonEnabled(false);
+	}
+
+	@Override
+	public void onResult(String methodType, Object resultData,Dialog dialog) {
+		if (methodType.equals("SL")) {
+
+			stateModal = (StateModal) resultData;
+			if (stateModal != null) {
+				if (stateModal.isSuccess()) {
+					stateAdapter = new StateAdapter(LocateRetailer.this,
+							R.layout.main_list_row, stateModal.getStateList());
+					stateListView.setAdapter(stateAdapter);
+					city.setEnabled(true);
+					dialog.setContentView(stateDialogView);
+					dialog.setTitle("Select State");
+					dialog.show();
+				} else {
+					Toast.makeText(LocateRetailer.this,
+							stateModal.getErrorMsg(), Toast.LENGTH_SHORT)
+							.show();
+				}
+			} else {
+
+				Toast.makeText(LocateRetailer.this, "Server error!" + "",
+						Toast.LENGTH_SHORT).show();
+
+			}
+
+		}
+		if (methodType.equals("CL")) {
+
+			cityModal = (CityModal) resultData;
+
+			if (cityModal != null) {
+
+				if (cityModal.isSuccess()) {
+					cityAdapter = new CityAdapter(LocateRetailer.this,
+							R.layout.main_list_row, cityModal.getCityList());
+					cityListView.setAdapter(cityAdapter);
+					city.setEnabled(true);
+
+				} else {
+
+					Toast.makeText(LocateRetailer.this,
+							cityModal.getErrorMsg(), Toast.LENGTH_SHORT).show();
+				}
+			} else {
+
+				Toast.makeText(LocateRetailer.this, "Server error!" + "",
+						Toast.LENGTH_SHORT).show();
+
+			}
+
+		}
+
+		if (methodType.equals("RL")) {
+
+			retailerListModal = (RetailerListModal) resultData;
+			if (retailerListModal != null) {
+
+				if (retailerListModal.isSuccess()) {
+					isMarkerClickable = true;
+					if (retailerListModals != null) {
+						if (retailerListModals.size() > 0) {
+							retailerListModals.clear();
+						}
+					}
+					if (googleMap != null) {
+						googleMap.clear();
+					}
+					for (int i = 0; i < retailerListModal.getRetailerList()
+							.size(); i++) {
+
+						RetailerList retailerList = retailerListModal
+								.getRetailerList().get(i);
+
+						retailerListModals.add(retailerList);
+						latLng = new LatLng(
+								Double.parseDouble(retailerListModal
+										.getRetailerList().get(i).getLatitude()),
+								Double.parseDouble(retailerListModal
+										.getRetailerList().get(i)
+										.getLongitude()));
+						MarkerOptions marker = new MarkerOptions()
+								.position(latLng);
+
+						marker.icon(BitmapDescriptorFactory
+								.fromResource(R.drawable.sports));
+
+						googleMap.addMarker(marker);
+
+					}
+					googleMap.setInfoWindowAdapter(new MyInfoWindowAdapter(
+							retailerListModal.getRetailerList()));
+					isClickable = true;
+					locateMap(latLng, 12);
+					isRetailerAddressClickabale = true;
+					retailerListView.setAdapter(new RetailerAdapter(
+							getApplicationContext(),
+							R.layout.retailer_list_row, retailerListModals));
+				} else {
+					isMarkerClickable = false;
+					isClickable = true;
+					setUpMapIfNeeded();
+					// tracker = new GPSTracker(LocateRetailer.this);
+					// if (tracker.canGetLocation()) {
+					// navigateToCurrentLoc(tracker);
+					// } else {
+					// // tracker.showSettingsAlert();
+					// }
+					ArrayList<String> data = new ArrayList<String>();
+					data.add(retailerListModal.getErrorMsg());
+					isRetailerAddressClickabale = false;
+					retailerListView.setAdapter(new NoRetailerFoundAdapter(
+							getApplicationContext(),
+							android.R.layout.simple_list_item_1, data));
+					Toast.makeText(LocateRetailer.this,
+							retailerListModal.getErrorMsg(), Toast.LENGTH_SHORT)
+							.show();
+				}
+			} else {
+				isMarkerClickable = false;
+				Toast.makeText(LocateRetailer.this, "Server error!" + "",
+						Toast.LENGTH_SHORT).show();
+
+			}
+
+		}
+
+	}
+
+	private void locateMap(LatLng latLng, float zoom) {
+		position = new CameraPosition.Builder().zoom(zoom).target(latLng)
+				.build();
+		googleMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
+		googleMap
+				.animateCamera(CameraUpdateFactory.newCameraPosition(position));
+	}
+
+	private class NoRetailerFoundAdapter extends ArrayAdapter<String> {
+
+		HashMap<String, Integer> mIdMap = new HashMap<String, Integer>();
+
+		public NoRetailerFoundAdapter(Context context, int textViewResourceId,
+				List<String> objects) {
+			super(context, textViewResourceId, objects);
+			for (int i = 0; i < objects.size(); ++i) {
+				mIdMap.put(objects.get(i), i);
+			}
+		}
+
+		@Override
+		public long getItemId(int position) {
+			String item = getItem(position);
+			return mIdMap.get(item);
+		}
+
+		@Override
+		public boolean hasStableIds() {
+			return true;
+		}
+
+	}
+
+	private class MyInfoWindowAdapter implements InfoWindowAdapter {
+
+		List<RetailerList> retailerLists;
+		RetailerList retailerList;
+		int myPos;
+		TextView name, address, contact, email;
+
+		int integer = 0;
+
+		public MyInfoWindowAdapter(List<RetailerList> retailerListModal) {
+			// System.out.println("called one  " + (+integer));
+			mapData = new HashMap<LatLng, List<RetailerValueBean>>();
+			retailerLists = retailerListModal;
+			getPrepareRetailerListData(retailerLists);
+		}
+
+		@Override
+		public View getInfoWindow(Marker marker) {
+
+			// LinearLayout mLayout = new
+			// LinearLayout(getApplicationContext());
+			// mLayout.setLayoutParams(new LinearLayout.LayoutParams(
+			// LayoutParams.WRAP_CONTENT, LayoutParams.WRAP_CONTENT));
+			// mLayout.setOrientation(LinearLayout.VERTICAL);
+			View view = ((LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE))
+					.inflate(R.layout.map_info_window, null);
+			// ListView listView = (ListView)
+			// view.findViewById(R.id.main_menu);
+			// ((View) view.findViewById(R.id.menu_header))
+			// .setVisibility(View.GONE);
+			List<RetailerValueBean> mapAddressList = mapData.get(new LatLng(
+					latLongFormater(marker.getPosition().latitude),
+					latLongFormater(marker.getPosition().longitude)));
+
+			// System.out.println(latLongFormater(marker.getPosition().latitude)
+			// + "==getting==="
+			// + latLongFormater(marker.getPosition().longitude));
+			if (mapAddressList != null) {
+				if (mapAddressList.size() > 0) {
+					RetailerValueBean showData = mapAddressList.get(0);
+					name = (TextView) view.findViewById(R.id.mapfirstLastName);
+					address = (TextView) view.findViewById(R.id.mapaddress);
+					contact = (TextView) view.findViewById(R.id.mapcontact);
+					email = (TextView) view.findViewById(R.id.mapemail);
+
+					name.setText(showData.getFirstName() + " "
+							+ showData.getLastName());
+
+					address.setText(showData.getAddr_1() + showData.getAddr_2());
+					if (showData.getPhoneNbr().length() > 1
+							&& showData.getMobileNbr().length() > 1) {
+						contact.setText(showData.getPhoneNbr() + ", "
+								+ showData.getMobileNbr());
+					} else if (showData.getMobileNbr().length() > 1
+							&& !(showData.getPhoneNbr().length() > 1)) {
+						contact.setText(showData.getMobileNbr());
+
+					} else if (showData.getPhoneNbr().length() > 1
+							&& !(showData.getMobileNbr().length() > 1)) {
+						contact.setText(showData.getPhoneNbr());
+
+					} else if (!(showData.getPhoneNbr().length() > 1)
+							&& !(showData.getMobileNbr().length() > 1)) {
+						contact.setVisibility(TextView.GONE);
+					} else {
+						contact.setVisibility(TextView.GONE);
+
+					}
+					email.setText(showData.getEmail_id());
+
+				}
+				// return mLayout;
+				return null;
+			} else {
+
+				TextView me = new TextView(getApplicationContext());
+				me.setText("");
+				return null;
+
+			}
+
+		}
+
+		@Override
+		public View getInfoContents(Marker arg0) {
+
+			return null;
+		}
+
+		private void getPrepareRetailerListData(
+				List<RetailerList> retailerLists2) {
+			List<RetailerValueBean> mRetailerList = new ArrayList<RetailerValueBean>();
+
+			for (int i = 0; i < retailerLists2.size(); i++) {
+
+				mRetailerList.add(new RetailerValueBean(retailerLists2.get(i)
+						.getAddr_1(), retailerLists2.get(i).getPhoneNbr(),
+						retailerLists2.get(i).getLastName(), retailerLists2
+								.get(i).getMobileNbr(), retailerLists2.get(i)
+								.getAddr_2(), retailerLists2.get(i)
+								.getFirstName(), retailerLists2.get(i)
+								.getEmail_id(), new LatLng(
+								latLongFormater(Double
+										.parseDouble(retailerLists2.get(i)
+												.getLatitude())),
+								latLongFormater(Double
+										.parseDouble(retailerLists2.get(i)
+												.getLongitude())))));
+
+				System.out.println(latLongFormater(Double
+						.parseDouble(retailerLists2.get(i).getLatitude()))
+						+ "======"
+						+ latLongFormater(Double.parseDouble(retailerLists2
+								.get(i).getLongitude())));
+
+			}
+
+			for (int j = 0; j < mRetailerList.size(); j++) {
+				RetailerValueBean mBean = mRetailerList.get(j);
+				if (!mapData.containsKey(mBean.getLatLng())) {
+					List<RetailerValueBean> retList = new ArrayList<RetailerValueBean>();
+					RetailerValueBean tempData = new RetailerValueBean(
+							mBean.getAddr_1(), mBean.getPhoneNbr(),
+							mBean.getLastName(), mBean.getMobileNbr(),
+							mBean.getAddr_2(), mBean.getFirstName(),
+							mBean.getEmail_id());
+					retList.add(tempData);
+					if (retList.size() > 0)
+						mapData.put(mBean.getLatLng(), retList);
+				} else {
+
+					List<RetailerValueBean> retList = new ArrayList<RetailerValueBean>();
+
+					retList.addAll(mapData.get(mBean.getLatLng()));
+					RetailerValueBean tempData = new RetailerValueBean(
+							mBean.getAddr_1(), mBean.getPhoneNbr(),
+							mBean.getLastName(), mBean.getMobileNbr(),
+							mBean.getAddr_2(), "(" + j + ")"
+									+ mBean.getFirstName(), mBean.getEmail_id());
+					retList.add(tempData);
+
+					System.out.println("Duplicate size ===" + retList.size());
+					if (retList.size() > 0)
+						mapData.put(mBean.getLatLng(), retList);
+				}
+			}
+
+		}
+	}
+
+	// Retailer Data bean to show on Map
+
+	// Method to formatting latitude/longitude value
+	private double latLongFormater(double value) {
+
+		return round(value, 6);
+		// return Double.parseDouble(new
+		// DecimalFormat("##.#####").format(value));
+	}
+
+	private class InfoListAdapter extends ArrayAdapter<RetailerValueBean> {
+		List<RetailerValueBean> objects;
+
+		public InfoListAdapter(Context context, int resource,
+				List<RetailerValueBean> objects) {
+			super(context, resource, objects);
+			this.objects = objects;
+		}
+
+		@Override
+		public View getView(int position, View convertView, ViewGroup parent) {
+			Holder holder = null;
+			RetailerValueBean showData = objects.get(position);
+			if (convertView == null) {
+				holder = new Holder();
+				convertView = ((LayoutInflater) getSystemService(LAYOUT_INFLATER_SERVICE))
+						.inflate(R.layout.map_info_window, null);
+				holder.name = (TextView) convertView
+						.findViewById(R.id.mapfirstLastName);
+				holder.address = (TextView) convertView
+						.findViewById(R.id.mapaddress);
+				holder.contact = (TextView) convertView
+						.findViewById(R.id.mapcontact);
+				holder.email = (TextView) convertView
+						.findViewById(R.id.mapemail);
+				convertView.setTag(holder);
+			} else {
+				holder = (Holder) convertView.getTag();
+			}
+			holder.name.setText(showData.getFirstName() + " "
+					+ showData.getLastName());
+
+			holder.address.setText(showData.getAddr_1() + showData.getAddr_2());
+			if (showData.getPhoneNbr().length() > 1
+					&& showData.getMobileNbr().length() > 1) {
+				holder.contact.setText(showData.getPhoneNbr() + ", "
+						+ showData.getMobileNbr());
+			} else if (showData.getMobileNbr().length() > 1
+					&& !(showData.getPhoneNbr().length() > 1)) {
+				holder.contact.setText(showData.getMobileNbr());
+
+			} else if (showData.getPhoneNbr().length() > 1
+					&& !(showData.getMobileNbr().length() > 1)) {
+				holder.contact.setText(showData.getPhoneNbr());
+
+			} else if (!(showData.getPhoneNbr().length() > 1)
+					&& !(showData.getMobileNbr().length() > 1)) {
+				holder.contact.setVisibility(TextView.GONE);
+			} else {
+				holder.contact.setVisibility(TextView.GONE);
+
+			}
+			holder.email.setText(showData.getEmail_id());
+			return convertView;
+		}
+
+		class Holder {
+			TextView name, address, contact, email;
+		}
+	}
+
+	public Bitmap writeOnDrawable(int drawableId, String text) {
+
+		Bitmap bm = BitmapFactory.decodeResource(getResources(), drawableId)
+				.copy(Bitmap.Config.ARGB_8888, true);
+
+		Paint paint = new Paint();
+		paint.setStyle(Style.FILL);
+		paint.setColor(Color.BLACK);
+		paint.setTextSize(20);
+
+		Canvas canvas = new Canvas(bm);
+		canvas.drawText(text, canvas.getWidth() / 2, canvas.getHeight() / 2,
+				paint);
+
+		return bm;
+	}
+
+	private Bitmap writeTextOnDrawable(int drawableId, String text) {
+
+		Bitmap bm = BitmapFactory.decodeResource(getResources(), drawableId)
+				.copy(Bitmap.Config.ARGB_8888, true);
+
+		Typeface tf = Typeface.create("Helvetica", Typeface.BOLD);
+
+		Paint paint = new Paint();
+		paint.setStyle(Style.FILL);
+		paint.setColor(Color.WHITE);
+		paint.setTypeface(tf);
+		paint.setTextAlign(Align.CENTER);
+		paint.setTextSize(convertToPixels(22));
+
+		Rect textRect = new Rect();
+		paint.getTextBounds(text, 0, text.length(), textRect);
+
+		Canvas canvas = new Canvas(bm);
+
+		// If the text is bigger than the canvas , reduce the font size
+		if (textRect.width() >= (canvas.getWidth() - 4)) // the padding on
+															// either sides is
+															// considered as 4,
+															// so as to
+															// appropriately fit
+															// in the text
+			paint.setTextSize(convertToPixels(14)); // Scaling needs to
+													// be used for
+													// different dpi's
+
+		// Calculate the positions
+		int xPos = (canvas.getWidth() / 2) - 2; // -2 is for regulating the x
+												// position offset
+
+		// "- ((paint.descent() + paint.ascent()) / 2)" is the distance from the
+		// baseline to the center.
+		int yPos = (int) ((canvas.getHeight() / 2) - ((paint.descent() + paint
+				.ascent()) / 2));
+
+		canvas.drawText(text, xPos, yPos, paint);
+
+		return bm;
+	}
+
+	public int convertToPixels(int nDP) {
+		final float conversionScale = getResources().getDisplayMetrics().density;
+
+		return (int) ((nDP * conversionScale) + 0.5f);
+
+	}
+
+	private class ReadTask extends AsyncTask<String, Void, String> {
+		@Override
+		protected String doInBackground(String... url) {
+			String data = "";
+			try {
+				HttpConnection http = new HttpConnection();
+				data = http.readUrl(url[0]);
+			} catch (Exception e) {
+				// Log.d("Background Task", e.toString());
+			}
+			return data;
+		}
+
+		@Override
+		protected void onPostExecute(String result) {
+			super.onPostExecute(result);
+			new ParserTask().execute(result);
+		}
+	}
+
+	private class ParserTask extends
+			AsyncTask<String, Integer, PolylineOptions> {
+
+		@Override
+		protected PolylineOptions doInBackground(String... jsonData) {
+
+			JSONObject jObject;
+			List<List<HashMap<String, String>>> routes = null;
+
+			try {
+				jObject = new JSONObject(jsonData[0]);
+				PathJSONParser parser = new PathJSONParser();
+				routes = parser.parse(jObject);
+			} catch (Exception e) {
+				// e.printStackTrace();
+			}
+
+			ArrayList<LatLng> points = null;
+			polyLineOptions = null;
+			// traversing through routes
+			if (routes != null && routes.size() > 0) {
+				for (int i = 0; i < routes.size(); i++) {
+					points = new ArrayList<LatLng>();
+
+					List<HashMap<String, String>> path = routes.get(i);
+
+					// System.out.println("path-----------" + path.size());
+
+					if (!(path.size() > 7000)) {
+						polyLineOptions = new PolylineOptions();
+						for (int j = 0; j < path.size(); j++) {
+							HashMap<String, String> point = path.get(j);
+
+							double lat = Double.parseDouble(point.get("lat"));
+							double lng = Double.parseDouble(point.get("lng"));
+							LatLng position = new LatLng(lat, lng);
+							// Log.i("loc", position + "");
+							points.add(position);
+						}
+					}
+					if (points != null) {
+						polyLineOptions.addAll(points);
+						polyLineOptions.width(5);
+						polyLineOptions.color(Color.GREEN);
+					}
+				}
+			}
+
+			return polyLineOptions;
+		}
+
+		@Override
+		protected void onPostExecute(PolylineOptions routes) {
+			if (routes != null) {
+
+				try {
+					polyline = googleMap.addPolyline(routes);
+				} catch (OutOfMemoryError e) {
+					// Toast.makeText(getApplicationContext(),
+					// "No Routes Found",
+					// Toast.LENGTH_SHORT).show();
+				}
+			} else {
+				// Toast.makeText(getApplicationContext(), "No Routes Found",
+				// Toast.LENGTH_SHORT).show();
+			}
+
+		}
+
+	}
+
+	private String getMapsApiDirectionsUrl(LatLng src, LatLng dest) {
+		String waypoints = "waypoints=optimize:true&origin=" + src.latitude
+				+ "," + src.longitude + "&destination=" + dest.latitude + ","
+				+ dest.longitude;
+
+		String sensor = "sensor=false";
+		String params = waypoints + "&" + sensor;
+		String output = "json";
+		String url = "https://maps.googleapis.com/maps/api/directions/"
+				+ output + "?" + params;
+		// Log.i("url", url);
+		return url;
+	}
+
+	public void getNearestLocation() {
+		GPSTracker tracker = new GPSTracker(LocateRetailer.this);
+
+		if (tracker.canGetLocation()) {
+			RetailerListModal modal = new Gson().fromJson(fakeJson,
+					RetailerListModal.class);
+			modal.setLat(tracker.getLatitude() + "");
+			modal.setLat(tracker.getLongitude() + "");
+			drawMaps(modal);
+			// String path =
+			// "com/skilrock/pms/mobile/lmsMgmt/action/fetchNearByRetailerInfo.action?";
+			// String data = "{\"playerName\":\"dushyant"
+			// + "\", \"isGps\":\"ON\",\"lat\":\"" + tracker.getLatitude()
+			// + "\",\"lng\":\"" + tracker.getLongitude() + "\"}";
+			// JSONObject jsonObject;
+			// try {
+			// jsonObject = new JSONObject("");
+			// new WebTask(LocateRetailer.this, path, jsonObject, "NBL",
+			// RetailerListModal.class, "Getting Nearest Retailers...")
+			// .execute();
+			// } catch (JSONException e) {
+			// TODO Auto-generated catch block
+			// e.printStackTrace();
+			// }
+			// navigateToCurrentLoc(tracker);
+		} else {
+
+			AlertDialog.Builder alertDialog = new AlertDialog.Builder(
+					LocateRetailer.this);
+
+			// Setting Dialog Title
+			alertDialog.setTitle("GPS");
+
+			// Setting Dialog Message
+			alertDialog.setMessage("Network provider is diabled, enable it!");
+
+			// On Pressing Setting button
+			alertDialog.setPositiveButton("Settings",
+					new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							Intent intent = new Intent(
+									Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+							startActivity(intent);
+						}
+					});
+
+			// On pressing cancel button
+			alertDialog.setNegativeButton("Cancel",
+					new DialogInterface.OnClickListener() {
+						@Override
+						public void onClick(DialogInterface dialog, int which) {
+							dialog.cancel();
+							RetailerListModal modal = new Gson().fromJson(
+									fakeJson, RetailerListModal.class);
+							drawMaps(modal);
+							// String path =
+							// "com/skilrock/pms/mobile/lmsMgmt/action/fetchNearByRetailerInfo.action?";
+							// String data = "{\"playerName\":\""
+							// + DataSource.Login.username
+							// + "\", \"isGps\":\"OFF\",\"lat\":\"" + 0.0
+							// + "\",\"lng\":\"" + 0.0 + "\"}";
+							// JSONObject jsonObject;
+							// try {
+							// jsonObject = new JSONObject(data);
+							// new WebTask(LocateRetailer.this, path,
+							// jsonObject, "NBL",
+							// RetailerListModal.class,
+							// "Getting Nearest Retailers...")
+							// .execute();
+							// } catch (JSONException e) {
+							// // TODO Auto-generated catch block
+							// e.printStackTrace();
+							// }
+						}
+					});
+
+			alertDialog.show();
+		}
+	}
+
+	public static double round(double value, int places) {
+		if (places < 0)
+			throw new IllegalArgumentException();
+
+		long factor = (long) Math.pow(10, places);
+		value = value * factor;
+		long tmp = Math.round(value);
+		return (double) tmp / factor;
+	}
+
+	private void bindViewIds() {
+		servicesGrid = (GridView) findViewById(R.id.service_grid);
+		okay = (CustomTextView) findViewById(R.id.okay);
+		infoView = (RelativeLayout) findViewById(R.id.info_view);
+		currentLoc = (ImageView) findViewById(R.id.imageView1);
+		tabLay = (LinearLayout) findViewById(R.id.four_opns);
+		name = (CustomTextView) findViewById(R.id.ret_name);
+		add = (CustomTextView) findViewById(R.id.ret_add);
+		contact = (CustomTextView) findViewById(R.id.ret_contact);
+		distance = (CustomTextView) findViewById(R.id.distance);
+		locationDesclay = (RelativeLayout) findViewById(R.id.location_desc_lay);
+		((CustomTextView) findViewById(R.id.state_icon)).getCompoundDrawables()[2]
+				.setColorFilter(
+						getResources().getColor(R.color.five_color_three),
+						Mode.SRC_IN);
+		((CustomTextView) findViewById(R.id.city_icon)).getCompoundDrawables()[2]
+				.setColorFilter(
+						getResources().getColor(R.color.five_color_three),
+						Mode.SRC_IN);
+		stateLay = (RelativeLayout) findViewById(R.id.state_lay);
+		cityLay = (RelativeLayout) findViewById(R.id.city_lay);
+		retList = (CustomCheckedTextView) findViewById(R.id.ret_list);
+		retMap = (CustomCheckedTextView) findViewById(R.id.ret_map);
+	}
+
+	@Override
+	public void finish() {
+		super.finish();
+		selectedItemId = -1;
+		overridePendingTransition(GlobalVariables.startAmin,
+				GlobalVariables.endAmin);
+	}
+
+	private void showInfoAnim(View view, boolean isOpen, RetailerValueBean list) {
+		if (isOpen) {
+			if (list != null) {
+				Animation btn_toogleanim = AnimationUtils.loadAnimation(
+						getApplicationContext(), R.anim.anim_translate);
+				view.startAnimation(btn_toogleanim);
+				view.setVisibility(View.VISIBLE);
+				name.setText(list.getFirstName() + " " + list.getLastName());
+				add.setText(list.getAddr_1() + ", " + list.getAddr_2());
+				if (list.getPhoneNbr().length() > 1
+						&& list.getMobileNbr().length() > 1) {
+					contact.setText(list.getEmail_id() + "\n" + "Phone : "
+							+ list.getPhoneNbr() + "\n" + "Mobile : "
+							+ list.getMobileNbr());
+				} else if (list.getPhoneNbr().length() > 1
+						&& !(list.getMobileNbr().length() > 1)) {
+					contact.setText(list.getEmail_id() + "\n" + "Phone : "
+							+ list.getPhoneNbr());
+				} else if (!(list.getPhoneNbr().length() > 1)
+						&& (list.getMobileNbr().length() > 1)) {
+					contact.setText(list.getEmail_id() + "\n" + "Mobile : "
+							+ list.getMobileNbr());
+				} else if (!(list.getPhoneNbr().length() > 1)
+						&& !(list.getMobileNbr().length() > 1)) {
+					contact.setText(list.getEmail_id());
+				} else {
+					contact.setText(list.getEmail_id());
+
+				}
+				if (list.getMobileNbr().equals("")) {
+					contact.setVisibility(View.GONE);
+				}
+			}
+		} else {
+			Animation btn_toogleanim = AnimationUtils.loadAnimation(
+					getApplicationContext(), R.anim.anim_translate_return);
+			view.startAnimation(btn_toogleanim);
+			view.setVisibility(View.GONE);
+		}
+	}
+
+	OnMarkerClickListener retailersClick = new OnMarkerClickListener() {
+
+		@Override
+		public boolean onMarkerClick(Marker marker) {
+			// drawerLayout.openDrawer(itemListView);
+
+			if (localRouteBase != null) {
+				if (isMarkerClickable) {
+					LatLng latLng = new LatLng(
+							latLongFormater(marker.getPosition().latitude),
+							latLongFormater(marker.getPosition().longitude));
+					RetailerValueBean data = null;
+					try {
+						data = mapData.get(latLng).get(0);
+						// if (locationDesclay.getVisibility() != View.VISIBLE)
+						// {
+						showInfoAnim(locationDesclay, true, data);
+						// }
+					} catch (Exception e) {
+						e.printStackTrace();
+						// data = new RetailerValueBean("London", "", "", "",
+						// "UK", "Your Current Location" + "", "");
+						// if (locationDesclay.getVisibility() != View.VISIBLE)
+						// {
+						// showInfoAnim(locationDesclay, true, data);
+						// }
+					}
+					LatLng current = new LatLng(
+							latLongFormater(localRouteBase.latitude),
+							latLongFormater(localRouteBase.longitude));
+					if (!(latLng.equals(current))) {
+						if ((polyline != null)) {
+							polyline.remove();
+						}
+						String url = getMapsApiDirectionsUrl(localRouteBase,
+								marker.getPosition());
+						ReadTask downloadTask = new ReadTask();
+						downloadTask.execute(url);
+					}
+				}
+			}
+			return false;
+		}
+	};
+	OnMarkerClickListener scratchRetailersClick = new OnMarkerClickListener() {
+		@Override
+		public boolean onMarkerClick(Marker marker) {
+			RetailerValueBean modal = (RetailerValueBean) getIntent()
+					.getSerializableExtra("modal");
+			if (locationDesclay.getVisibility() != View.VISIBLE) {
+				showInfoAnim(locationDesclay, true, modal);
+			}
+			return false;
+		}
+	};
+
+	private void drawMaps(RetailerListModal resultData) {
+
+		retailerListModal = resultData;
+		// retailerListModal = new Gson()
+		// .fromJson(
+		// "{\"retailerList\":[{\"addr_1\":\"101 nelson mandela\",\"phoneNbr\":\"772922465\",\"lastName\":\"Ncube\",\"mobileNbr\":\"0\",\"addr_2\":\"101 nelson mandela\",\"longitude\":\"28.6247220\",\"latitude\":\"-20.0183329\",\"firstName\":\"Carolline\",\"email_id\":\"kingmupatsi@gmail.com\"},{\"addr_1\":\"Coppacabana Rank Corner speke and Chinhoyi street\",\"phoneNbr\":\"0\",\"lastName\":\"Geza\",\"mobileNbr\":\"263772979829\",\"addr_2\":\"\",\"longitude\":\"0.000000\",\"latitude\":\"0.000000\",\"firstName\":\"Gilbert\",\"email_id\":\"king@africalotto.co.zw\"},{\"addr_1\":\"54654\",\"phoneNbr\":\"54654654\",\"lastName\":\"hypertwo\",\"mobileNbr\":\"0\",\"addr_2\":\"54654\",\"longitude\":\"28.6866047\",\"latitude\":\"-20.2110224\",\"firstName\":\"tm\",\"email_id\":\"vimbai@africabet.co.zw\"},{\"addr_1\":\"67586\",\"phoneNbr\":\"0\",\"lastName\":\"KAROI\",\"mobileNbr\":\"0\",\"addr_2\":\"\",\"longitude\":\"28.6437392\",\"latitude\":\"-20.1496508\",\"firstName\":\"TM\",\"email_id\":\"cathy@africalotto.co.zw\"}],\"errorMsg\":\"\",\"isSuccess\":true,\"lng\":\"28.6437392\",\"lat\":\"-20.1496508\"}",
+		// RetailerListModal.class);
+		if (retailerListModal != null) {
+
+			if (retailerListModal.isSuccess()) {
+				isMarkerClickable = true;
+				ArrayList<CityList> cityLists = new ArrayList<CityModal.CityList>();
+				CityModal.CityList list = new CityModal().new CityList();
+				list.setCityName("London");
+				list.setCityCode("101");
+				cityLists.add(list);
+				cityAdapter = new CityAdapter(LocateRetailer.this,
+						R.layout.main_list_row, cityLists);
+				cityListView.setAdapter(cityAdapter);
+
+				ArrayList<StateList> stateLists = new ArrayList<StateModal.StateList>();
+				StateModal.StateList statelist = new StateModal().new StateList();
+				statelist.setStateName("UK");
+				statelist.setStateCode("101");
+				stateLists.add(statelist);
+				stateAdapter = new StateAdapter(LocateRetailer.this,
+						R.layout.main_list_row, stateLists);
+				stateListView.setAdapter(stateAdapter);
+				city.setText(list.getCityName());
+				state.setText(statelist.getStateName());
+				if (retailerListModals != null) {
+					if (retailerListModals.size() > 0) {
+						retailerListModals.clear();
+					}
+				}
+				for (int i = 0; i < retailerListModal.getRetailerList().size(); i++) {
+
+					RetailerList retailerList = retailerListModal
+							.getRetailerList().get(i);
+
+					retailerListModals.add(retailerList);
+					latLng = new LatLng(Double.parseDouble(retailerListModal
+							.getRetailerList().get(i).getLatitude()),
+							Double.parseDouble(retailerListModal
+									.getRetailerList().get(i).getLongitude()));
+					MarkerOptions marker = new MarkerOptions().position(latLng);
+					marker.icon(BitmapDescriptorFactory
+							.fromResource(R.drawable.sports));
+
+					googleMap.addMarker(marker);
+
+				}
+				googleMap.setInfoWindowAdapter(new MyInfoWindowAdapter(
+						retailerListModal.getRetailerList()));
+				isClickable = true;
+				localRouteBase = new LatLng(
+						Double.parseDouble(retailerListModal.getLat()),
+						Double.parseDouble(retailerListModal.getLng()));
+				MarkerOptions markerOptions = new MarkerOptions();
+				markerOptions.position(localRouteBase);
+				markerOptions.icon(BitmapDescriptorFactory
+						.fromResource(R.drawable.my_location_point));
+
+				googleMap.addMarker(markerOptions);
+				locateMap(localRouteBase, 12);
+				isRetailerAddressClickabale = true;
+				retailerListView.setAdapter(new RetailerAdapter(
+						getApplicationContext(), R.layout.retailer_list_row,
+						retailerListModals));
+			} else {
+				isMarkerClickable = false;
+				Toast.makeText(LocateRetailer.this,
+						retailerListModal.getErrorMsg(), Toast.LENGTH_SHORT)
+						.show();
+			}
+		} else {
+			isMarkerClickable = false;
+			Toast.makeText(LocateRetailer.this, "Server error!" + "",
+					Toast.LENGTH_SHORT).show();
+
+		}
+
+	}
+
+}

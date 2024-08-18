@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/draw_res_main_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/stat_bal_parent_height"
+        android:gravity="center"
+        android:padding="2dp">
+
+        <LinearLayout
+            android:id="@+id/draw_res_sub_lay"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:padding="2dp">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/match"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/stats_ball"
+                android:gravity="center"
+                android:text="25"
+                android:textColor="#fff"
+                android:textSize="@dimen/stats_ball_text" />
+        </LinearLayout>
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/winner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="500"
+            android:textColor="#4C4C4C"
+            android:textSize="@dimen/stats_ball_text" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/amount"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="30 draws ago"
+            android:textColor="#4C4C4C"
+            android:textSize="@dimen/stats_ball_text" />
+    </LinearLayout>
+
+</LinearLayout>

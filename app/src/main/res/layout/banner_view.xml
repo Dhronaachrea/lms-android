@@ -1,0 +1,35 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <!-- android:background="#3C94FE" -->
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pagerview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/dotsView"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="@color/banner_footer_color"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="5dip" >
+    </LinearLayout>
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/time_remaining"
+        android:layout_width="10dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:background="#80ff0000"
+        android:gravity="center"
+        android:text="5"
+        android:textColor="#fff"
+        android:visibility="gone" >
+    </com.skilrock.customui.CustomTextView>
+
+</FrameLayout>

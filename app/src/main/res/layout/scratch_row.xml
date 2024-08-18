@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <!-- ListRow Left sied Thumbnail image -->
+
+        <LinearLayout
+            android:id="@+id/thumbnail"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="5dip"
+            android:padding="3dip">
+
+            <ImageView
+                android:id="@+id/list_image"
+                android:layout_width="@dimen/scratch_thum_size"
+                android:layout_height="@dimen/scratch_thum_size"
+                android:layout_gravity="center_vertical" />
+        </LinearLayout>
+
+        <!-- Title Of Song -->
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/dec"
+            android:layout_alignTop="@+id/thumbnail"
+            android:layout_toLeftOf="@+id/duration"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Rihanna Love the way lie"
+            android:textColor="@color/sc_title"
+            android:textSize="17sp"
+            android:textStyle="bold"
+            android:typeface="sans" />
+
+        <!-- Artist Name -->
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/artist"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_below="@+id/title"
+            android:layout_marginRight="5dip"
+            android:layout_marginTop="1dip"
+
+            android:layout_toLeftOf="@+id/duration"
+            android:layout_toRightOf="@+id/thumbnail"
+            android:text="Just gona stand there and ..."
+            android:textColor="@color/sc_sub" />
+
+        <!-- Rightend Duration -->
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/duration"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignTop="@id/title"
+            android:layout_marginRight="5dip"
+            android:gravity="right"
+            android:text="5:45"
+            android:textColor="@color/amt_color"
+            android:textStyle="bold" />
+
+        <!-- Rightend Arrow -->
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ticket_shadow">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:background="@drawable/tkt_bottom" />
+    </LinearLayout>
+</LinearLayout>

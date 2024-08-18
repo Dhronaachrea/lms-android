@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/drawNameLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/txn_cal_month"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="@dimen/_2sdp">
+
+            <ImageView
+                android:id="@+id/isWinIcon"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.2"
+                android:src="@drawable/money_icon"
+                android:visibility="gone" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/winText"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/ticket_amt_color"
+                android:textSize="@dimen/_10sdp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:isTransaction="true"
+                app:text_style="bold" />
+
+            <LinearLayout
+                android:id="@+id/ll_draw_name"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center"
+                android:orientation="vertical">
+
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/draw_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="BONANZA"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/draw_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="25 Dec 14:30 "
+                    android:textAppearance="?android:attr/textAppearanceMedium"
+                    android:textColor="@color/white" />
+            </LinearLayout>
+
+            <!--<HorizontalScrollView-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_weight="0.2">-->
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/winAmnt"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:gravity="center"
+                android:text="GHS\n19116.90"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/ticket_amt_color"
+                android:textSize="@dimen/_14sdp"
+                android:textStyle="bold"
+                android:visibility="gone"
+                app:isTransaction="true"
+                app:text_style="bold" />
+            <!--</HorizontalScrollView>-->
+
+        </LinearLayout>
+
+        <!--<com.skilrock.customui.CustomTextView-->
+        <!--android:id="@+id/draw_status"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center|right"-->
+        <!--android:gravity="right"-->
+        <!--android:text="Lost" -->
+        <!--android:textColor="@color/five_color_one"-->
+        <!--android:textSize="15sp" />-->
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:id="@+id/ll_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/grey" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal">
+
+            <com.skilrock.customui.CustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:gravity="left|center"
+                android:text="@string/bet_amount_txt"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/tkt_text_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/panel_price"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_alignParentRight="true"
+                android:gravity="left|center_vertical"
+                android:text="12"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txn_cal_year"
+                android:textStyle="bold"
+                app:text_style="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

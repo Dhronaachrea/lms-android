@@ -1,0 +1,56 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_bg_color">
+
+    <include
+        android:id="@+id/header_id"
+        layout="@layout/dialog_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <ScrollView
+        android:id="@+id/scroll_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_id">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.skilrock.customui.CustomTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/five_color_three"
+                android:padding="5dp"
+                android:text="@string/types_ret_filter_dial"
+                android:textColor="#fff"></com.skilrock.customui.CustomTextView>
+
+            <LinearLayout
+                android:id="@+id/type_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+
+
+            <com.skilrock.customui.CustomTextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/five_color_three"
+                android:padding="5dp"
+                android:text="@string/serv_ret_filter_dial"
+                android:textColor="#fff"></com.skilrock.customui.CustomTextView>
+
+            <LinearLayout
+                android:id="@+id/service_list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"></LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

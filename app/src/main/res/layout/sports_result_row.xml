@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dip"
+    android:background="@drawable/basic_button_bg_normal"
+    android:orientation="vertical"
+    android:padding="5dp" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:orientation="vertical" >
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/home_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/vs"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:maxLines="2"
+                android:padding="2dip"
+                android:text="India"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/vs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:padding="2dip"
+                android:text="VS"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/away_team"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/vs"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="2"
+                android:padding="2dip"
+                android:text="Pak"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/result"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/buttons_normal"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="2dip"
+            android:text="India Won the match"
+            android:textColor="@color/text_view_text_color"
+            android:textSize="16sp" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/league_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_toLeftOf="@+id/venue"
+                android:ellipsize="end"
+                android:gravity="center|left"
+                android:maxLines="2"
+                android:paddingRight="10dp"
+                android:text="Indian Premier Leauge "
+                android:textColor="@color/header_text_color" />
+
+            <TextView
+                android:id="@+id/venue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:ellipsize="end"
+                android:gravity="center"
+                android:maxLines="2"
+                android:paddingRight="10dp"
+                android:text="R.K Khanna"
+                android:textColor="@color/header_text_color"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/event_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_toRightOf="@+id/venue"
+                android:ellipsize="end"
+                android:gravity="center|right"
+                android:maxLines="2"
+                android:text="14:30, 10 Sept 2014"
+                android:textColor="@color/header_text_color" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.skilrock.customui.CustomTextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/footer"
+    android:layout_width="match_parent"
+    android:layout_height="40dp"
+    android:layout_alignParentBottom="true"
+    android:background="@color/header_color"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:text="© WINLOT 2014"
+    android:textColor="#fff"
+    android:textStyle="bold"
+    android:visibility="gone" />

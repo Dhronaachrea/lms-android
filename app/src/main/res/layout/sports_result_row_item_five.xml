@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF">
+
+        <com.skilrock.customui.RobotoTextView
+            android:id="@+id/txt_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/spl_result_bg_time"
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="5dp"
+            android:paddingTop="1dp"
+            android:text="14:30, 10 sep"
+            android:textColor="@color/spl_result_text_time"
+            android:textSize="@dimen/_10sdp"
+            app:typeface="roboto_regular" />
+
+        <com.skilrock.customui.RobotoTextView
+            android:id="@+id/txt_venue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/txt_time"
+            android:gravity="right"
+            android:paddingBottom="1dp"
+            android:paddingLeft="2dp"
+            android:paddingRight="2dp"
+            android:paddingTop="1dp"
+            android:text="African Premier League, Madagascar"
+            android:textColor="@color/spl_result_text_venue"
+            android:textSize="@dimen/_10sdp"
+            app:typeface="roboto_light" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_check_boxes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_venue"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_check_boxes"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_toLeftOf="@+id/txt_vs"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/txt_team_home_short_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="*WBA"
+                    android:textColor="@color/spl_result_text_team_code"
+                    android:textSize="@dimen/_16sdp"
+                    android:visibility="gone"
+                    app:typeface="roboto_light" />
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/txt_team_home_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:minLines="3"
+                    android:text="West Broomwich Albion"
+                    android:textColor="@color/spl_result_text_team"
+                    android:textSize="@dimen/_12sdp"
+                    app:typeface="roboto_regular" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="5">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <com.skilrock.customui.SquareCheckBox
+                        android:id="@+id/cb_minus_two"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spl_result_check_box_normal_three"
+                        android:button="@drawable/spl_result_check_box_normal_three"
+                        android:gravity="center"
+                        android:text="H+"
+                        android:textColor="@color/spl_result_text_game_normal"
+                        app:typeface="roboto_regular" />
+
+                    <com.skilrock.customui.SquareCheckBox
+                        android:id="@+id/cb_minus_one"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spl_result_check_box_normal_three"
+                        android:button="@drawable/spl_result_check_box_normal_three"
+                        android:checked="true"
+                        android:gravity="center"
+                        android:text="H"
+                        android:textColor="@color/spl_result_text_game_normal"
+                        app:typeface="roboto_regular" />
+
+                    <com.skilrock.customui.SquareCheckBox
+                        android:id="@+id/cb_draw"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spl_result_check_box_normal_three"
+                        android:button="@drawable/spl_result_check_box_normal_three"
+                        android:gravity="center"
+                        android:text="D"
+                        android:textColor="@color/spl_result_text_game_normal"
+                        app:typeface="roboto_regular" />
+
+                    <com.skilrock.customui.SquareCheckBox
+                        android:id="@+id/cb_plus_one"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spl_result_check_box_normal_three"
+                        android:button="@drawable/spl_result_check_box_normal_three"
+                        android:gravity="center"
+                        android:text="A"
+                        android:textColor="@color/spl_result_text_game_normal"
+                        app:typeface="roboto_regular" />
+
+                    <com.skilrock.customui.SquareCheckBox
+                        android:id="@+id/cb_plus_two"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="4dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/spl_result_check_box_normal_three"
+                        android:button="@drawable/spl_result_check_box_normal_three"
+                        android:gravity="center"
+                        android:text="A+"
+                        android:textColor="@color/spl_result_text_game_normal"
+                        app:typeface="roboto_regular" />
+                </LinearLayout>
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/txt_match_cancled"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/spl_bg_match_cancelled"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingLeft="@dimen/_20sdp"
+                    android:paddingRight="@dimen/_20sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:text="Match Cancelled"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_14sdp"
+                    android:visibility="gone"
+                    app:typeface="roboto_regular" />
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/ll_check_boxes"
+                android:layout_marginRight="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/txt_vs"
+                android:layout_weight="2"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/txt_team_away_short_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right"
+                    android:text="CNEW"
+                    android:textColor="@color/spl_result_text_team_code"
+                    android:textSize="@dimen/_16sdp"
+                    android:visibility="gone"
+                    app:typeface="roboto_light" />
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/txt_team_away_full_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="right|center_vertical"
+                    android:minLines="3"
+                    android:text="West Broomwich Albion"
+                    android:textColor="@color/spl_result_text_team"
+                    android:textSize="@dimen/_12sdp"
+                    app:typeface="roboto_regular" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/transparent" />
+</FrameLayout>

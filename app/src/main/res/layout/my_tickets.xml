@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/grey"
+    tools:context=".LoginActivity">
+
+    <ListView
+        android:id="@+id/tickets_list"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent"
+        android:layout_above="@+id/linearLayout1"
+        android:background="@android:color/transparent"
+        android:divider="@null"
+        android:dividerHeight="0dp"
+        android:listSelector="@android:color/transparent"
+        android:visibility="visible"></ListView>
+
+    <com.skilrock.customui.RobotoTextView
+        android:id="@+id/txt_info"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_bottom"
+        android:gravity="center"
+        android:text="@string/ticket_rep_data"
+        android:textSize="@dimen/_24sdp"
+        android:visibility="gone"
+        app:typeface="roboto_bold" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:background="#80000000"
+        android:gravity="center"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/filter"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_margin="5dp"
+            android:background="@drawable/button_bg_login"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="FILTER"
+            android:textColor="#fff"
+            android:textSize="17sp" />
+    </LinearLayout>
+
+</RelativeLayout>

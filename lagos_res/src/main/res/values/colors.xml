@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="grid_bg_Color_dg">#11415b</color>
+    <color name="new_lef_menu_color">#1D3247</color>
+    <color name="ver_text_color">#FFF</color>
+    <color name="splash_progress_color">#F00</color>
+    <color name="dialog_header_start_color">#5785A9</color>
+    <color name="dialog_header_end_color">#0BA0C7</color>
+    <color name="dialog_message_text_color">#000</color>
+    <color name="header_start_color">#5785A9</color>
+    <color name="header_end_color">#435C7B</color>
+    <color name="text_view_text_color">#444444</color>
+    <color name="screen_bg_color">#F0F0F0</color>
+    <color name="forgot_text_color">#C92617</color>
+    <color name="new_user_color">#393220</color>
+    <color name="reg_color">#463B1F</color>
+    <color name="basic_btn_start_color">#4098D8</color>
+    <color name="basic_btn_end_color">#156AA3</color>
+    <color name="basic_btn_text_color">#FFFFFF</color>
+    <color name="username_status_ok_color">#0F0</color>
+    <color name="username_status_na_color">#F00</color>
+    <!-- New -->
+    <color name="tab_strip_bg_color">#fff</color>
+    <color name="tab_strip_text_color">#0077b9</color>
+    <color name="tab_strip_footer_color">#00304b</color>
+    <color name="tab_strip_selected_text_color">#00304b</color>
+    <color name="view_pager_gap_color">#a4a4a4</color>
+    <color name="grid_divider_color">#DBDBDB</color>
+    <color name="grid_item_bg_color">#fff</color>
+    <color name="grid_item_tap_color">#c4e6ff</color>
+    <color name="grid_text_color">#848484</color>
+    <color name="banner_footer_color">#80ff0000</color>
+    <color name="five_theme_color">#1792B4</color>
+    <color name="five_draw_color">#E0E0E0</color>
+    <color name="five_draw_header_color">#7D7F7E</color>
+    <color name="buy_option_d_color">#7D859A</color>
+    <color name="jublee_mon_direct_select">#fff002</color>
+    <color name="buy_option_s_color">#F5F5F5</color>
+    <color name="five_nine_base_color">#C2C2C2</color>
+    <color name="five_nine_rest_color">#F5F5F5</color>
+    <color name="five_nine_top_bottom_color">#FFF</color>
+    <color name="five_nine_divider_color">#B9B9B9</color>
+    <color name="dialog_bg_color">#fff</color>
+    <color name="dialog_bg_color_selected">#f00</color>
+    <color name="dialog_text_color">#00304b</color>
+    <color name="fast_row_bg_color">#0077b9</color>
+    <color name="buy_options_colors">#F97B64</color>
+    <color name="buy_options_colord">#A9A9A9</color>
+    <color name="buy_options_bg">#fff</color>
+    <color name="no_of_line_color">#64829A</color>
+    <color name="tot_amt_color">#4C505B</color>
+    <color name="current_draw">#BEBEBE</color>
+    <!--<color name="fast_nos_bg_color">#0077b9</color>-->
+    <color name="fast_nos_bg_color">#00304b</color>
+    <color name="fast_nos_text_color">#ffffff</color>
+    <color name="login_edit_bg_color">#C5CCD2</color>
+    <color name="disabled_color">#88d5ff</color>
+    <color name="bet_selected_color">#c4e6ff</color>
+    <!-- EOP New -->
+
+
+    <color name="back_ground_check">#e8e8e8</color>
+
+
+    <!--ticket_desc_child-->
+    <color name="ticket_descr_child">#9b9b9b</color>
+    <color name="tckt_desc_child_amt">#0077b9</color>
+
+    <!-- FiveByNineColors -->
+    <color name="five_color_one">#9b9b9b</color>
+    <color name="five_color_two">#3d6067</color>
+    <color name="five_color_three">#0077b9</color>
+    <color name="five_color_three_ad">#0077b9</color>
+
+    <color name="five_color_four">#3d7411</color>
+    <color name="five_color_five">#7fc745</color>
+    <color name="five_color_divider">#b5b5b5</color>
+
+    <color name="three_more">#00304b</color>
+    <color name="change_bet_type">#0077b9</color>
+    <color name="direct_bonza">#00304b</color>
+
+    <color name="five_color_tab_bg">#dcf8fb</color>
+    <color name="five_color_bg">#fff</color>
+    <color name="five_color_nos_bg">#798194</color>
+
+    <!-- FiveByNineColors END -->
+
+
+    <!-- Theme Colors Start -->
+    <color name="fast_theme_color">#489C5E</color>
+    <color name="fast_draw_header_color">#307B42</color>
+    <color name="fast_ball_color">#2D6F3F</color>
+    <color name="fast_ball_text_color">#00304b</color>
+    <color name="bonus_theme_color">#2594AF</color>
+    <color name="bonus_draw_header_color">#106C81</color>
+    <color name="bonus_ball_color">#33BDDA</color>
+    <color name="bonus_ball_text_color">#FFFFFF</color>
+    <color name="five_ball_text_color">#FFFFFF</color>
+    <!-- Theme Colors End -->
+    <color name="term_and_condition_color">#00304b</color>
+    <color name="grey">#d5d5d5</color>
+    <color name="grey_back">#403361</color>
+    <color name="theme_color">#2e1e5a</color>
+    <color name="res_back_2">#45327a</color>
+    <color name="blue">#27a2db</color>
+    <color name="yellow">#88d5ff</color>
+    <color name="grey_selected">#989898</color>
+    <color name="light_purple">#4C21BD</color>
+    <color name="light_light_purple">#8259ea</color>
+    <color name="white">#FFFFFF</color>
+    <color name="dark_grey">#444444</color>
+    <color name="black">#000000</color>
+    <color name="orange">#f57832</color>
+    <color name="dark_blue">#296599</color>
+    <color name="draw_header_color">#454E53</color>
+    <color name="circle_light_blue">#33819E</color>
+    <color name="header_color">#1AB2D9</color>
+    <color name="image_bg_color">#fff</color>
+    <color name="grid_bg_color">#E6E6E6</color>
+    <color name="first_half_bg">#043C4B</color>
+    <color name="third_half_bg_start">#09607E</color>
+    <color name="third_half_bg_end">#1493B3</color>
+    <color name="holo_blue">#FF33E5B5</color>
+    <color name="divide_one_color">#033C4D</color>
+    <color name="elec_theme_color">#574472</color>
+    <color name="draw_theme_color">#DBA03A</color>
+    <color name="sports_theme_color">#5EC2D9</color>
+    <color name="scratch_theme_color">#C95152</color>
+    <color name="instant_theme_color">#6EB91E</color>
+
+    <!-- Banner Color Used -->
+    <color name="holo_blue_dark">#ff0099cc</color>
+    <color name="indigo_500">#3f51b5</color>
+    <color name="indigo_700">#303f9f</color>
+    <color name="cyan_500">#00bcd4</color>
+
+    <color name="deposite_strip_color">#00304b</color>
+    <color name="single_deposit_strip_color">#0077b9</color>
+
+    <!--my_txn_colors-->
+    <color name="withdraw_option">#0077b9</color>
+
+    <color name="txn_cal_month">#00304b</color>
+    <color name="txn_cal_year">#0077b9</color>
+    <color name="txn_block_bg">#fff002</color>
+
+    <color name="txn_border_color">#aa81ae</color>
+    <color name="txn_date_text_color">#0077b9</color>
+    <color name="txn_date_bg_color">#7e7e7e</color>
+    <color name="txn_exp_date">#aa81ae</color>
+    <color name="txn_type">#00304b</color>
+    <color name="txn_status_appr_color">#016ea7</color>
+    <color name="txn_status_pending_color">#88d5ff</color>
+    <color name="txn_color_green">#016ea7</color>
+
+    <!-- sports lottery colors-->
+
+    <color name="ticket_amnt_color">#016ea7</color>
+    <color name="spl_text_odds">#aa81ae</color>
+    <color name="spl_bg_time">#626262</color>
+    <color name="spl_text_time">#FFFFFFFF</color>
+    <color name="spl_text_venue">#545454</color>
+    <color name="spl_text_team">#3b3b3b</color>
+    <color name="spl_text_team_short">#553556</color>
+    <color name="spl_text_vs">#FFFFFF</color>
+    <color name="spl_bg_vs">#aa81ae</color>
+    <color name="spl_border_game">#553556</color>
+    <color name="spl_text_game_normal">#553556</color>
+    <color name="spl_text_game_selected">#FFFFFFFF</color>
+    <color name="spl_bg_game_normal">#FFFFFFFF</color>
+    <color name="spl_bg_game_selected">#553556</color>
+    <color name="spl_bg_btn_proceed_disable">#FFA8ADA7</color>
+    <color name="spl_bg_btn_proceed_normal">#ff3535</color>
+    <color name="spl_bg_btn_proceed_selected">#FF922828</color>
+    <color name="spl_text_btn_proceed_normal">#FFFFFFFF</color>
+    <color name="spl_text_btn_proceed_selected">#FFFFFFFF</color>
+    <color name="spl_bottom_bg">#FF403A54</color>
+    <color name="spl_header_bg">#FFFFCC02</color>
+
+    <!-- sports lottery result colors-->
+    <color name="spl_result_text_title">#09A1C6</color>
+    <color name="spl_result_bg_time">#626262</color>
+    <color name="spl_result_text_time">#FFFFFF</color>
+    <color name="spl_result_text_venue">#545454</color>
+    <color name="spl_result_divider_game">#626262</color>
+    <color name="spl_result_text_team_code">#553556</color>
+    <color name="spl_result_text_team">#3b3b3b</color>
+    <color name="spl_result_storke_game">#553556</color>
+    <color name="spl_result_text_game_normal">#553556</color>
+    <color name="spl_result_text_game_selected">#FFFFFFFF</color>
+    <color name="spl_result_bg_game_normal">#FFFFFFFF</color>
+    <color name="spl_result_bg_game_selected">#553556</color>
+    <color name="spl_result_bg_gray">#E6E6E6</color>
+    <color name="spl_result_bg_white">#FFFFFF</color>
+
+
+    <!-- sports lottery matches color-->
+    <color name="spl_match_bg_time">#626262</color>
+    <color name="spl_match_text_time">#FFFFFF</color>
+    <color name="spl_match_text_venue">#545454</color>
+    <color name="spl_match_text_team_code">#553556</color>
+    <color name="spl_match_text_team">#3b3b3b</color>
+    <color name="spl_match_text_vs">#FFFFFF</color>
+    <color name="spl_match_bg_vs">#aa81ae</color>
+    <color name="spl_match_storke_vs">#aa81ae</color>
+    <color name="spl_match_divider_game">#B08491</color>
+    <color name="spl_match_text_selected">#069FBE</color>
+    <color name="spl_match_text_unselected">#11A6CE</color>
+    <color name="spl_match_divider_indicator">#069FBE</color>
+    <color name="spl_match_indicator_selected">#069FBE</color>
+
+    <!--Profile Colors-->
+    <color name="profile_bg_upper">#0077b9</color>
+    <color name="profile_bg_notification">#FF3246</color>
+    <color name="profile_text_notification">#FF3246</color>
+    <color name="profile_text_name">#FFF</color>
+    <color name="profile_divider">#00304b</color>
+    <color name="profile_bg_lower">#FFFFFF</color>
+    <color name="profile_bg_btn_deposit_normal">#FE7966</color>
+    <color name="profile_stoke_btn_deposit_normal">#CF4A37</color>
+    <color name="profile_bg_btn_my_ticket_normal">#3A7F8E</color>
+    <color name="profile_stoke_btn_my_ticket_normal">#154049</color>
+    <color name="profile_bg_btn_my_transaction_normal">#499C70</color>
+    <color name="profile_stoke_btn_my_transaction_normal">#256B46</color>
+    <color name="profile_text_gray">#878787</color>
+    <color name="profile_text_green">#00304b</color>
+    <color name="profile_text_btn">#FFFFFF</color>
+    <color name="profile_border_image">#FFFFFF</color>
+
+    <color name="profile_edit_divider">#B7C0D1</color>
+    <color name="profile_edit_text_name">#67B6D5</color>
+    <color name="profile_edit_hint">#ACACAC</color>
+    <color name="profile_edit_text">#7F91A7</color>
+
+
+    <!--Calender Color-->
+    <color name="all_header_color_new">#0077b9</color>
+    <color name="header_text_color_line">#7F91A7</color>
+    <color name="all_header_color">#00304b</color>
+    <color name="loading_txt_color">#88d4ff</color>
+    <color name="header_text_color">#FFFFFF</color>
+    <color name="deposite_text_color_succ">#016ea7</color>
+    <color name="dialog_header_color">#0077b9</color>
+    <color name="second_half_bg">#0077b9</color>
+    <color name="dialog_header_text_color">#fff</color>
+    <color name="spinner_text_color">#FFFFFF</color>
+    <color name="profile_circle_color">#FFF</color>
+    <color name="profile_name_text_color">#FFF</color>
+    <color name="bal_text_color">#FFF</color>
+    <color name="divide_two_color">#f6f6f6</color>
+    <color name="menu_text_color">#c9d1e3</color>
+    <color name="side_gap_color">#02090d</color>
+    <color name="side_gap_rest_color">#0a070e</color>
+    <color name="activity_button_text_color">#fff</color>
+    <color name="dialog_button_bg_shade_color">#064f77</color>
+    <color name="dialog_button_bg_color">#0077b9</color>
+    <color name="dialog_button_bg_reg_color">#3C0245</color>
+    <color name="dialog_button_text_color">#ffffff</color>
+    <color name="deposite_button_bg_color">#00304b</color>
+    <color name="deposite_button_bg_shade_color">#064f77</color>
+    <color name="buy_now_bg_color">#00304b</color>
+    <color name="buy_now_bg_shade_color">#064f77</color>
+    <color name="mytransactions_button_bg_shade_color">#064f77</color>
+    <color name="mytransactions_button_bg_color">#0077b9</color>
+    <color name="myticket_button_bg_shade_color">#064f77</color>
+    <color name="myticket_button_bg_color">#0077b9</color>
+    <color name="deposite_text_color">#ffffff</color>
+    <color name="buy_now_text_color">#0F0F0F</color>
+    <color name="dialog_edit_text_color">#0077b9</color>
+    <color name="copyright_text_color">#3D1702</color>
+    <color name="edit_text_underline_color">#0077b9</color>
+    <color name="edit_text_underline_color_d">#D8D8D8</color>
+    <color name="forgot_password_color">#00304b</color>
+
+
+    <!--Deposit Screen-->
+    <color name="deposit_screen_msg">#0077b9</color>
+
+
+    <!-- Five Game Res Start-->
+    <color name="five_win_no_txt_color">#fff</color>
+    <color name="five_win_no_time_txt_color">#fff</color>
+    <color name="five_win_no_bg_color">#00304b</color>
+    <color name="five_last_no_txt_color">#fff</color>
+    <color name="bonus_no_txt_color">#6f4900</color>
+    <color name="five_last_no_bg_color">#00304b</color>
+    <color name="five_last_bg_color">#0077b9</color>
+    <color name="five_menu_icon_bg_color">#00304b</color>
+    <color name="five_menu_txt_color">#00304b</color>
+    <color name="five_play_now_bg_color">#00304b</color>
+    <color name="five_play_now_bg_shade_color">#064f77</color>
+    <color name="five_play_now_txt_color">#fff</color>
+    <color name="five_play_disable_now_bg_color">#064f77</color>
+    <color name="five_play_disable_now_bg_shade_color">#064f77</color>
+    <color name="five_play_disable_now_txt_color">#8f4747</color>
+    <color name="five_result_header_text_color">#fff</color>
+    <color name="five_result_header_bg_color">#7D7F7E</color>
+    <color name="five_result_ball_bg_color">#ffc6c8c7</color>
+    <color name="five_result_type_text_color">#ff393939</color>
+    <!-- Five Game Res End-->
+    <!-- Bonus Game Res Start-->
+    <color name="bonus_win_no_txt_color">#fff</color>
+    <color name="bonus_win_no_time_txt_color">#fff</color>
+    <color name="bonus_win_no_bg_color">#00304b</color>
+    <color name="bonus_last_no_txt_color">#fff</color>
+    <color name="bonus_last_no_bg_color">#00304b</color>
+    <color name="bonus_last_extra_no_bg_color">#fffc8615</color>
+    <color name="bonus_last_bg_color">#0077b9</color>
+    <color name="bonus_menu_icon_bg_color">#00304b</color>
+    <color name="bonus_menu_txt_color">#414141</color>
+    <color name="bonus_play_now_bg_color">#00304b</color>
+    <color name="bonus_play_now_bg_shade_color">#064f77</color>
+    <color name="bonus_play_now_txt_color">#fff</color>
+    <color name="bonus_result_header_text_color">#fff</color>
+    <color name="bonus_result_header_bg_color">#7D7F7E</color>
+    <color name="bonus_result_ball_bg_color">#ffc6c8c7</color>
+    <color name="bonus_result_type_text_color">#ff393939</color>
+    <!-- Bonus Game Res End-->
+    <!-- Fast Game Res Start-->
+    <color name="fast_win_no_txt_color">#fff</color>
+    <color name="fast_win_no_time_txt_color">#fff</color>
+    <color name="fast_win_no_bg_color">#7D7F7E</color>
+    <color name="fast_last_no_txt_color">#fff</color>
+    <color name="fast_last_no_bg_color">#00304b</color>
+    <color name="fast_last_bg_color">#0077b9</color>
+    <color name="fast_menu_icon_bg_color">#00304b</color>
+    <color name="fast_menu_txt_color">#00304b</color>
+    <color name="fast_play_now_bg_color">#00304b</color>
+    <color name="fast_play_now_bg_shade_color">#064f77</color>
+    <color name="fast_play_now_txt_color">#fff</color>
+    <color name="fast_result_header_text_color">#fff</color>
+    <color name="fast_result_header_bg_color">#7D7F7E</color>
+    <color name="fast_result_ball_bg_color">#ffc6c8c7</color>
+    <color name="fast_result_type_text_color">#ff393939</color>
+    <!-- Fast Game Res End-->
+    <!--Ticket Screen-->
+    <color name="tkt_no_of_lines_val">#0077b9</color>
+    <color name="tkt_selected_nos">#575757</color>
+    <color name="tkt_selected_nos_text">#7e7e7e</color>
+    <color name="tkt_bet_name">#148085</color>
+    <color name="tkt_draw_name_bg">#404c5e</color>
+    <color name="tkt_no_color">#626262</color>
+    <color name="tkt_text_color">#898989</color>
+    <color name="tkt_draw_name">#51c9cf</color>
+
+    <color name="three_bet_type">#8d8d8d</color>
+    <color name="jublee_mon_direct">#00304b</color>
+    <color name="four_options_text">#FFFFFF</color>
+    <color name="four_options_background">#0077b9</color>
+    <color name="circle_text_color">#fff</color>
+    <color name="current_quick">#0077b9</color>
+
+    <color name="five_color_one1">#9b9b9b</color>
+    <color name="five_color_two1">#0077b9</color>
+
+    <!--IGE Games-->
+    <color name="ige_Text_simple">#0077b9</color>
+    <color name="ige_Text_bold">#00304b</color>
+
+    <color name="ige_background">#ffeaeaeb</color>
+    <color name="hint_color">#ffbfc3cd</color>
+    <color name="red_shadow">#02090d</color>
+    <color name="red_color">#00304b</color>
+    <color name="cyan">#3C5B6D</color>
+    <color name="brown">#6E4F3D</color>
+    <color name="gray_solid">#ff6b6b6b</color>
+    <color name="tabsScrollColor">#4C21BD</color>
+    <color name="alpha_win_popup_bg">#dd6b6b6b</color>
+
+
+    <color name="spinner_bg_color">#FFFFFF</color>
+    <color name="spinner_divider_color">#FFF</color>
+
+    <color name="sc_title">#533454</color>
+    <color name="sc_sub">#636D6E</color>
+    <color name="amt_color">#CD7801</color>
+    <color name="spl_result_bg_match_cancelled">#33ff0000</color>
+    <color name="spl_result_bg_txt_match_cancelled">#fb3630</color>
+    <!-- Locate Retailer-->
+    <color name="loc_purple">#664E87</color>
+    <color name="loc_white">#FFFFFF</color>
+
+
+    <color name="ticket_amt_color">#88d5ff</color>
+
+    <color name="abv">#CAEEE4</color>
+    <color name="abvs">#42A085</color>
+    <color name="ticket_preview_color">#0077b9</color>
+
+    <!--lottoleague-->
+    <color name="lotto_league_row_a">#E6E6E6</color>
+    <color name="lotto_league_row_b">#ffffff</color>
+
+</resources>

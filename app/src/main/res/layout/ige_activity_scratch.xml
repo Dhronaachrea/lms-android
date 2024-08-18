@@ -1,0 +1,163 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <!-- Game Load progress -->
+    <ProgressBar
+        android:id="@+id/game_load_progress"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/txn_cal_year"
+        android:indeterminateTintMode="src_in"
+        android:visibility="visible" />
+
+    <include
+        android:id="@+id/action_bar"
+        layout="@layout/main_header"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/main_header_height" />
+
+    <RelativeLayout
+        android:id="@+id/parent_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/action_bar">
+
+        <ImageView
+            android:id="@+id/back"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:scaleType="fitXY" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/ticketNumber"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:background="#aa13130B"
+            android:gravity="center"
+            android:padding="@dimen/_1sdp"
+            android:text="Scratch All"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:textColor="@android:color/white"
+            android:visibility="gone"
+            app:text_style="light" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/winningPop"
+        android:layout_width="fill_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/action_bar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/winning"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2"
+            android:orientation="vertical"
+            android:visibility="gone" />
+
+
+        <LinearLayout
+            android:id="@+id/btn_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerHorizontal="false"
+            android:layout_centerVertical="false"
+            android:layout_weight="0.8"
+            android:background="#ee13130B"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="@dimen/_10sdp"
+            android:visibility="gone">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/isMyTicketMessage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:padding="@dimen/_1sdp"
+                android:text="You've successfully completed your unfinished game!"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@android:color/white"
+                android:visibility="gone"
+                app:text_style="light" />
+
+            <TextView
+                android:id="@+id/playForCash"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/btn_bg_red"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:singleLine="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_19sdp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/playAgain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/btn_bg_red"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Try Again"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_19sdp"
+                android:visibility="gone"
+                app:text_style="light" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/mainMenu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:layout_marginLeft="@dimen/_35sdp"
+                android:layout_marginRight="@dimen/_35sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/btn_bg_cyan"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Main Menu"
+                android:textAllCaps="true"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_19sdp"
+                android:visibility="gone"
+                app:text_style="light" />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/loadingMsg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/game_load_progress"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center_horizontal|center_vertical"
+        android:text="Please wait"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+</RelativeLayout>

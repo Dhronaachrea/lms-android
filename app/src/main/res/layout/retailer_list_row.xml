@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/five_color_bg"
+    android:descendantFocusability="afterDescendants"
+    android:orientation="vertical"
+    android:padding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:id="@+id/ret_type"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginRight="5dp"
+            android:layout_weight="0.2"
+            android:src="@drawable/instant" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.6"
+            android:orientation="vertical">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/ret_name"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textColor="@color/five_color_one"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/ret_add"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:text="Add"
+                android:textColor="@color/five_color_one"
+                android:textSize="14sp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/ret_contact"
+                android:layout_width="fill_parent"
+                android:visibility="gone"
+                android:layout_height="wrap_content"
+                android:text="Contact"
+                android:textColor="@color/five_color_one"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/service_view"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.2"
+                android:orientation="horizontal"></LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="5dp"
+        android:background="@color/five_color_divider" />
+
+</LinearLayout>

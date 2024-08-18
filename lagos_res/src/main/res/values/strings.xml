@@ -1,0 +1,964 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="mpower_bank_array">
+        <item>BNK</item>
+        <item>HBK</item>
+        <item>RBS</item>
+    </string-array>
+    <string name="app_name">My Winlot</string>
+    <string name="ccm">Please enter your promo code to redeem amount</string>
+    <string name="cc">enter promo code</string>
+    <string name="apply_promo">APPLY PROMO CODE</string>
+
+    <!--xml files -->
+    <string name="Send_bet_dialog">Send</string>
+    <string name="nocontact_bet_dialog">No Contacts</string>
+
+    <!--bonus games-->
+    <string name="winjub_bonus_game">WINLOT JUBILEE</string>
+    <string name="tue_bonus_game">TUE, 25 sept 10:25</string>
+    <string name="current_bonus_game">CURRENT</string>
+    <string name="draw_bonus_game">DRAW</string>
+    <string name="bonus_back">BACK</string>
+
+    <string name="bet_type_bonus_game">BET TYPE</string>
+    <string name="perm1_bonus_game">PERM1</string>
+    <string name="change_bet_type_bonus_game">Change Bet Type</string>
+    <string name="sel_num_bonus_game">Select Numbers</string>
+    <string name="fav_bonus_game">Favorite</string>
+    <string name="last_pick_bonus_game">Last Picked</string>
+    <string name="quick_pick_bonus_game">Quick Pick</string>
+    <string name="pick_bonus_game">Pick New</string>
+    <string name="numb_bonus_game">Numbers</string>
+    <string name="no_bonus_game">Number</string>
+    <string name="plus_more_bonus_game">+3 more</string>
+    <string name="nos_bonus_game">25</string>
+    <string name="select_bonus_game">Selected</string>
+    <string name="of_lines_bonus_game">of Lines</string>
+    <string name="unit_price_bonus_game">BET AMOUNT</string>
+    <string name="okay_bonus_game">Okay</string>
+    <string name="dol_with_zero_bonus_game">$ 00.00</string>
+    <string name="last_draw_bonus_game">Last draw</string>
+    <string name="match_bonus_game">Match</string>
+    <string name="winner_bonus_game">Winner</string>
+    <string name="amount_bonus_game">Amount</string>
+
+
+    <string name="ball_common_stats">Ball</string>
+    <string name="freq_common_stats">Frequency</string>
+    <string name="last_seen_common_stats">Last Seen</string>
+
+    <string name="medium_text_cust_prog_dial">Medium Text</string>
+
+    <string name="amount_deposit">Amount :</string>
+    <string name="edit_deposit">Edit</string>
+    <string name="fav_numb_deposit">Favorite\nNumbers</string>
+
+    <string name="header_dialog">Header</string>
+    <string name="picked_num_dialog_lay">Picked Numbers</string>
+    <string name="draw_select_dialog_lay">Draw Selected</string>
+    <string name="qp__dialog_lay">Qp</string>
+    <string name="enter_qp_dialog_lay">enter qp</string>
+    <string name="no_of_line_dialog_lay">No of Lines</string>
+
+
+    <string name="bet_amt_dialog_lay">Bet Amt</string>
+    <string name="enter_bet_amt_dialog_lay">enter bet amt</string>
+    <string name="total_amt_dialog_lay">Total amt</string>
+    <string name="ok_dialog_lay">Ok</string>
+    <string name="cancel_dialog_lay">Cancel</string>
+
+
+    <string name="bet_detail_draw_lay">Bet Details</string>
+    <string name="name_drawer_lay_main">Vishal</string>
+    <string name="login_drawer_lay_main">Login</string>
+    <string name="my_acc_drawer_lay_main">My Account</string>
+    <string name="my_acc_drawer_lay_promo">Promo Code</string>
+    <string name="inbox_drawer_lay_main">Inbox</string>
+    <string name="user_setting_drawer_lay_main">User Settings</string>
+    <string name="app_setting_drawer_lay_main">App Settings</string>
+    <string name="invit_friend_drawer_lay_main">Invite Friend</string>
+    <string name="locate_retailer_drawer_lay_main">Locate Retailer</string>
+    <string name="change_pdw_drawer_lay_main">Change Password</string>
+    <!--lottoLeague-->
+    <string name="lotto_league_text">Lotto League</string>
+
+    <string name="faq_drawer_lay_main">FAQ</string>
+
+    <string name="help_text">Help</string>
+
+    <string name="contact_us_drawer_lay_main">Contact Us</string>
+    <string name="logout_drawer_lay_main">Logout</string>
+    <string name="my_acc_deposit">DEPOSIT</string>
+
+
+    <string name="login_drawer_row">Login</string>
+
+    <string name="using_eco_mob_app_eco_cash_activity">Using Ecocash Mobile App</string>
+    <string name="usercode_transfer_amt_eco_cash_activity">Use Merchant code 37240 to transfer
+        amount from your EcoCash account to AfricaLotto Mobile App
+    </string>
+    <string name="transfer_ecocash_eco_cash_activity">Ecocash transfer using USSD</string>
+    <string name="march_cd_transter_amt_eco_cash_activity">Merchant code for AfricaLotto is
+        37240.\nTap here *151*200# to transfer money to AfricaLotto
+    </string>
+    <string name="scratch_all_escratch_play_screen">Scratch All</string>
+
+
+    <string name="winjub_fast_game">WINLOT JUBILEE</string>
+    <string name="tue_fast_game">TUE, 25 sept 10:25</string>
+    <string name="current_fast_game">CURRENT</string>
+    <string name="draw_fast_game">DRAW</string>
+    <string name="bet_type_fast_game">BET TYPE</string>
+    <string name="perm1_fast_game">PERM1</string>
+    <string name="change_bet_type_fast_game">Change Bet Type</string>
+    <string name="sel_num_fast_game">Select Numbers</string>
+    <string name="fav_fast_game">Favorite</string>
+    <string name="last_pick_fast_game">Last Picked</string>
+    <string name="quick_pick_fast_game">Quick Pick</string>
+    <string name="pick_fast_game">Pick New</string>
+    <string name="numb_fast_game">Selected</string>
+    <string name="plus_more_fast_game">+3 more</string>
+    <string name="nos_fast_game">25</string>
+    <string name="select_fast_game">Selected</string>
+    <string name="of_lines_fast_game">Numbers</string>
+    <string name="unit_price_fast_game">BET AMOUNT</string>
+    <string name="okay_fast_game">Okay</string>
+    <string name="dol_with_zero_fast_game">$ 00.00</string>
+    <string name="last_draw_fast_game">Last draw</string>
+    <string name="match_fast_game">Match</string>
+    <string name="winner_fast_game">Winner</string>
+    <string name="amount_fast_game">Amount</string>
+
+
+    <string name="win_number_fast_lotto_frag">Last Winning Result</string>
+    <string name="static_fast_lotto_frag">STATISTICS\n</string>
+    <string name="chk_result_fast_lotto_frag">CHECK\nRESULTS</string>
+
+
+    <string name="time_fast_lotto_res_frag">Time</string>
+    <string name="winner_fast_lotto_res_frag">Winner</string>
+    <string name="number_fast_lotto_res_frag">Number</string>
+
+
+    <string name="last_five_by_nine_res_frag">Last draw</string>
+    <string name="match_five_by_nine_res_frag">Match</string>
+    <string name="winner_five_by_nine_res_frag">Winner</string>
+    <string name="amount_five_by_nine_res_frag">Amount</string>
+
+
+    <string name="current_five_game">CURRENT</string>
+    <string name="winjub_five_game">WINLOT JUBILEE</string>
+    <string name="tue_five_game">TUE, 25 sept 10:25</string>
+    <string name="plus_more_five_game">+3 more</string>
+    <string name="bet_type_five_game">BET TYPE</string>
+    <string name="perm1_five_game">PERM1</string>
+    <string name="draw_five_game">DRAW</string>
+    <string name="change_bet_type_five_game">Change Bet Type</string>
+    <string name="sel_num_five_game">Select Numbers</string>
+    <string name="fav_five_game">Favorite</string>
+    <string name="last_pick_five_game">Last Picked</string>
+    <string name="quick_pick_five_game">Quick Pick</string>
+    <string name="pick_five_game">Pick New</string>
+    <string name="numb_five_game">Numbers</string>
+    <string name="nos_five_game">25</string>
+    <string name="select_five_game">Selected</string>
+    <string name="of_lines_five_game">of Lines</string>
+    <string name="unit_price_five_game">BET AMOUNT</string>
+    <string name="okay_five_game">Okay</string>
+    <string name="dol_with_zero_five_game">$ 00.00</string>
+
+
+    <string name="win_number_five_frag">Last Winning Result</string>
+    <string name="static_five_frag">STATISTICS\n</string>
+    <string name="chk_result_five_frag">CHECK\nRESULTS</string>
+
+
+    <string name="last_draw_five_game">Last draw</string>
+    <string name="match_five_game">Match</string>
+    <string name="winner_five_game">Winner</string>
+    <string name="amount_five_game">Amount</string>
+
+
+    <string name="african_lotto_gcm_dialog">AfricaLotto</string>
+    <string name="okay_gcm_dialog">Okay</string>
+
+
+    <string name="deposit_init_deposit_screen">DEPOSIT</string>
+
+    <string name="map_locate_retailer">Map</string>
+    <string name="list_locate_retailer">List</string>
+
+
+    <string name="win_number_lotto_bonus_frag">Winning Number</string>
+    <string name="static_lotto_bonus_frag">STATISTICS\n</string>
+    <string name="chk_result_lotto_bonus_frag">CHECK\nRESULTS</string>
+
+
+    <string name="deposit_my_profile">DEPOSIT</string>
+
+
+    <string name="win_bal__my_profile">Winning Bal:</string>
+    <string name="bon_bal_my_profile">Bonus Bal:</string>
+
+    <string name="dep_bal_my_profile">Deposit Bal:</string>
+    <string name="redeem_bal_my_profile">Redeemable Bal:</string>
+
+
+    <string name="sel_date_my_txns">SELECT\nDATE</string>
+
+    <string name="depos_prof_act">DEPOSIT</string>
+    <string name="my_tick_prof_act">MY TICKETS</string>
+    <string name="my_trans_prof_act">MY TRANSACTIONS</string>
+
+
+    <string name="types_ret_filter_dial">Types</string>
+    <string name="serv_ret_filter_dial">Services</string>
+
+    <string name="match_list_spl_frag">Match\nList</string>
+    <string name="chk_rest_spl_frag">CHECK\nRESULTS</string>
+
+
+    <string name="soccer_sp_act_ticket">Soccer</string>
+    <string name="weekend_sp_act_ticket">Weekend</string>
+    <string name="matches_sp_act_ticket">Matches</string>
+    <string name="unit_price_sp_act_ticket">Bet Amount :</string>
+
+    <string name="no_of_lines_sp_lott">No of Lines</string>
+    <string name="play_amt_sp_lott">Play Amount</string>
+    <string name="tick_amt_sp_lott">Ticket Amt.</string>
+    <string name="ticket_rep_data">No Tickets Available</string>
+
+
+    <string name="bet_amt_sp_lott">Bet Amount</string>
+
+
+    <string name="wba_sp_match_row_itm">WBA</string>
+    <string name="vs_sp_match_row_itm">VS</string>
+
+    <string name="result_sp_reslt_row">India Won the match</string>
+
+    <string name="match_sp_result_row_item_bottom">Match</string>
+    <string name="winner_sp_result_row_item_bottom">Winner</string>
+    <string name="amt_sp_result_row_item_bottom">Amount</string>
+
+
+    <string name="home_sp_row_itm_three">HOME</string>
+    <string name="draw_sp_row_itm_three">DRAW</string>
+    <string name="away_sp_row_itm_three">AWAY</string>
+
+
+    <string name="fav_num_withdrawal_scrn">Favorite\nNumbers</string>
+
+
+    <!-- new -->
+
+    <string name="no">No</string>
+    <string name="register_id">Registration ID :</string>
+    <string name="error">Error :</string>
+    <string name="max_select">Max Selected</string>
+    <string name="otp_correct_conf">Please Enter Correct OTP</string>
+    <string name="complete">Complete</string>
+
+    <!--drawgames -->
+
+    <!--bonusgame-->
+    <string name="select_at_least">Please select at least </string>
+    <string name="number">numbers</string>
+    <string name="confirm">CONFIRM</string>
+    <string name="insufficient_balance">Insufficient Balance</string>
+    <string name="withdrawal_amt">Withdrawal amount should not zero(0)</string>
+    <string name="get_stats">GET_STATS</string>
+    <string name="get_results">GET_RESULTS</string>
+    <string name="coming_soon">Coming Soon!</string>
+
+    <!--fastgame-->
+    <string name="more">more</string>
+    <string name="purchase_conf">Are you sure you want to purchase?</string>
+    <string name="result_res_scr">RESULTS</string>
+    <string name="draw_game_res_scr">Draw Games</string>
+
+    <string name="statis_static_scr">STATISTIC</string>
+
+
+    <!--customui-->
+    <string name="logout_conf">Are you sure you want to logout?</string>
+    <string name="userName">UserName</string>
+    <string name="inbox">Inbox</string>
+    <string name="user_settings">User Settings</string>
+    <string name="app_settings">App Settings</string>
+    <string name="invite_friend">Invite Friend</string>
+    <string name="select_atlest">Select atleast one!</string>
+
+
+    <!--escratch -->
+    <string name="result">RESULT</string>
+    <string name="electronic_scratch">Electronic Scratch</string>
+    <string name="play_now_escratch">PLAY NOW</string>
+
+    <!--locateretailer-->
+    <string name="locate_retailer">LOCATE RETAILER</string>
+    <string name="server_error">Server error!</string>
+    <string name="network_error">Please enable Location Services!</string>
+    <string name="select_state_city">Select state and/or city first</string>
+    <string name="scratch_retailer">SCRATCH RETAILER</string>
+
+    <!--lottery-->
+    <string name="mobile_no_validate">Mobile No. length should be" "</string>
+    <string name="mobile_no_validate_zero">Mobile No. should not starts with zero(0)</string>
+    <string name="mobile_validate_zero">Mobile No. should starts with zero(0)</string>
+    <string name="internal">Internal</string>
+    <string name="external">External</string>
+    <string name="back_to_exit">Press back again to exit!</string>
+    <string name="user_name_validate">User Name should be greater than" "</string>
+    <string name="character">" "Characters</string>
+
+
+    <!--new31july-->
+
+    <!--banner-->
+    <!--circlepageINdicator-->
+    <!--exception-->
+    <string name="ori_hor_ver">Orientation must be either HORIZONTAL or VERTICAL.</string>
+    <string name="view_page_bound">ViewPager has not been bound.</string>
+
+
+    <!--customui-->
+    <!--animated expandable listView-->
+    <!--exception-->
+    <string name="must_imp_ani_exp_li_adap">" "must implement AnimatedExpandableListAdapter</string>
+
+    <!--betDialog-->
+    <string name="sel_bet">SELECT BET</string>
+
+    <!--bonusNumberDialog-->
+    <string name="plz_sel_six_no">Please select at least 6 numbers</string>
+    <string name="sel_numb">SELECT NUMBERS</string>
+
+    <!--circleImageView-->
+    <!--exception-->
+    <string name="scal_type_not_supp">ScaleType %s not supported.</string>
+
+    <!--drawDialog-->
+    <string name="sel_draw">SELECT DRAWS</string>
+    <string name="sel_atlst_one">Select at least one Draw</string>
+
+
+    <!--drawerBaseActivity-->
+    <string name="inbox_draw">Inbox</string>
+
+
+    <!--retailerFileterDialog-->
+    <string name="fil_by">FILTER BY</string>
+    <string name="sel_atle_one">Select atleast one!</string>
+
+    <!--drewgame-->
+    <!--bonusgamescr--><!--bonusgamescr--><!--bonusgamescr-->
+    <string name="ok_draw">OK</string>
+    <string name="next_grid">NEXT</string>
+    <!--bonusgamescr-->
+    <string name="plz_sel_four_line">Please select either 2 or 4 lines</string>
+
+    <!--fiveGameScrn-->
+    <string name="plz_sel_at_lest_five">Please select at least" "</string>
+    <string name="numb_five">" "number(s)</string>
+    <string name="amt_check">" "amount</string>
+
+    <string name="are_u_want_purch_five_k">Are you sure you want to purchase?</string>
+    <!--downloaddialogbox-->
+    <string name="conf_five">CONFIRM</string>
+    <!--downloaddialbox-->
+    <string name="ins_bal_five">Insufficient Balance</string>
+
+    <!--ims.communication-->
+    <!--DGETTask-->
+
+    <!--IGETask-->
+
+    <!--SLETask-->
+    <string name="ims_load">Loading...</string>
+
+
+    <!--locateRetailer-->
+    <!--locateRetailer-->
+    <string name="lis_vie">LIST VIEW</string>
+    <string name="map_vie">MAP VIEW</string>
+    <string name="loc_ret">LOCATE RETAILER</string>
+    <string name="plz_sel_stat_first">Please select state first!</string>
+    <string name="sel_stat">Select State</string>
+    <string name="gps">GPS</string>
+    <string name="phn">Phone :</string>
+    <string name="mob">Mobile :</string>
+
+
+    <!--place-->
+    <string name="cities">Cities</string>
+    <!--openDialog-->
+    <string name="states">States</string>
+    <!--openDialog-->
+
+    <!--lottery-->
+    <!--loginActivity-->
+
+    <string name="load_login">Loading...</string>
+    <!--dialog-->
+
+    <!--mainscreen-->
+    <string name="internal_main_scr">Internal</string>
+    <string name="external_main_scr">External</string>
+    <string name="prs_back_to_ex">Press back again to exit!</string>
+
+    <!--splash-->
+    <string name="srv_err_splash">Server error!</string>
+
+
+    <!--Myaccount-->
+
+    <!--deposite-->
+    <!--depositescreen-->
+    <string name="status_dep">Status :</string>
+    <!--DownloadDialogBox-->
+    <string name="amt_dep">Amount :</string>
+    <!--DownloadDialogBox-->
+
+
+    <!--innitialDepositeScr-->
+    <string name="amt_grt_thn">Amount must be greater than " "</string>
+    <string name="inv_amt">Invalid Amount</string>
+    <string name="plz_sel_amt">Please select amount</string>
+    <string name="invlid_amt_init_dep">Invalid Amount</string>
+
+    <!--MyaccountActivity-->
+    <string name="err_on_fatch">Error on Fatching</string>
+
+    <!--myprofilescrn-->
+    <string name="add_photo">Add Photo!</string>
+
+    <!--myticketsscreen-->
+    <string name="err_on_fatch_my_tick">Error on Fatching</string>
+
+
+    <!--paymentgatewayweb-->
+    <string name="plz_wait">Please Wait...</string>
+    <string name="cancel_trans">Do you want to cancel transaction ?</string>
+    <!--AlertDialogMessage-->
+    <string name="deposite">Deposit</string>
+    <!--AlertDialogTitle-->
+
+    <!--profileEditActivity-->
+    <string name="city_prof_edit_acit">Cities</string>
+    <string name="state_prof_edit_acit">States</string>
+    <string name="toast_state_string_enter">Please enter state</string>
+    <string name="toast_state_string_select">Please select state</string>
+    <string name="toast_city_string_enter">Please enter city</string>
+    <string name="toast_city_string_select">Please select city</string>
+
+
+    <!--profileFragment-->
+    <string name="error_on_fatch_pro_frag">Error on Fatching</string>
+
+    <!--withdrawalScreen-->
+    <string name="no_withdrw_opt_ava">No Withdrawal Options Available</string>
+    <string name="inva_amt">Invalid Amount</string>
+
+
+    <!--scratchCards-->
+    <string name="result_scratch_card">RESULT</string>
+    <string name="scra_cards">Scratch Cards</string>
+
+    <!--sportsLottery-->
+    <!--slgamelistActivity-->
+    <string name="plz_wait_sl_act">Please Wait...</string>
+    <string name="no_games">No games!</string>
+    <string name="session_out_login">Session Out Login Again</string>
+
+
+    <!--sportslotteryacitivity-->
+    <string name="avl_bal_is_low">Available balace is low</string>
+    <string name="wrong_event_type">Wrong event type</string>
+
+
+    <!--sportsLotteryResultActivity-->
+    <string name="data_n_ava">Data not available</string>
+
+
+    <!--sportslotteryticketActivity-->
+    <string name="wro_eve_type">Wrong event type</string>
+    <!--sportsTicketActivity--><!--sportslotteryticketActivity-->
+    <string name="int_err">Internal Error!, Try again later</string>
+
+    <!--utils-->
+    <!--gloableVariables-->
+    <string name="load_global">Loading...</string>
+
+    <!--tabbar-->
+    <!--iconpageIndicator--><!--titlepageIndicator-->
+    <string name="view_page_d_n_ha_ad_ins">ViewPager does not have adapter instance.</string>
+    <!--exception-->
+    <string name="vi_pag_h_not_b_bound">ViewPager has not been bound.</string>
+    <!--exception-->
+
+    <!--end-->
+    <!--statsxml-->
+    <string name="stats_data_not_aval">Statistics Data is Not Available</string>
+
+    <!--resultxml-->
+    <string name="result_data_not_aval">Result Data is Not Available</string>
+
+    <!--accountEdit-->
+    <string name="first_name_hint">first name</string>
+    <string name="last_name_hint">last name</string>
+    <string name="dob_hint">birth date</string>
+    <string name="gender_text">Gender</string>
+    <string name="gender_male_text">Male</string>
+    <string name="gender_female_text">Female</string>
+    <string name="mo_hint">mobile number</string>
+    <string name="email_hint">email</string>
+    <string name="address_hint">address</string>
+    <string name="state_text">State</string>
+    <string name="city_text">City</string>
+    <string name="state_select_text">Select State</string>
+    <string name="state_text_hint">enter state</string>
+    <string name="city_select_text">Select City</string>
+    <string name="city_text_hint">enter city</string>
+    <string name="save_text">SAVE</string>
+
+
+    <!--Myaccount-->
+    <string name="please_select_amount">Please select amount</string>
+    <string name="call_for_africa_outlets">Call For Africa Outlets</string>
+    <string name="call_for_eco_cash">Call For Eco Cash</string>
+    <string name="open_nla_webview">Open NLA WebView</string>
+    <string name="call_for_tele_cash">Call For Tele Cash</string>
+
+    <!-- communicatoin-->
+    <string name="load_commun">Loading...</string>
+
+
+    <!--scratch -->
+    <string name="scratch_retailer_scr">SCRATCH RETAILER</string>
+
+    <!--SL -->
+    <string name="purchase_conf_sl">Purchase Confirmation</string>
+    <string name="int_error_sl">Internal Error !, Try Later</string>
+    <string name="no_match_avl_sl">No Match Available !</string>
+    <string name="bal_insuff_sl">Balance is not Sufficient</string>
+    <string name="purch_conf_sl">CONFIRM</string>
+    <string name="play_amt_insuff_sl">Play Amount should not Zero(0)</string>
+    <string name="sel_atlest_one_sl">Select atleast one from all!</string>
+    <string name="data_not_aval_sl">Data not available</string>
+    <string name="session_out_sl">Session Out Login Again</string>
+    <string name="no_games_sl">No games!</string>
+
+    <!--services-->
+    <string name="dg_sale">DG Sale</string>
+    <string name="claim">Claim</string>
+    <string name="scratch_sale">Scratch Sale</string>
+    <string name="sports_lottery">Sports Lottery</string>
+    <string name="cash_in">Cash in</string>
+    <string name="cash_out">Cash out</string>
+
+    <!--types-->
+    <string name="agent">Agent</string>
+    <string name="bank">Bank</string>
+    <string name="head_quarter">Head Quarter</string>
+    <string name="retailer">Retailer</string>
+    <string name="current">Current</string>
+
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="text">25</string>
+    <string name="ver">"VERSION : "</string>
+    <string name="download_text">The latest version</string>
+    <string name="download_text_two">of our app is out now. Upgrade now!</string>
+    <string name="update_text">Your App v</string>
+    <string name="downloading">Downloading, Please wait&#8230;</string>
+    <string name="org_name">© 2017 SKILROCK TECHNOLOGIES PVT. LTD.</string>
+    <string name="copyright">2017 COPYRIGHT</string>
+    <string name="enter_mobile_for_otp">Enter Mobile Number</string>
+    <string name="username">username</string>
+    <string name="password">password</string>
+    <string name="remember_me">Remember Me!!</string>
+    <string name="register">Register for Free</string>
+    <string name="register_button_text">Register</string>
+    <string name="reset_device">Reset Registered Device ?</string>
+    <string name="please_wait">Please Wait &#8230;</string>
+    <string name="loading">Loading Please Wait &#8230;</string>
+    <string name="no_ntk">Network Failure, Please Try Again</string>
+    <string name="un_pwd_validation">Username or Password cannot be blank</string>
+    <string name="exit_header">Exit Application</string>
+    <string name="exit_text">Do you want to Exit?</string>
+    <string name="invalid_mob">Invalid number</string>
+    <string name="enter_mob">Please enter mobile number</string>
+    <string name="enter_code">Please Enter your Code</string>
+    <string name="invalid_code">Please Enter your Code Correctly</string>
+    <string name="pass_sent">New Password has been Sent</string>
+    <string name="sess_out">Session Out Login Again</string>
+    <string name="login_header">LOGIN</string>
+    <string name="change_header">CHANGE PASSWORD</string>
+    <string name="forgot_header">FORGOT PASSWORD</string>
+    <string name="verify_header">RESET DEVICE BINDING</string>
+    <string name="reg_header">REGISTER</string>
+    <string name="otp_header">OTP</string>
+    <string name="terms_header">TERMS&amp;CONDITIONS</string>
+    <string name="sms_sent">SMS Sent, please check Inbox</string>
+    <string name="device_reg">Device Successfully Registered</string>
+    <string name="u_n_a">UserName Available</string>
+    <string name="u_n_i">UserName Invalid</string>
+    <string name="u_n_v">User Name less than 5 Characters</string>
+    <string name="cred_sent">Your credentials has been sent as SMS.</string>
+    <string name="otp_sent">Your OTP has been sent as SMS.</string>
+    <string name="bday">When\'s Your Birthday?</string>
+    <string name="date_picked">Date picked:</string>
+    <string name="all_man">All Fields Are Not Fulfilled</string>
+    <string name="u_n_min">User Name should be greater than 5 Characters</string>
+    <string name="all_fields">All Fields Are Not Fulfilled</string>
+    <string name="invalid_u_n">Invalid UserName</string>
+    <string name="invalid_f_n">Invalid Firstname</string>
+    <string name="invalid_l_n">Invalid Lastname</string>
+    <string name="invalid_eid">Invalid Emailid</string>
+    <string name="age_validation">Age must be greater than 18 years</string>
+    <string name="agree_tnc">Please Agree to the Terms and Conditions</string>
+    <string name="pls_try">Please try again later!</string>
+    <string name="inv_vc">Invalid verification Code</string>
+    <string name="vc_exp">Verification Code Expired</string>
+    <string name="enter_otp">Please Enter OTP</string>
+    <string name="regen_otp">Re-generate OTP</string>
+    <string name="dg_header">Winlot Game</string>
+    <string name="buy_now"><b>BUY</b>\n
+        <i>NOW</i>
+    </string>
+    <string name="sl_header">Sports Lottery</string>
+    <string-array name="array">
+        <item>Settings</item>
+        <item>Hai</item>
+        <item>Hello</item>
+        <item>Sngs</item>
+    </string-array>
+    <string-array name="jazzy_effects">
+        <item>Standard</item>
+        <item>Tablet</item>
+        <item>CubeIn</item>
+        <item>CubeOut</item>
+        <item>FlipVertical</item>
+        <item>FlipHorizontal</item>
+        <item>Stack</item>
+        <item>ZoomIn</item>
+        <item>ZoomOut</item>
+        <item>RotateUp</item>
+        <item>RotateDown</item>
+        <item>Accordion</item>
+    </string-array>
+
+    <string name="play_now">"<b>PLAY</b>\nNOW"
+    </string>
+    <string name="open">Open</string>
+    <string name="close">Close</string>
+    <string name="welcome_player">Welcome Player</string>
+    <string name="new_user">New User?</string>
+    <string name="use_otp">
+        <u>Use OTP</u>
+    </string>
+
+    <!--new merge zim-->
+    <string name="email">email id</string>
+    <string name="refCode">referral code</string>
+    <string name="emailvalidation">please enter correct email id</string>
+    <!--end-->
+
+    <string name="new_user_reg">New User Registration</string>
+    <string name="reg_username">username</string>
+    <string name="reg_firstname">First Name:</string>
+    <string name="reg_lastname">Last Name:</string>
+    <string name="reg_mobile">mobile no</string>
+    <string name="reg_mail">Email-id:</string>
+    <string name="reg_dob">dob</string>
+    <string name="reg_gender">Gender:</string>
+    <string name="reg_city">City:</string>
+    <string name="reg_address">Address:</string>
+    <string name="reg_male">Male</string>
+    <string name="reg_female">Female</string>
+    <string name="menu">Menu</string>
+    <string name="otp_message">Enter OTP sent to your registered mobile number.</string>
+    <string name="send_otp">Send</string>
+    <string name="regenerate_otp">Re-generate</string>
+    <string name="game">5/90 Game</string>
+    <string name="quick_pick">Quick Pick</string>
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="dialog_picked_numbers">Picked Numbers</string>
+    <string name="dialog_picked_numbers_six">Panel Count</string>
+    <string name="dialog_qp">QP</string>
+    <string name="dialog_draw_selected">Draw Selected</string>
+    <string name="dialog_bet_amt">Bet Amount</string>
+    <string name="dialog_bet_amt_six">Bet Amount</string>
+    <string name="dialog_bet_amt_mul">Bet Amount Mul</string>
+    <string name="dialog_qp_quantity">Enter No. for QP</string>
+    <string name="dialog_total_amt">Total Amount</string>
+    <string name="dialog_num_lines">No. of Lines</string>
+    <string name="dialog_bet_amt_hint">Bet Amount</string>
+    <string name="dialog_qp_hint">Quick Pick</string>
+    <string name="banker_upper_line">Enter No. for UL</string>
+    <string name="banker_below_line">Enter No. for BL</string>
+    <string name="banker_upperline">Quick Pick(UL)</string>
+    <string name="banker_belowline">Quick Pick(BL)</string>
+    <string name="banker_upper_line_bet">Upper Line</string>
+    <string name="banker_below_line_bet">Below Line</string>
+    <string name="reg_state">State:</string>
+    <!-- Sanjay Variables -->
+    <string name="oldpassword">old password</string>
+    <string name="newpassword">new password</string>
+    <string name="confirmpwd">confirm password</string>
+    <string name="retypepassword">retype password</string>
+    <string name="forgot_password">
+        <u>Forgot Password?</u>
+    </string>
+    <string name="amount">Enter Amount</string>
+    <string name="reamount">Confirm Amount</string>
+    <string name="terms">I agree to the Terms and Conditions</string>
+    <string name="enter_verification_code">Enter Verification Code</string>
+    <string name="verification_code">Verification Code</string>
+    <string name="done">Done</string>
+    <string name="oc">From Contact</string>
+    <string name="resend_verification">Code Not Received? Click Here</string>
+    <string name="enter_refer_number">Enter Friend\'s Mobile No.</string>
+    <string name="refer_number">Enter Mobile No.</string>
+    <string name="notify_deposit">Notify Deposit</string>
+    <string name="notify_deposit_date">Date</string>
+    <string name="notify_deposit_teller_no">Teller Number</string>
+    <string name="notify_deposit_amount">Amount</string>
+    <string name="select_payment_option">- Select -</string>
+    <string name="account_header">My Account</string>
+    <string name="account_edit_header">Edit Profile</string>
+    <string name="faq_header">FAQ</string>
+    <string name="contact_us_header">Contact Us</string>
+    <string name="tckt_desc_header">Ticket Description</string>
+    <string name="my_tckts">My Tickets</string>
+    <string name="track_tckts">Track Ticket</string>
+
+    <string-array name="payment_gateway_arrays">
+        <item>Paga</item>
+    </string-array>
+    <string-array name="payment_option_arrays">
+        <item>- Select -</item>
+        <item>Cash</item>
+        <item>Online</item>
+    </string-array>
+    <string-array name="payment_gateway_selection_arrays">
+        <item>Paga</item>
+        <item>Bank</item>
+    </string-array>
+    <string-array name="withdrawal_source_arrays">
+        <item>AfricaLotto Outlets</item>
+        <!-- <item>Paga Outlets</item> -->
+        <!-- <item>Direct Credit to Paga Account</item> -->
+        <!-- <item>Bank Transfer</item> -->
+    </string-array>
+    <string-array name="wallets">
+        <item>Select Wallet Provider</item>
+        <item>Paga</item>
+        <item>Eco</item>
+        <item>Tele</item>
+    </string-array>
+    <string-array name="banks">
+        <item>Select Banks</item>
+        <item>SBI</item>
+        <item>PNB</item>
+        <item>HDFC</item>
+    </string-array>
+
+    <string name="back">Back</string>
+    <string name="purchase">Purchase</string>
+    <string name="epn">Enter Your registered mobile number to get new password instantly.</string>
+    <string name="pnh">mobile number</string>
+    <string name="amt">Amount</string>
+    <string name="camt">Confirm Amount</string>
+    <string name="wdr">Withdrawal</string>
+    <string name="pgty">Payment Gateway</string>
+    <string name="status">Status</string>
+    <string name="gty">Gateway</string>
+    <string name="pcma">Please check My Accounts to verify your payment</string>
+    <string name="prcd">Proceed</string>
+    <string name="cbal">Closing Balance</string>
+    <string name="dnaz">Do not add 0 or area code</string>
+    <string name="winlot">WINLOT</string>
+    <string name="ghana">5/90 Ghana</string>
+    <string name="ywl">You will require this password for login</string>
+    <string name="dday">Draw Date</string>
+    <string name="dtime">Draw Time</string>
+    <string name="rawt">RESULT AWAITED&#8230;!</string>
+    <string name="nols">No. Of Lines(s)</string>
+    <string name="btype">BetType</string>
+    <string name="pamt">Panel amount</string>
+    <string name="pctype">Picked Type</string>
+    <string name="totamt">Total Amount (NGN)</string>
+    <string name="nod">No. Of Draws</string>
+    <string name="tckt">Ticket No</string>
+    <!-- new -->
+    <string name="send">Send</string>
+    <string name="nc">No Contacts</string>
+    <string name="map_view">Map View</string>
+    <string name="list_view">List View</string>
+    <string name="s_s">Select State</string>
+    <string name="s_c">Select City</string>
+    <string name="etn">enter ticket number</string>
+    <string name="evn">enter virn number</string>
+    <string name="submit">SUBMIT</string>
+    <string name="net_error">Server Error, please try later</string>
+    <string name="dwn_fld_msg">Sorry! Unable to download</string>
+    <string name="dwn_fld">Download failed</string>
+    <string name="txt_image_slider">Banner</string>
+    <string name="notify_deposit_select_bank">Select Bank</string>
+    <string name="notify_deposit_select_payment_option">Payment Option</string>
+    <string name="notify_deposit_select_branch">Enter Branch (Optional)</string>
+    <string name="deposit_date">Deposit Date</string>
+    <string name="deposit_date_hint">DD/MM/YYYY</string>
+    <!-- changes made -->
+    <string name="login">Login</string>
+    <!--  -->
+
+    <string name="title_activity_lr">LR</string>
+    <string name="title_activity_weaver">Weaver</string>
+
+
+    //new
+    <string name="otpconfig">Please enter 6 digit OTP, which is sent your mobile number</string>
+    <string name="agreement">By Registering confirms that you are 18+ and you accept to our Terms
+        and Conditions
+    </string>
+    <string name="continue_button_text">continue</string>
+    <string name="play_now_text">
+        <b>BUY</b>
+        <i>NOW!!</i>
+    </string>
+    <string name="lets_play">LETS PLAY</string>
+    <string name="lost_password">Forgot Password?</string>
+    <string name="loading_one">L O A D I N G .</string>
+    <string name="loading_two">L O A D I N G . .</string>
+    <string name="loading_three">L O A D I N G . . .</string>
+
+    <!--IGE Game String-->
+    <string name="ige_name">INSTANT WIN</string>
+    <string name="no_network_connection_toast">No network connection found</string>
+    <string name="terms_and_policy">By Sign in your account you agree to our
+        <font color="black">
+            <b>
+                <u>Terms of use</u>
+            </b>
+        </font>
+        and
+        <font color="black">
+            <b>
+                <u>Privacy Policy</u>
+            </b>
+        </font>
+    </string>
+    <string name="try_free">
+        <i>No thanks!! I want to</i>
+        <font color="black">
+            <b>try it for free !!</b>
+        </font>
+    </string>
+    <string name="bonus_done">DONE</string>
+    <string name="unfinish">You have unfinished games</string>
+    <string name="no_draws_text">No Draws Available</string>
+    <string name="withdrawal_rep_data">My withdrawals data is not available</string>
+    <string name="bank_deposit_rep_data">Bank Deposit Report Data is Not Available</string>
+    <string name="my_txns">No transaction found!</string>
+    <string name="app_tour_drawer_lay_main">App Tour</string>
+    <string name="title_activity_my_profile">MyProfileActivity</string>
+
+    <string name="txt_tc">By registering you agree to our\n<font><b>
+                <u>Terms &amp; Conditions</u>
+            </b>
+        </font>
+    </string>
+    <string name="sql_exception">Internal system error !</string>
+    <string name="not_avl">currently not available</string>
+
+    <!--myaccount-->
+    <string name="some_internal_error">Some internal error !!</string>
+    <string name="oops">Oops...</string>
+    <string name="amt_in_bt">amount should in between</string>
+    <string name="to">to</string>
+    <string name="deposit">Deposit</string>
+    <string name="deposit_error">Deposit Error !! Please check My Account to verify your deposit."</string>
+
+    <!--paymentGatewayFrag-->
+    <string name="top_up_with_player">Top Up Player Wallet</string>
+    <string name="vpayment_specific_err">Vpayment specific error at time of first communication
+    </string>
+    <string name="vpayment_con_err">Vpayments Connection Error!</string>
+    <string name="req_pay_not_inti">Deposit Payment request Not Intiated Successfully.</string>
+    <string name="mpower_req_id_not_avl">Mpower Deposit Request Id Not Available!</string>
+    <string name="vpay_req_id_not_avl">Vpayments Deposit Request Id Not Available!</string>
+    <string name="req_id_not_avl">Deposit Request Id Not Available!</string>
+    <string name="time_out">Time Out. Login Again !</string>
+
+    <!--telecashConfirms-->
+    <string name="otp_null">otp is null</string>
+    <!--stats.xml-->
+    <!--<string name="stats_data_not_aval">Statistics Data is Not Available</string>-->
+
+    <!--&lt;!&ndash;resultxml&ndash;&gt;-->
+    <!--<string name="result_data_not_aval">Result Data is Not Available</string>-->
+
+    <!--mpower_account-->
+    <string name="mpower_username">mpower username or phone number</string>
+
+    <!--personal_bank_acc-->
+    <string name="acc_no">account number</string>
+    <string name="acc_name">account name</string>
+    <string name="branch_name">branch name</string>
+
+    <!--mtn_mobile_money-->
+    <string name="mob_mon_no">mobile money number</string>
+    <string name="name_of_fund_rec">name of fund recipient</string>
+
+    <!--PGAdapter-->
+    <string name="surch_amt">% surcharge)</string>
+    <string name="confirm_buy">Confirm buy</string>
+    <string name="amtvalidation">Please enter amount range between %s to" "</string>
+
+    <string name="proceed">PROCEED</string>
+    <string name="dialog_notice">* The minimum total play amount should be 0.50 GHs</string>
+    <string name="dialog_notice_buy">Please play at least one game</string>
+    <string name="add_more_panel">Add more panel</string>
+
+    <!--lagos-->
+    <string name="lagos_acc_number">account number</string>
+    <string name="rs_check_on">Please select amount</string>
+
+    <!--gamesNameForMyTicket-->
+    <string name="sport_lottery_ticket">SPORTS\nLOTTERY</string>
+    <string name="dge_lottery_ticket">WINLOT\nGAME(S)</string>
+    <string name="sc_lottery_ticket">SCRATCH\nCARD</string>
+    <string name="ige_lottery_ticket">INSTANT\nWIN</string>
+
+    <!--lotto League-->
+    <string name="lotto_rank">Rank</string>
+    <string name="lotto_name">Name</string>
+    <string name="lotto_points">Points</string>
+    <string name="lotto_league_header">Lotto League</string>
+    <string name="lotto_league_avl">Lotto League Data are Not Available</string>
+
+    <!--pseudoName-->
+    <string name="pseudoName">Lotto pseudo name</string>
+    <string name="pseudoName_validation">Lotto pseudo name cannot be empty</string>
+    <string name="successfully_register">you are successfully register</string>
+    <string name="unsuccessfully_register">you are not register</string>
+
+    <!--inputDialogBox-->
+    <string name="input_ok">OK</string>
+    <string name="input_logout">Logout</string>
+
+    <!--Change of BetAmount in Play Amount for Ghana-->
+    <string name="bet_amount_txt">Bet Amount" "</string>
+    <!--for retailer scan -->
+    <string name="retailer_scan">retailer scan</string>
+    <!--sle buyNow new-->
+    <string name="sle_buy_now">currently sale is not available</string>
+
+
+</resources>

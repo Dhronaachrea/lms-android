@@ -1,0 +1,42 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white">
+
+    <include
+        android:id="@+id/header_id"
+        layout="@layout/dialog_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <EditText
+        android:id="@+id/search_contact"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_id"
+        android:hint="Tap to search"
+        android:singleLine="true"
+        android:visibility="gone">
+
+        <requestFocus />
+    </EditText>
+
+    <ListView
+        android:id="@+id/contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/change"
+        android:layout_below="@+id/search_contact" />
+
+    <com.skilrock.customui.RobotoTextView
+        android:id="@+id/nCon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header_id"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:text="No Contacts"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:visibility="gone" />
+
+</RelativeLayout>

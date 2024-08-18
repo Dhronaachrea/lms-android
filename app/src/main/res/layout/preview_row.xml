@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TableLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/preview_data"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp" >
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/btype"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/bet_name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="Direct1"
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/nols"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/no_of_lines"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="5"
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/unit_price_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="gone" >
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/dialog_bet_amt_six"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/bet_unit_price_text"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/panel_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/pamt"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/panel_amount"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text="120"
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="left"
+            android:text="@string/pctype"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/ispickednumbers"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right"
+            android:text=""
+            android:textColor="@color/white" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/preview_pickednumbers"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="2"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:visibility="gone" />
+    </TableRow>
+
+    <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="5dp" >
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/row_line"
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_weight="1"
+            android:background="@color/white" />
+    </TableRow>
+
+</TableLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent_view"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_bg_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/row_root"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/draw_row_height"
+        android:layout_marginLeft="15dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="0dp"
+            android:layout_height="fill_parent"
+            android:layout_weight="0.1"
+            android:gravity="center"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:orientation="vertical">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/bet_name"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:ellipsize="end"
+                android:gravity="left"
+                android:singleLine="true"
+                android:text="@string/Send_bet_dialog"
+                android:textColor="@color/dialog_text_color"
+                android:textSize="@dimen/bet_text"
+                android:textStyle="bold" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/five_nine_divider_color" />
+
+</LinearLayout>

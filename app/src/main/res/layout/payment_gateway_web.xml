@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/main_header" />
+
+    <LinearLayout
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <com.skilrock.customui.CustomCheckedTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/txn_cal_month"
+            android:gravity="center"
+            android:padding="2dp"
+            android:text="@string/top_up_with_player"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/yellow" />
+    </LinearLayout>
+
+    <WebView
+        android:id="@+id/webview_paga"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layerType="software" />
+
+</LinearLayout>

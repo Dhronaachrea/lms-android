@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/dialog_bg_color"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/row_root"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <RelativeLayout
+            android:id="@+id/da"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="8dp"
+            android:paddingTop="8dp">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/con_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:singleLine="true"
+                    android:text="Jublee"
+                    android:textColor="@color/dialog_text_color"
+                    android:textSize="@dimen/draw_name_text"
+                    android:textStyle="bold" />
+
+                <com.skilrock.customui.CustomTextViewTop
+                    android:id="@+id/con_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:gravity="left"
+                    android:maxLines="2"
+                    android:text="Mon2014"
+                    android:textColor="@color/dialog_text_color"
+                    android:textSize="@dimen/draw_sub_text" />
+            </LinearLayout>
+
+            <CheckBox
+                android:id="@+id/a"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:button="@null"
+                android:drawableRight="@drawable/draw_row_bg"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+
+        <CheckBox
+            android:id="@+id/check_box"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:drawableRight="@drawable/draw_row_bg"
+            android:gravity="right" />
+
+
+    </RelativeLayout>
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/five_nine_divider_color" />
+
+</LinearLayout>

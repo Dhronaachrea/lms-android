@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_teams"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_check_boxes"
+            android:layout_toLeftOf="@+id/txt_vs"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.winlot.wear.RobotoTextView
+                android:id="@+id/home"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Crystal Palace"
+                android:textColor="#3B3B3B"
+                android:textSize="12sp" />
+
+        </LinearLayout>
+
+        <com.winlot.wear.RobotoTextView
+            android:id="@+id/txt_vs"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:background="@drawable/spl_match_bg_vs"
+            android:gravity="center"
+            android:text="VS"
+            android:textColor="#7B7B7B"
+            android:textSize="13sp" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/ll_check_boxes"
+            android:layout_toRightOf="@+id/txt_vs"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <com.winlot.wear.RobotoTextView
+                android:id="@+id/away"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Derby County"
+                android:textColor="#3B3B3B"
+                android:textSize="12sp" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp">
+
+        <com.winlot.wear.SquareCheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_bg"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="H"
+            android:textColor="#6D6D6D" />
+
+        <com.winlot.wear.SquareCheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_bg"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="D"
+            android:textColor="#6D6D6D" />
+
+        <com.winlot.wear.SquareCheckBox
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:layout_weight="1"
+            android:background="@drawable/radio_bg"
+            android:button="@android:color/transparent"
+            android:gravity="center"
+            android:text="A"
+            android:textColor="#6D6D6D" />
+    </RadioGroup>
+
+
+</LinearLayout>

@@ -1,0 +1,1100 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/main_header"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <!-- The main content view -->
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/five_color_bg"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/buy_lay"
+                    android:orientation="vertical">
+
+                    <ScrollView
+                        android:id="@+id/scrollView"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_alignParentTop="true"
+                            android:orientation="vertical">
+
+                            <RelativeLayout
+                                android:id="@+id/aa"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/bonus_aa_height"
+                                android:background="@color/five_color_bg"
+                                android:orientation="horizontal">
+
+                                <LinearLayout
+                                    android:id="@+id/one"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="fill_parent"
+                                    android:background="@color/five_color_bg"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:paddingBottom="@dimen/bonus_one_pad_bot"
+                                    android:paddingLeft="@dimen/bonus_one_pad_lf"
+                                    android:paddingRight="@dimen/bonus_one_pad_rt"
+                                    android:paddingTop="@dimen/bonus_one_pad_top">
+
+                                    <com.skilrock.customui.CustomTextViewDown
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/five_color_bg"
+                                        android:gravity="center"
+                                        android:includeFontPadding="false"
+                                        android:text="@string/current_bonus_game"
+                                        android:textColor="@color/current_quick"
+                                        android:textSize="@dimen/bonus_current_tx_siz" />
+
+                                    <com.skilrock.customui.CustomTextViewTop
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/five_color_bg"
+                                        android:gravity="center"
+                                        android:text="@string/draw_bonus_game"
+                                        android:textColor="@color/current_quick"
+                                        android:textSize="@dimen/bonus_current_quick_tx_size" />
+                                </LinearLayout>
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:id="@+id/two"
+                                    android:layout_width="@dimen/bonus_two_wd"
+                                    android:layout_height="fill_parent"
+                                    android:layout_toRightOf="@+id/one"
+                                    android:background="@color/five_color_one" />
+
+                                <LinearLayout
+                                    android:id="@+id/linearLayout1"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_toRightOf="@+id/two"
+                                    android:gravity="left|center"
+                                    android:orientation="vertical"
+                                    android:paddingLeft="@dimen/bonus_line_lay_pad_lf">
+
+                                    <com.skilrock.customui.CustomTextView
+                                        android:id="@+id/draw_name"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:gravity="center_vertical"
+                                        android:singleLine="true"
+                                        android:text="@string/winjub_bonus_game"
+                                        android:textColor="@color/jublee_mon_direct"
+                                        android:textSize="@dimen/bonus_line_lay_tx_siz" />
+
+                                    <com.skilrock.customui.CustomTextViewTop
+                                        android:id="@+id/draw_time"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:ellipsize="end"
+                                        android:gravity="left"
+                                        android:paddingTop="@dimen/bonus_line_lay_pd_top"
+                                        android:singleLine="true"
+                                        android:text="@string/tue_bonus_game"
+                                        android:textColor="@color/jublee_mon_direct"
+                                        android:textSize="@dimen/bonus_draw_time_tx_size" />
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:id="@+id/three"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="fill_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_toRightOf="@+id/linearLayout1">
+
+                                    <com.skilrock.customui.CustomTextView
+                                        android:id="@+id/rest_draws"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="fill_parent"
+                                        android:layout_toLeftOf="@+id/advance_menu"
+                                        android:background="@color/five_color_bg"
+                                        android:gravity="center"
+                                        android:paddingRight="@dimen/bonus_rest_draws_pd_rt"
+                                        android:text="+3 more"
+                                        android:textColor="@color/jublee_mon_direct"
+                                        android:textSize="@dimen/bonus_rest_draws_tx_siz" />
+
+                                    <ImageView
+                                        android:id="@+id/advance_menu"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_alignParentRight="true"
+                                        android:scaleType="fitXY"
+                                        android:src="@drawable/new_add_more" />
+                                </RelativeLayout>
+                            </RelativeLayout>
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="fill_parent"
+                                android:layout_height="@dimen/bonus_bel_rest_draws_ht"
+                                android:background="@color/five_color_one" />
+
+                            <RelativeLayout
+                                android:id="@+id/bet_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/five_color_bg"
+                                android:orientation="horizontal"
+                                android:padding="@dimen/bonus_bet_lay_pd">
+
+                                <com.skilrock.customui.CustomTextViewDown
+                                    android:id="@+id/scroll"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:text="@string/bet_type_bonus_game"
+                                    android:textColor="@color/three_bet_type"
+                                    android:textSize="@dimen/bonus_scroll_tx_siz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:id="@+id/bet_name"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_below="@+id/scroll"
+                                    android:text="@string/perm1_bonus_game"
+                                    android:textColor="@color/jublee_mon_direct"
+                                    android:textSize="@dimen/bonus_bet_name_height" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:id="@+id/change_bet_type"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:drawablePadding="@dimen/bonus_change_bet_type_pd"
+                                    android:drawableRight="@drawable/bet_arrow"
+                                    android:gravity="center"
+                                    android:text="@string/change_bet_type_bonus_game"
+                                    android:textColor="@color/jublee_mon_direct"
+                                    android:textSize="@dimen/bonus_change_bet_size" />
+                            </RelativeLayout>
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/bonus_bel_change_bet_type_divder"
+                                android:background="@color/five_color_divider" />
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/four_options_background"
+                                android:gravity="center"
+                                android:padding="@dimen/bonus_sel_num_pd"
+                                android:text="@string/sel_num_bonus_game"
+                                android:textColor="@color/four_options_text"
+                                android:textSize="@dimen/select_no_text_size"
+                                android:visibility="visible" />
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/bonus_cust_divd"
+                                android:background="@color/four_options_text" />
+
+                            <LinearLayout
+                                android:id="@+id/four_opns"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/four_options_background"
+                                android:orientation="horizontal"
+                                android:visibility="visible"
+                                android:weightSum="1.0">
+
+                                <com.skilrock.customui.CustomCheckedTextView
+                                    android:id="@+id/fav_nos"
+                                    android:layout_width="@dimen/bonus_fav_nos_wd"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.25"
+                                    android:background="@color/four_options_background"
+                                    android:checked="true"
+                                    android:drawableBottom="@drawable/strip_down1"
+                                    android:drawableTop="@drawable/fn"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/bonus_fav_nos_pd_tp"
+                                    android:text="@string/fav_bonus_game"
+                                    android:textColor="@color/four_options_text"
+                                    android:textSize="@dimen/bonus_fav_nos_tx_siz" />
+
+                                <com.skilrock.customui.CustomCheckedTextView
+                                    android:id="@+id/last_picked"
+                                    android:layout_width="@dimen/bonus_last_picked_wd"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.25"
+                                    android:background="@color/four_options_background"
+                                    android:drawableTop="@drawable/lp"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/bonus_last_picked_pd_tp"
+                                    android:text="@string/last_pick_bonus_game"
+                                    android:textColor="@color/four_options_text"
+                                    android:textSize="@dimen/bonus_last_picked_tx_Sz" />
+
+                                <com.skilrock.customui.CustomCheckedTextView
+                                    android:id="@+id/quick_pick"
+                                    android:layout_width="@dimen/bonus_quick_pick_wd"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.25"
+                                    android:background="@color/four_options_background"
+                                    android:drawableTop="@drawable/qp"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/bonus_quick_pick_pd_tp"
+                                    android:text="@string/quick_pick_bonus_game"
+                                    android:textColor="@color/four_options_text"
+                                    android:textSize="@dimen/bonus_quick_pick_tx_siz" />
+
+                                <com.skilrock.customui.CustomCheckedTextView
+                                    android:id="@+id/select_nos"
+                                    android:layout_width="@dimen/bonus_select_nos_wd"
+                                    android:layout_height="fill_parent"
+                                    android:layout_weight="0.25"
+                                    android:background="@color/four_options_background"
+                                    android:drawableTop="@drawable/sn"
+                                    android:gravity="center"
+                                    android:paddingTop="@dimen/bonus_select_nos_pd_tp"
+                                    android:text="@string/pick_bonus_game"
+                                    android:textColor="@color/four_options_text"
+                                    android:textSize="@dimen/bonus_select_nos_tx_sz" />
+                            </LinearLayout>
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/bonus_bel_select_nos_div"
+                                android:background="@color/five_color_divider" />
+
+                            <LinearLayout
+                                android:id="@+id/last_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/five_color_bg"
+                                android:gravity="center"
+                                android:orientation="vertical"
+                                android:padding="@dimen/bonus_last_lay_pd"
+                                android:visibility="visible">
+
+                                <LinearLayout
+                                    android:id="@+id/perm_six_lay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/five_color_bg"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:padding="@dimen/bonus_perm_six_lay_pd"
+                                    android:visibility="gone">
+
+                                    <LinearLayout
+                                        android:id="@+id/last_lay_sub"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@color/five_color_bg"
+                                        android:gravity="left"
+                                        android:orientation="vertical"
+                                        android:padding="@dimen/bonus_last_lay_sub_pd">
+
+                                        <LinearLayout
+                                            android:id="@+id/first_selected_nos"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1"
+                                            android:background="@color/five_color_bg"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_first_selected_nos_wd"
+                                                android:layout_height="@dimen/bonus_first_selected_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+                                        </LinearLayout>
+
+                                        <LinearLayout
+                                            android:id="@+id/second_selected_nos"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="@dimen/bonus_second_selected_nos"
+                                            android:layout_weight="1"
+                                            android:background="@color/five_color_bg"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game" />
+                                        </LinearLayout>
+                                    </LinearLayout>
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/direct_six_lay"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/five_color_bg"
+                                    android:gravity="center"
+                                    android:orientation="vertical"
+                                    android:visibility="visible">
+
+                                    <RelativeLayout
+                                        android:id="@+id/bonus_row_one"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp">
+
+                                        <com.skilrock.customui.CustomTextView
+                                            android:id="@+id/no_one"
+                                            android:layout_width="@dimen/bonus_no_one_wd"
+                                            android:layout_height="@dimen/bonus_no_one_ht"
+                                            android:layout_alignParentLeft="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:text="#1"
+                                            android:textColor="@color/four_options_text"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:id="@+id/first_direct_nos"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginTop="@dimen/bonus_first_dir_nos_mg_tp"
+                                            android:layout_toLeftOf="@+id/edit_one"
+                                            android:layout_toRightOf="@+id/no_one"
+                                            android:layout_weight="1"
+                                            android:background="@color/five_color_bg"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_first_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_first_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_first_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_first_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_first_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_first_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_first_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_first_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_first_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_first_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_first_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_first_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:id="@+id/edit_one"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:src="@drawable/bonus_edit"
+                                            android:text="#1"
+                                            android:textColor="#fff" />
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/five_nine_divider_color" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/bonus_row_two"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <com.skilrock.customui.CustomTextView
+                                            android:id="@+id/no_two"
+                                            android:layout_width="@dimen/bonus_no_two_wd"
+                                            android:layout_height="@dimen/bonus_no_two_ht"
+                                            android:layout_alignParentLeft="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:text="#2"
+                                            android:textColor="@color/four_options_text"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:id="@+id/second_direct_nos"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginTop="@dimen/bonus_second_direct_nos_mg_tp"
+                                            android:layout_toLeftOf="@+id/edit_two"
+                                            android:layout_toRightOf="@+id/no_two"
+                                            android:layout_weight="1"
+                                            android:background="@color/five_color_bg"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_second_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_second_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_second_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_second_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_second_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_second_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_second_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_second_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_second_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_second_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_second_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_second_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:id="@+id/edit_two"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:src="@drawable/bonus_edit"
+                                            android:text="#1"
+                                            android:textColor="#fff" />
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/theme_color" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/bonus_row_three"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <com.skilrock.customui.CustomTextView
+                                            android:id="@+id/no_three"
+                                            android:layout_width="@dimen/bonus_no_three_wd"
+                                            android:layout_height="@dimen/bonus_no_three_ht"
+                                            android:layout_alignParentLeft="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:text="#3"
+                                            android:textColor="@color/four_options_text"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:id="@+id/third_direct_nos"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginTop="@dimen/bonus_third_direct_nos_mg_tp"
+                                            android:layout_toLeftOf="@+id/edit_three"
+                                            android:layout_toRightOf="@+id/no_three"
+                                            android:layout_weight="1"
+                                            android:background="@color/five_color_bg"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_third_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_third_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_third_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_third_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_third_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_third_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_third_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_third_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_third_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_third_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_third_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_third_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:id="@+id/edit_three"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:src="@drawable/bonus_edit"
+                                            android:text="#1"
+                                            android:textColor="#fff" />
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="1dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/five_nine_divider_color" />
+
+                                    <RelativeLayout
+                                        android:id="@+id/bonus_row_four"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content">
+
+                                        <com.skilrock.customui.CustomTextView
+                                            android:id="@+id/no_four"
+                                            android:layout_width="@dimen/bonus_no_four_wd"
+                                            android:layout_height="@dimen/bonus_no_four_ht"
+                                            android:layout_alignParentLeft="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:text="#4"
+                                            android:textColor="@color/four_options_text"
+                                            android:textStyle="bold" />
+
+                                        <LinearLayout
+                                            android:id="@+id/fourth_direct_nos"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_centerVertical="true"
+                                            android:layout_marginTop="@dimen/bonus_fourth_direct_nos_mg_tp"
+                                            android:layout_toLeftOf="@+id/edit_four"
+                                            android:layout_toRightOf="@+id/no_four"
+                                            android:layout_weight="1"
+                                            android:background="@color/five_color_bg"
+                                            android:gravity="center"
+                                            android:orientation="horizontal">
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_fourth_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_fourth_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_fourth_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_fourth_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_fourth_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_fourth_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_fourth_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_fourth_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_fourth_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_fourth_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+
+                                            <com.skilrock.customui.CustomTextView
+                                                android:layout_width="@dimen/bonus_fourth_direct_nos_wd"
+                                                android:layout_height="@dimen/bonus_fourth_direct_nos_ht"
+                                                android:background="@drawable/bonus_none_ball_bg"
+                                                android:gravity="center"
+                                                android:orientation="horizontal"
+                                                android:text="@string/nos_bonus_game"
+                                                android:textColor="#fff" />
+                                        </LinearLayout>
+
+                                        <ImageView
+                                            android:id="@+id/edit_four"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:layout_alignParentRight="true"
+                                            android:layout_centerVertical="true"
+                                            android:gravity="center"
+                                            android:orientation="horizontal"
+                                            android:src="@drawable/bonus_edit"
+                                            android:text="#1"
+                                            android:textColor="#fff" />
+                                    </RelativeLayout>
+
+                                    <View
+                                        android:layout_width="match_parent"
+                                        android:layout_height="2dp"
+                                        android:layout_marginBottom="5dp"
+                                        android:layout_marginTop="5dp"
+                                        android:background="@color/theme_color" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/five_color_divider_heig"
+                                android:background="@color/five_color_divider" />
+
+                            <RelativeLayout
+                                android:id="@+id/nol_sn"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/bonus_nol_sn_mg_bt"
+                                android:layout_marginTop="@dimen/bonus_nol_sn_mg_tp"
+                                android:background="@color/five_color_bg"
+                                android:paddingLeft="@dimen/bonus_nol_sn_pd_lf"
+                                android:paddingRight="@dimen/bonus_nol_sn_pd_rt">
+
+                                <ImageView
+                                    android:id="@+id/edit"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_centerVertical="true"
+                                    android:background="@drawable/edit_nos"></ImageView>
+
+                                <LinearLayout
+                                    android:id="@+id/rest_no_lines"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <com.skilrock.customui.CustomTextViewDown
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/select_bonus_game"
+                                            android:textColor="@color/current_quick"
+                                            android:textSize="@dimen/bonus_current_quick_tx_sz" />
+
+                                        <com.skilrock.customui.CustomTextViewTop
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/numb_bonus_game"
+                                            android:textColor="@color/current_quick"
+                                            android:textSize="@dimen/bonus_current_quick_tx_sz" />
+                                    </LinearLayout>
+
+                                    <com.skilrock.customui.CustomTextView
+                                        android:id="@+id/selected_nos"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/bonus_selected_nos_mg_lf"
+                                        android:gravity="center_vertical"
+                                        android:text="20"
+                                        android:textColor="@color/jublee_mon_direct"
+                                        android:textSize="@dimen/bonus_selected_nos_tx_sz"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="match_parent"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
+                                    android:orientation="horizontal">
+
+                                    <LinearLayout
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:gravity="center"
+                                        android:orientation="vertical">
+
+                                        <com.skilrock.customui.CustomTextViewDown
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/no_bonus_game"
+                                            android:textColor="@color/current_quick"
+                                            android:textSize="@dimen/bonus_numb_bonus_tx_sz" />
+
+                                        <com.skilrock.customui.CustomTextViewTop
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content"
+                                            android:gravity="center"
+                                            android:text="@string/of_lines_bonus_game"
+                                            android:textColor="@color/current_quick"
+                                            android:textSize="@dimen/bonus_numb_bonus_tx_sz" />
+                                    </LinearLayout>
+
+                                    <com.skilrock.customui.CustomTextView
+                                        android:id="@+id/no_of_lines"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="match_parent"
+                                        android:layout_marginLeft="@dimen/bonus_no_of_lines_mg_lf"
+                                        android:gravity="left|center"
+                                        android:text="62"
+                                        android:textColor="@color/jublee_mon_direct"
+                                        android:textSize="@dimen/bonus_no_of_lines_tx_sz"
+                                        android:textStyle="bold" />
+                                </LinearLayout>
+
+                                <LinearLayout
+                                    android:id="@+id/qp_no_lines"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentLeft="true"
+                                    android:layout_alignParentTop="true"
+                                    android:layout_marginRight="@dimen/bonus_qp_no_lines_mg_rt"
+                                    android:orientation="vertical"
+                                    android:visibility="gone">
+
+                                    <com.skilrock.customui.CustomTextView
+                                        android:id="@+id/qp_line_number"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:text="Numbers"
+                                        android:textColor="@color/five_color_one"
+                                        android:textSize="@dimen/bonus_qp_no_lines_tx_sz" />
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:gravity="center"
+                                        android:orientation="horizontal">
+
+                                        <ImageView
+                                            android:id="@+id/qp_dec"
+                                            android:layout_width="@dimen/bonus_qp_dec_wd"
+                                            android:layout_height="@dimen/bonus_qp_dec_ht"
+                                            android:layout_marginRight="@dimen/bonus_qp_dec_mg_rt"
+                                            android:background="@drawable/dec"
+                                            android:gravity="center"
+                                            android:padding="@dimen/bonus_qp_dec_pd" />
+
+                                        <com.skilrock.customui.CustomTextView
+                                            android:id="@+id/qp_nos"
+                                            android:layout_width="@dimen/bonus_qp_nos_wd"
+                                            android:layout_height="@dimen/bonus_qp_nos_ht"
+                                            android:background="@drawable/qp_no_bg"
+                                            android:ems="2"
+                                            android:gravity="center"
+                                            android:maxLength="3"
+                                            android:singleLine="true"
+                                            android:text="100"
+                                            android:textColor="@color/jublee_mon_direct"
+                                            android:textSize="@dimen/bonus_qp_nos_tx_sz"
+                                            android:textStyle="bold" />
+
+                                        <ImageView
+                                            android:id="@+id/qp_inc"
+                                            android:layout_width="@dimen/bonus_qp_inc_wd"
+                                            android:layout_height="@dimen/bonus_qp_inc_ht"
+                                            android:layout_marginLeft="@dimen/bonus_qp_inc_mg_lf"
+                                            android:background="@drawable/inc"
+                                            android:gravity="center"
+                                            android:padding="@dimen/bonus_qp_inc_pd" />
+                                    </LinearLayout>
+                                </LinearLayout>
+                            </RelativeLayout>
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/bonus_bel_qp_inc_divd"
+                                android:background="@color/five_color_divider" />
+
+                            <LinearLayout
+                                android:id="@+id/unit_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical"
+                                android:padding="@dimen/bonus_unit_lay_pd">
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:ems="3"
+                                    android:gravity="center"
+                                    android:text="@string/unit_price_bonus_game"
+                                    android:textColor="@color/current_quick"
+                                    android:textSize="@dimen/bonus_unit_lay_tx_sz" />
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:gravity="center"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:id="@+id/dec"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/dec"
+                                        android:gravity="center"
+                                        android:visibility="gone" />
+
+                                    <com.skilrock.customui.CustomTextView
+                                        android:id="@+id/unit_price"
+                                        android:layout_width="@dimen/bonus_unit_price_wd"
+                                        android:layout_height="@dimen/bonus_unit_price_ht"
+                                        android:layout_marginLeft="@dimen/bonus_unit_price_mg_lf"
+                                        android:layout_marginRight="@dimen/bonus_unit_price_mg_rt"
+                                        android:background="@drawable/qp_no_bg"
+                                        android:ems="2"
+                                        android:gravity="center"
+                                        android:text="100"
+                                        android:textColor="@color/jublee_mon_direct"
+                                        android:textSize="@dimen/bonus_unit_price_tx_sz" />
+
+                                    <ImageView
+                                        android:id="@+id/inc"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:background="@drawable/inc"
+                                        android:gravity="center"
+                                        android:textStyle="bold"
+                                        android:visibility="gone" />
+                                </LinearLayout>
+                            </LinearLayout>
+
+                            <com.skilrock.customui.ExpandableGridView
+                                android:id="@+id/no_grid"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:background="@color/five_color_nos_bg"
+                                android:clipChildren="true"
+                                android:numColumns="6"
+                                android:visibility="visible"></com.skilrock.customui.ExpandableGridView>
+
+                            <com.skilrock.customui.CustomTextView
+                                android:id="@+id/okay"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="@string/okay_bonus_game"
+                                android:textColor="#fff"
+                                android:textSize="@dimen/bonus_okay_tx_sz"
+                                android:visibility="gone" />
+                        </LinearLayout>
+                    </ScrollView>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/buy_lay"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/game_footer_height"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/five_color_divider"
+                    android:orientation="horizontal"
+                    android:paddingTop="@dimen/bonus_buy_lay_pd_tp">
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/final_amt"
+                        android:layout_width="@dimen/bonus_final_amt_wd"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/five_color_bg"
+                        android:gravity="center"
+                        android:text="@string/dol_with_zero_bonus_game"
+                        android:textColor="@color/jublee_mon_direct"
+                        android:textSize="@dimen/bonus_final_amt_tx_sz" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/bonus_abv_buy_no_wd"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/five_color_bg"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="@dimen/bonus_abv_buy_no_pd">
+
+                        <com.skilrock.customui.CustomTextView
+                            android:id="@+id/buy_now"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@drawable/activity_button_bg"
+                            android:gravity="center"
+                            android:text="@string/play_now_text"
+                            android:textColor="@color/activity_button_text_color"
+                            android:textSize="@dimen/bonus_buy_now_tx_sz" />
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </FrameLayout>
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/post_footer" />
+
+</RelativeLayout>

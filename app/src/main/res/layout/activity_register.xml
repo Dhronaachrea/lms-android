@@ -1,0 +1,451 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/dialog_header"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+
+
+    <LinearLayout
+        android:id="@+id/lay_continue"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:layout_below="@+id/header"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+
+        <ScrollView
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TableLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="10dp">
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.weidget.LotteryEditText
+                            android:id="@+id/username"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_bg_login"
+                            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+                            android:hint="@string/reg_username"
+                            android:maxLength="15"
+                            android:singleLine="true"
+                            android:textColor="@color/dialog_edit_text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/register_edit_text_size"
+                            app:met_floatingLabel="normal"
+                            app:met_primaryColor="@color/edit_text_underline_color"
+                            app:met_underlineColor="@color/edit_text_underline_color_d" />
+                    </TableRow>
+
+                    <TableRow
+                        android:id="@+id/statusrow"
+                        android:layout_width="fill_parent"
+                        android:layout_height="20dp"
+                        android:visibility="gone">
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text=""
+                            android:textColor="@color/five_color_one" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:id="@+id/showavailibility"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="right|center"
+                            android:text="afdafa"
+                            android:textColor="@color/five_color_one" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+
+                        <com.weidget.LotteryEditText
+                            android:id="@+id/date_of_birth"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_bg_login"
+                            android:editable="false"
+                            android:hint="@string/reg_dob"
+                            android:singleLine="true"
+                            android:textColor="@color/dialog_edit_text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/register_edit_text_size"
+                            app:met_floatingLabel="normal"
+                            app:met_primaryColor="@color/edit_text_underline_color"
+                            app:met_underlineColor="@color/edit_text_underline_color_d" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.skilrock.customui.CustomCheckedTextView
+                            android:id="@+id/mobile_code"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.1"
+                            android:gravity="center"
+                            android:paddingBottom="@dimen/_15sdp"
+                            android:paddingTop="@dimen/_15sdp"
+                            android:text="0"
+                            android:textSize="@dimen/register_edit_text_size"
+                            android:visibility="gone" />
+
+                        <com.weidget.LotteryEditText
+                            android:id="@+id/phoneNumber"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.9"
+                            android:background="@drawable/edit_bg_login"
+                            android:digits="0123456789"
+                            android:hint="@string/reg_mobile"
+                            android:imeOptions="actionDone"
+                            android:inputType="phone"
+                            android:maxLength="15"
+                            android:singleLine="true"
+                            android:textColor="@color/dialog_edit_text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/register_edit_text_size"
+                            app:met_floatingLabel="normal"
+                            app:met_primaryColor="@color/edit_text_underline_color"
+                            app:met_underlineColor="@color/edit_text_underline_color_d" />
+                    </TableRow>
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.weidget.LotteryEditText
+                            android:id="@+id/refer_promo_code"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_bg_login"
+                            android:hint="@string/refCode"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColor="@color/dialog_edit_text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/register_edit_text_size"
+                            app:met_floatingLabel="normal" />
+                    </TableRow>
+
+
+                    <TableRow
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp">
+
+                        <com.weidget.LotteryEditText
+                            android:id="@+id/email"
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:background="@drawable/edit_bg_login"
+                            android:hint="@string/email"
+                            android:imeOptions="actionDone"
+                            android:singleLine="true"
+                            android:textColor="@color/dialog_edit_text_color"
+                            android:textCursorDrawable="@null"
+                            android:textSize="@dimen/register_edit_text_size"
+                            app:met_floatingLabel="normal" />
+                    </TableRow>
+
+                    <!-- <com.skilrock.customui.CustomTextView
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/dnaz"
+                         android:gravity="right|center"
+                         android:textColor="@color/five_color_one"
+                         android:textSize="12sp" />-->
+
+                </TableLayout>
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/txt_tc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="5dp"
+                    android:gravity="center_horizontal"
+                    android:paddingLeft="@dimen/_15sdp"
+                    android:paddingRight="@dimen/_15sdp"
+                    android:text="@string/txt_tc"
+                    android:textColor="@color/term_and_condition_color" />
+
+                <Button
+                    android:id="@+id/lets_play"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginBottom="@dimen/register_button_margin_bottom"
+                    android:layout_marginLeft="@dimen/register_button_margin_l_r"
+                    android:layout_marginRight="@dimen/register_button_margin_l_r"
+                    android:layout_marginTop="@dimen/register_button_margin_top"
+                    android:background="@drawable/dialog_button_bg"
+                    android:padding="5dp"
+                    android:text="@string/lets_play"
+                    android:textColor="@color/dialog_button_text_color"
+                    android:textSize="@dimen/register_button_text_size"
+                    android:textStyle="bold"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+        </ScrollView>
+    </LinearLayout>
+
+
+    <!--visible-->
+
+    <!-- <LinearLayout
+         android:id="@+id/lay_continue"
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:layout_above="@+id/footer"
+         android:layout_below="@+id/header"
+         android:orientation="vertical"
+         android:visibility="visible">
+
+
+         <ScrollView
+             android:layout_width="fill_parent"
+             android:layout_height="fill_parent">
+
+             <LinearLayout
+                 android:layout_width="fill_parent"
+                 android:layout_height="wrap_content"
+                 android:orientation="vertical">
+
+                 <TableLayout
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_margin="10dp">
+
+                     <TableRow
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content">
+
+
+                         <com.weidget.LotteryEditText
+                             android:id="@+id/username"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:background="@drawable/edit_bg_login"
+                             android:hint="@string/reg_username"
+                             android:maxLength="15"
+                             android:padding="5dp"
+                             android:singleLine="true"></com.weidget.LotteryEditText>
+                     </TableRow>
+
+                     <TableRow
+                         android:id="@+id/statusrow"
+                         android:layout_width="fill_parent"
+                         android:layout_height="20dp"
+                         android:visibility="gone">
+
+                         <com.skilrock.customui.CustomTextView
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:text=""
+                             android:textColor="@color/five_color_one" />
+
+                         <com.skilrock.customui.CustomTextView
+                             android:id="@+id/showavailibility"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:text="afdafa"
+                             android:gravity="right|center"
+                             android:textColor="@color/five_color_one" />
+                     </TableRow>
+
+
+                     <TableRow
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="10dp">
+
+
+                         <com.weidget.LotteryEditText
+                             android:id="@+id/date_of_birth"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:background="@drawable/edit_bg_login"
+                             android:editable="false"
+                             android:hint="@string/reg_dob"
+                             android:padding="5dp"
+                             android:singleLine="true" />
+                     </TableRow>
+
+
+                     &lt;!&ndash;<TableRow
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="10dp">
+
+
+                         <com.weidget.LotteryEditText
+                             android:id="@+id/phoneNumber"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:background="@drawable/edit_bg_login"
+                             android:digits="0123456789"
+                             android:hint="@string/reg_mobile"
+                             android:inputType="phone"
+                             android:maxLength="10"
+                             android:padding="5dp"
+                             android:singleLine="true" />
+                     </TableRow>&ndash;&gt;
+
+
+
+
+                     <FrameLayout
+                         android:id="@+id/mobile_lay"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:padding="5dp"
+                         android:layout_marginTop="10dp"
+                         android:singleLine="true"
+                         >
+
+                         <com.weidget.LotteryEditText
+                             android:id="@+id/phoneNumber"
+                             android:layout_width="fill_parent"
+                             android:layout_height="wrap_content"
+                             android:layout_weight="1"
+                             android:background="@drawable/edit_bg_login"
+                             android:digits="0123456789"
+                             android:hint="@string/reg_mobile"
+                             android:inputType="phone"
+                             android:maxLength="10"
+                             android:padding="5dp"
+                             android:singleLine="true" >
+                         </com.weidget.LotteryEditText>
+
+                         <TextView
+                             android:id="@+id/resendtv"
+                             android:layout_width="wrap_content"
+                             android:layout_height="wrap_content"
+                             android:background="@drawable/edit_bg_login"
+                             android:textColor="@color/five_color_three"
+                             android:layout_gravity="right|center"
+                             android:text="Re-send"/>
+                     </FrameLayout>
+
+
+                     <com.skilrock.customui.CustomTextView
+                         android:layout_width="fill_parent"
+                         android:layout_height="wrap_content"
+                         android:text="@string/dnaz"
+                         android:gravity="right|center"
+                         android:textColor="@color/five_color_one"
+                         android:textSize="12sp" />
+
+                 </TableLayout>
+
+
+
+                     <TextView
+                         android:id="@+id/otptext"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="10dp"
+                         android:gravity="center"
+                         android:text="@string/otpconfig" />
+
+                     <com.weidget.LotteryEditText
+                         android:id="@+id/otpedit"
+                         android:layout_width="200dp"
+                         android:layout_marginTop="10dp"
+                         android:layout_height="wrap_content"
+                         android:layout_gravity="center"
+                         android:gravity="center"
+                         android:maxLength="6" />
+
+
+
+
+                     <TextView
+                         android:id="@+id/terms"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginTop="10dp"
+                         android:gravity="center"
+                         android:text="@string/agreement" />
+
+
+
+                 <Button
+                     android:id="@+id/lets_play"
+                     android:layout_width="fill_parent"
+                     android:layout_height="wrap_content"
+                     android:layout_gravity="center"
+                     android:layout_marginBottom="10dp"
+                     android:layout_marginLeft="30dp"
+                     android:layout_marginRight="30dp"
+                     android:layout_marginTop="10dp"
+                     android:visibility="visible"
+                     android:background="@drawable/button_bg_login_s"
+                     android:padding="5dp"
+                     android:text="@string/lets_play"
+                     android:textColor="#fff"
+                     android:textStyle="bold" />
+
+
+
+
+
+
+
+             </LinearLayout>
+         </ScrollView>
+     </LinearLayout>-->
+
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/pre_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

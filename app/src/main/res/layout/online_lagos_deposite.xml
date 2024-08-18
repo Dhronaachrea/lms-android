@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/notify_first"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#99000000"
+            android:dividerHeight="0.5dp"
+            android:gravity="center"
+            android:text="mainheader" />
+
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/bank_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:divider="#99000000"
+            android:dividerHeight="0.5dp"
+            android:gravity="center"
+            android:text="mainmenu" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/txt_submit_notify_first"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_horizontal"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/activity_button_bg"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:text="Notify"
+            android:textColor="@color/activity_button_text_color"
+            android:textSize="@dimen/_18sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/notify_second"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+
+        <com.skilrock.customui.BetterSpinner
+            android:id="@+id/payment_option"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/withdraw_amnt_bg"
+            android:entries="@array/mpower_bank_array"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:textColor="@color/txn_date_text_color"
+            android:textSize="@dimen/_16sdp" />
+
+        <com.skilrock.customui.BetterSpinner
+            android:id="@+id/select_bank"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/withdraw_amnt_bg"
+            android:entries="@array/mpower_bank_array"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:textColor="@color/txn_date_text_color"
+            android:textSize="@dimen/_16sdp" />
+
+        <EditText
+            android:id="@+id/enter_branch"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/withdraw_amnt_bg"
+            android:descendantFocusability="beforeDescendants"
+            android:digits="0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ#-"
+            android:hint="branch(Optional)"
+            android:imeOptions="actionDone"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:textColor="@color/txn_date_text_color"
+            android:textColorHint="@color/edit_text_underline_color_d"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_16sdp"
+            android:windowSoftInputMode="adjustResize"></EditText>
+
+        <EditText
+            android:id="@+id/date"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/withdraw_amnt_bg"
+            android:editable="false"
+            android:hint="date"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:textColor="@color/txn_date_text_color"
+            android:textColorHint="@color/edit_text_underline_color_d"
+            android:textSize="@dimen/_16sdp"></EditText>
+
+        <EditText
+            android:id="@+id/teller_name"
+            android:layout_width="@dimen/_280sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/withdraw_amnt_bg"
+            android:descendantFocusability="beforeDescendants"
+            android:hint="teller no"
+            android:imeOptions="actionDone"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:textColor="@color/txn_date_text_color"
+            android:textColorHint="@color/edit_text_underline_color_d"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_16sdp" />
+
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/txt_submit_notify_second"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/activity_button_bg"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:text="Submit"
+            android:textColor="@color/activity_button_text_color"
+            android:textSize="@dimen/_18sdp" />
+
+
+    </LinearLayout>
+
+
+</LinearLayout>

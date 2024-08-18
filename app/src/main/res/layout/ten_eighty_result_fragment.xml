@@ -1,0 +1,434 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".LoginActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/scratch_theme_color">
+
+            <RelativeLayout
+                android:id="@+id/data_lay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/scratch_theme_color">
+
+                <LinearLayout
+                    android:id="@+id/result_box"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/five_result_header_bg_color"
+                        android:padding="5dp">
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:visibility="gone" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:id="@+id/draw_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:gravity="right"
+                            android:text="Wed, 24 Sept 2014"
+                            android:textColor="#fff"
+                            android:visibility="gone" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:id="@+id/draw_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignBaseline="@+id/draw_time"
+                            android:layout_alignBottom="@+id/draw_time"
+                            android:layout_centerVertical="true"
+                            android:layout_toRightOf="@+id/imageView1"
+                            android:text="@string/last_five_by_nine_res_frag"
+                            android:textColor="@color/five_result_header_text_color"
+                            android:textStyle="bold" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/five_draw_color"
+                        android:orientation="vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="vertical"
+                            android:weightSum="1.0">
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="Winning Number"
+                                android:textColor="#fff"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/win_num_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/bonus_last_bg_color"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:id="@+id/text"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:id="@+id/win_num_lay1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@color/bonus_last_bg_color"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="1dp"
+                                    android:background="@drawable/result_ball_scr"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff"
+                                    android:textSize="@dimen/result_ball_tx_sz" />
+
+                            </LinearLayout>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            android:visibility="gone">
+
+                            <com.skilrock.customui.CustomTextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_margin="5dp"
+                                android:gravity="center"
+                                android:text="Machine Number"
+                                android:textColor="#fff" />
+
+                            <LinearLayout
+                                android:id="@+id/mac_num_lay"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:background="@drawable/circle_back_five"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:background="@drawable/circle_back_five"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:background="@drawable/circle_back_five"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:background="@drawable/circle_back_five"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff" />
+
+                                <com.skilrock.customui.CustomTextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_margin="2dp"
+                                    android:background="@drawable/circle_back_five"
+                                    android:gravity="center"
+                                    android:text="25"
+                                    android:textColor="#fff" />
+                            </LinearLayout>
+                        </LinearLayout>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/match"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/match_five_by_nine_res_frag"
+                android:textColor="@color/five_result_type_text_color"
+                android:textSize="@dimen/five_by_nine_res_frag_tx_sz"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/winner"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/winner_five_by_nine_res_frag"
+                android:textColor="@color/five_result_type_text_color"
+                android:textSize="@dimen/five_by_nine_res_frag_tx_sz"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/amount_five_by_nine_res_frag"
+                android:textColor="@color/five_result_type_text_color"
+                android:textSize="@dimen/five_by_nine_res_frag_tx_sz"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <ListView
+            android:id="@+id/item_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#fff"
+            android:listSelector="@android:color/transparent"></ListView>
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:padding="5dp"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/tickets_row_bg"
+        android:orientation="vertical"
+        android:padding="8dp">
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/tckt_number"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="100102123016213"
+            custom:newStyle="medium" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            custom:newStyle="medium"
+            android:gravity="center"
+            android:text="Lucky Numbers" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <com.skilrock.customui.CustomTextView
+                custom:newStyle="light"
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Friday, 25 Dec 2014"
+                android:textSize="17sp" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/date"
+                custom:newStyle="bold"
+                android:text="05:12 PM"
+                android:textColor="@color/fast_nos_bg_color"
+                android:textSize="17sp" />
+        </RelativeLayout>
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="7dp"
+            android:background="#D9B3A6"
+            android:gravity="center"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/status"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="* * * LOST * * *"
+            android:textColor="@color/fast_nos_bg_color"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:background="@drawable/ticket_shadow"
+        android:layout_height="5dp" />
+</LinearLayout>

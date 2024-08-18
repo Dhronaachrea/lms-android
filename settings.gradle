@@ -1,0 +1,2 @@
+include ':app', 'sdp-android', ':caldroid', ':map_cluster', ':ghana_res', ':zim_res', ':lagos_res'//, ':winlot_wear'
+

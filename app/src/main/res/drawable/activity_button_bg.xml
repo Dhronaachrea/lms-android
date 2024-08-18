@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:state_enabled="false">
+        <layer-list>
+            <item>
+                <shape>
+                    <corners android:radius="@dimen/_5sdp" />
+                    <solid android:color="@color/five_play_disable_now_bg_shade_color" />
+                </shape>
+            </item>
+            <item android:bottom="3dp">
+                <shape>
+                    <corners android:radius="@dimen/_5sdp" />
+                    <solid android:color="@color/five_play_disable_now_bg_shade_color" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+    <item android:state_pressed="true">
+        <shape>
+            <corners android:radius="@dimen/_5sdp" />
+            <solid android:color="@color/five_play_now_bg_shade_color" />
+        </shape>
+    </item>
+    <item>
+        <layer-list>
+            <item>
+                <shape>
+                    <corners android:radius="@dimen/_5sdp" />
+                    <solid android:color="@color/five_play_now_bg_shade_color" />
+                </shape>
+            </item>
+            <item android:bottom="3dp">
+                <shape>
+                    <corners android:radius="@dimen/_5sdp" />
+                    <solid android:color="@color/five_play_now_bg_color" />
+                </shape>
+            </item>
+        </layer-list>
+    </item>
+
+</selector>

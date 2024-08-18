@@ -1,0 +1,92 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#fff"
+    android:orientation="vertical">
+
+    <!-- <RelativeLayout -->
+    <!-- android:id="@+id/sub_header" -->
+    <!-- android:layout_width="match_parent" -->
+    <!-- android:layout_height="wrap_content" -->
+    <!-- android:background="@color/grey" > -->
+
+    <com.skilrock.customui.CustomTextView
+        android:id="@+id/title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/dialog_header_bg"
+        android:drawableLeft="@drawable/ic_launcher"
+        android:drawablePadding="@dimen/_10sdp"
+        android:gravity="center_vertical"
+        android:padding="5dp"
+        android:singleLine="true"
+        android:text="@string/african_lotto_gcm_dialog"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_20sdp"
+        android:textStyle="bold" />
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_alignBottom="@+id/title"
+        android:layout_alignParentLeft="true"
+        android:background="@color/white" />
+
+    <ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="fill_parent"
+        android:layout_height="@dimen/_180sdp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/title"
+        android:padding="10dp">
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/details"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/five_color_two"
+            android:textSize="17sp" />
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/scrollView1"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:paddingBottom="5dp">
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dialog_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Cancel"
+            android:textColor="#fff"
+            android:textSize="@dimen/_15sdp" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/deposit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dialog_button_bg"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/okay_gcm_dialog"
+            android:textColor="#fff"
+            android:textSize="@dimen/_15sdp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

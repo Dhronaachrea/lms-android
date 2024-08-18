@@ -1,0 +1,140 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/main_header" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <!-- The main content view -->
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/txt_info"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/ll_bottom"
+                    android:gravity="center"
+                    android:text="@string/result_data_not_aval"
+                    android:textSize="@dimen/_24sdp"
+                    android:visibility="gone"
+                    app:typeface="roboto_bold" />
+
+                <com.viewpager.indicator.TitlePageIndicator
+                    android:id="@+id/indicator"
+                    android:layout_width="fill_parent"
+                    android:layout_height="35dp"
+                    android:background="@color/tab_strip_bg_color"
+                    android:padding="10dip"
+                    android:textColor="@color/tab_strip_text_color"
+                    app:footerColor="@color/tab_strip_footer_color"
+                    app:footerIndicatorHeight="5dp"
+                    app:footerIndicatorStyle="underline"
+                    app:footerLineHeight="0dp"
+                    app:footerPadding="@dimen/_5sdp"
+                    app:selectedBold="true"
+                    app:selectedColor="@color/tab_strip_selected_text_color" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#DBDBDB"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    android:weightSum="1.0">
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/buy_now"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/grid_item_bg"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="BUY\nNOW"
+                        android:textColor="#7A7A7A"
+                        android:textSize="12sp" />
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/my_tckt"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/grid_item_bg"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="MY\nTICKETS"
+                        android:textColor="#7A7A7A"
+                        android:textSize="12sp" />
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/verify_tckt"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_marginRight="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/grid_item_bg"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="VERIFY\nTICKET"
+                        android:textColor="#7A7A7A"
+                        android:textSize="12sp" />
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/locate_ret_text"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_marginBottom="1dp"
+                        android:layout_weight="0.25"
+                        android:background="@drawable/grid_item_bg"
+                        android:gravity="center"
+                        android:paddingTop="5dp"
+                        android:text="LOCATE\nRETAILER"
+                        android:textColor="#7A7A7A"
+                        android:textSize="12sp" />
+                </LinearLayout>
+
+                <com.skilrock.customui.CustomTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="#000" />
+
+
+                <com.viewpager.SliderLayout
+                    android:id="@+id/jazzy_pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/pattern_bg" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/post_footer" />
+
+</RelativeLayout>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?><!-- <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android" --><!-- android:layout_width="match_parent" --><!-- android:layout_height="wrap_content" --><!-- android:background="@drawable/widget_progress_dialog_bg" --><!-- android:orientation="vertical" > -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:background="@drawable/dialog_header_bg"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/close_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/close"
+            android:visibility="invisible" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/dialogHeaderText"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/close"
+            android:layout_toRightOf="@+id/close_left"
+            android:background="@drawable/dialog_header_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_2sdp"
+            android:paddingRight="@dimen/_2sdp"
+            android:text="MOBILE CONFIRMATION"
+            android:textColor="@color/dialog_header_text_color"
+            android:textSize="@dimen/_16sdp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/close" />
+
+
+    </RelativeLayout>
+
+
+    <View
+        android:id="@+id/under_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.1dip"
+        android:background="@android:color/darker_gray" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/ed_mobile_number"
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/withdraw_amnt_bg"
+            android:hint="mobile number"
+            android:imeOptions="actionDone"
+            android:inputType="phone"
+            android:maxLength="15"
+            android:padding="@dimen/_6sdp"
+            android:digits="0123456789"
+            android:textColor="@color/txn_date_text_color"
+            android:textColorHint="@color/edit_text_underline_color_d"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_20sdp">
+
+            <requestFocus />
+        </EditText>
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/txt_submit"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/activity_button_bg"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:text="Submit"
+            android:textColor="@color/activity_button_text_color"
+            android:textSize="@dimen/_18sdp" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/cancel"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/activity_button_bg"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:text="cancel"
+            android:textColor="@color/activity_button_text_color"
+            android:textSize="@dimen/_18sdp"
+            android:visibility="gone" />
+
+
+    </LinearLayout>
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"
+        android:background="@color/header_text_color" />
+</LinearLayout>

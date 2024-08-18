@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Game 5/90 Keno Actions Start -->
+
+    <string name="action__play_5by90_draw1_perm1">action_5by90_draw1_perm1_Gameplay</string>
+    <string name="action__play_5by90_draw1_perm2">action_5by90_draw1_perm2_Gameplay</string>
+    <string name="action__play_5by90_draw1_perm3">action_5by90_draw1_perm3_Gameplay</string>
+    <string name="action__play_5by90_draw1_perm4">action_5by90_draw1_perm4_Gameplay</string>
+    <string name="action__play_5by90_draw1_perm5">action_5by90_draw1_perm5_Gameplay</string>
+    <string name="action__play_5by90_draw1_perm6">action_5by90_draw1_perm6_Gameplay</string>
+    <string name="action__play_5by90_draw1_direct1">action_5by90_draw1_direct1_Gameplay</string>
+    <string name="action__play_5by90_draw1_direct2">action_5by90_draw1_direct2_Gameplay</string>
+    <string name="action__play_5by90_draw1_direct3">action_5by90_draw1_direct3_Gameplay</string>
+    <string name="action__play_5by90_draw1_direct4">action_5by90_draw1_direct4_Gameplay</string>
+    <string name="action__play_5by90_draw1_direct5">action_5by90_draw1_direct5_Gameplay</string>
+    <string name="action__play_5by90_draw1_direct6">action_5by90_draw1_direct6_Gameplay</string>
+    <string name="action__play_5by90_draw1_banker">action_5by90_draw1_banker_Gameplay</string>
+    <string name="action__play_5by90_draw1_banker_1_against_all">action_5by90_draw1_banker_1_against_all_Gameplay</string>
+    <string name="action__play_5by90_draw1_dc_direct2">action_5by90_draw1_DC_Direct2_Gameplay</string>
+    <string name="action__play_5by90_draw1_dc_direct3">action_5by90_draw1_DC_Direct3_Gameplay</string>
+    <string name="action__play_5by90_draw1_dc_perm2">action_5by90_draw1_DC_Perm2_Gameplay</string>
+    <string name="action__play_5by90_draw1_dc_perm3">action_5by90_draw1_DC_Perm3_Gameplay</string>
+
+    <!-- Game 5/90 Keno Actions End -->
+
+</resources>

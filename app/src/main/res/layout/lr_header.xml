@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp"
+    android:background="@drawable/main_header_bg"
+    android:orientation="horizontal"
+    android:weightSum="1.0">
+
+    <LinearLayout
+        android:id="@+id/anim_header"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:background="#ff0000"
+        android:orientation="horizontal"
+        android:visibility="gone"></LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/header_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:weightSum="1.0">
+
+        <ImageView
+            android:id="@+id/header_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:src="@drawable/ic_navigation_drawer"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/drawer_image"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentLeft="true"
+            android:src="@drawable/back" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_toLeftOf="@+id/info"
+            android:layout_toRightOf="@+id/drawer_image"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/header_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/header_text_color"
+                android:textStyle="bold" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/header_sub_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@color/header_text_color" />
+        </LinearLayout>
+
+        <com.weidget.LotteryEditText
+            android:id="@+id/search_box"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_gravity="center"
+            android:background="@drawable/textfield_search_default_holo_light"
+            android:drawableRight="@android:drawable/ic_menu_search"
+            android:ems="10"
+            android:hint="Search"
+            android:textColorHint="#fff"
+            android:visibility="gone">
+
+            <requestFocus />
+        </com.weidget.LotteryEditText>
+
+        <ImageView
+            android:id="@+id/info"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/filter_ret"
+            android:padding="5dp"
+            android:src="@drawable/info_icon" />
+
+        <ImageView
+            android:id="@+id/filter_ret"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="5dp"
+            android:padding="5dp"
+            android:src="@drawable/filter_icon" />
+    </RelativeLayout>
+
+</LinearLayout>

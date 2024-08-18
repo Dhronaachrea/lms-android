@@ -1,0 +1,98 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/main_header" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <!-- The main content view -->
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:orientation="vertical"
+                android:padding="@dimen/_20sdp">
+
+                <com.skilrock.customui.RobotoTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/enter_refer_number"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/invite_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:background="@drawable/withdraw_amnt_bg"
+                    android:digits="0123456789,"
+                    android:hint="@string/refer_number"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxWidth="@dimen/_260sdp"
+                    android:padding="@dimen/_6sdp"
+                    android:textColor="@color/txn_date_text_color"
+                    android:textColorHint="@color/edit_text_underline_color_d"
+                    android:textCursorDrawable="@null"
+                    android:textSize="@dimen/_20sdp" />
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:splitMotionEvents="false">
+
+                    <com.skilrock.customui.RobotoButton
+                        android:id="@+id/invite_done"
+                        android:layout_width="@dimen/_120sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/activity_button_bg"
+                        android:text="@string/done"
+                        android:textColor="@color/activity_button_text_color"
+                        android:textSize="@dimen/_15sdp"
+                        android:textStyle="bold"
+                        app:typeface="roboto_light" />
+
+                    <com.skilrock.customui.RobotoButton
+                        android:id="@+id/open_contact"
+                        android:layout_width="@dimen/_140sdp"
+                        android:layout_height="@dimen/_40sdp"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/mytransactions_button_bg"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/oc"
+                        android:textColor="@color/profile_text_btn"
+                        android:textSize="@dimen/_15sdp"
+                        app:typeface="roboto_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/post_footer" />
+
+</RelativeLayout>

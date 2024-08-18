@@ -1,0 +1,473 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="header_text_size">14sp</dimen>
+    <dimen name="game_footer_height">60dp</dimen>
+    <dimen name="tabBarHeight">35dp</dimen>
+    <dimen name="header_height">@dimen/_48sdp</dimen>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+
+    <dimen name="default_padding_top">8dp</dimen>
+    <dimen name="default_padding_bottom">8dp</dimen>
+    <dimen name="inner_padding_left">0dp</dimen>
+    <dimen name="inner_padding_right">0dp</dimen>
+    <dimen name="floating_label_text_size">12sp</dimen>
+    <dimen name="bottom_text_size">12sp</dimen>
+    <dimen name="inner_components_spacing">8dp</dimen>
+    <dimen name="bottom_ellipsis_height">4dp</dimen>
+    <dimen name="dialog_header_height">50dp</dimen>
+
+
+    <!--8/4/15-->
+
+
+    <!--splash-->
+    <dimen name="splash_loading_text">22sp</dimen>
+    <dimen name="splash_org_name">22sp</dimen>
+    <dimen name="splash_copyright">22sp</dimen>
+
+    <!---->
+
+    <!--new widget par -->
+    <dimen name="wid_dia_text_size">18sp</dimen>
+    <dimen name="wid_dia_text_padding_top_bottom">10dp</dimen>
+
+
+    <dimen name="wid_dia_header_text_size">18sp</dimen>
+    <dimen name="wid_dia_button_text_size">18sp</dimen>
+    <dimen name="wid_dia_header_text_padding_lef_righ">2dp</dimen>
+
+    <dimen name="wid_dia_header_height">48dp</dimen>
+
+    <!--main header  -->
+
+    <dimen name="main_header_height">48dp</dimen>
+    <dimen name="main_header_text_size">18sp</dimen>
+    <dimen name="action_bar_height">48dp</dimen>
+    <!--  -->
+
+    <!--dialogheader-->
+    <dimen name="dialog_heder_height">48dp</dimen>
+    <dimen name="dialog_heder_height_textsize">18sp</dimen>
+    <dimen name="dialog_heder_icon_size">48dp</dimen>
+    <!--dialogheader-->
+
+    <!--activity_login-->
+    <dimen name="login_edit_text_size">18sp</dimen>
+    <dimen name="login_forgot_pass_text_size">18sp</dimen>
+    <dimen name="login_button_text_size">18sp</dimen>
+    <dimen name="login_button_margin_top">10dp</dimen>
+    <dimen name="login_button_margin_bottom">5dp</dimen>
+    <dimen name="login_button_margin_l_r">10dp</dimen>
+    <dimen name="login_button_margin_bottom_end">20dp</dimen>
+
+
+    <!--activity_login-->
+
+
+    <!--forgotpass-->
+    <dimen name="forgot_pass_text_size">18sp</dimen>
+    <dimen name="forgot_pass_text_margin_l_r">10dp</dimen>
+    <dimen name="forgot_pass_text_margin_top">20dp</dimen>
+
+
+    <dimen name="forgot_pass_button_text_size">18sp</dimen>
+    <dimen name="forgot_pass_button_text_margin_l_r">25dp</dimen>
+    <dimen name="forgot_pass_button_text_margin_top">10dp</dimen>
+    <dimen name="forgot_pass_button_text_margin_bottom">20dp</dimen>
+
+
+    <dimen name="forgot_pass_edittext_text_size">18sp</dimen>
+    <dimen name="forgot_pass_edittext_text_margin_l_r">25dp</dimen>
+    <dimen name="forgot_pass_edittext_text_margin_top">20dp</dimen>
+    <!-- -->
+
+    <!--activity_register-->
+
+
+    <dimen name="register_edit_text_size">18sp</dimen>
+    <dimen name="register_button_text_size">18sp</dimen>
+    <dimen name="register_button_margin_l_r">25dp</dimen>
+    <dimen name="register_button_margin_top">10dp</dimen>
+    <dimen name="register_button_margin_bottom">20dp</dimen>
+
+    <!-- -->
+
+    <!--drawer_layout_main-->
+
+    <dimen name="drawer_width_layout">270dp</dimen>
+    <dimen name="layout_padding_top">5dp</dimen>
+
+    <dimen name="drawer_text_size">18sp</dimen>
+    <dimen name="drawer_text_high_size">25sp</dimen>
+
+    <dimen name="profile_pic_size">60dp</dimen>
+    <dimen name="profile_pic_border">5dp</dimen>
+
+
+    <dimen name="drawer_items_height">40dp</dimen>
+    <dimen name="drawer_item_text_size">14sp</dimen>
+    <dimen name="drawer_item_padding">5dp</dimen>
+
+    <dimen name="drawer_item_line_margin_l_r">5dp</dimen>
+    <dimen name="drawer_item_line_margin_t_b">2dp</dimen>
+
+    <!-- -->
+
+
+    <!--deposite scr-->
+
+    <dimen name="deposit_scr_amt_text_size">18sp</dimen>
+    <dimen name="deposit_scr_edit_text_size">18sp</dimen>
+    <dimen name="deposit_scr_tab_views_txt_size">18sp</dimen>
+
+
+    <!-- -->
+
+    <!--withdrawal_Scr-->
+    <dimen name="withdrawal_scr_amt_text_size">18sp</dimen>
+    <dimen name="withdrawal_scr_amt_pric_text_size">18sp</dimen>
+    <dimen name="withdrawal_scr_edit_text_size">18sp</dimen>
+    <dimen name="withdrawal_scr_tab_views_text_size">18sp</dimen>
+
+
+    <!-- -->
+
+
+    <!--locate_retailer-->
+
+    <dimen name="locate_retailer_types">18sp</dimen>
+    <dimen name="locate_retailer_services">18sp</dimen>
+    <dimen name="locate_retailer_okay_button">18sp</dimen>
+
+    <!---->
+
+
+    <!---->
+    <!--fivegamescr-->
+    <dimen name="five_bet_type_text_size">18sp</dimen>
+    <dimen name="five_perm_text_size">18sp</dimen>
+    <dimen name="five_selected_text_size">18sp</dimen>
+    <dimen name="five_selected_no_text_size">18sp</dimen>
+    <dimen name="five_unit_price_amt_text_size">18sp</dimen>
+
+    <!--fivegamescr-->
+    <dimen name="five_aa_hei">50dp</dimen>
+    <dimen name="five_one_pa_bot">3dp</dimen>
+    <dimen name="five_one_pa_lef">4dp</dimen>
+    <dimen name="five_one_pa_rig">4dp</dimen>
+    <dimen name="five_one_pa_top">4dp</dimen>
+    <dimen name="five_current_tex_size">13sp</dimen>
+    <dimen name="five_draw_text_size">20sp</dimen>
+    <dimen name="five_two_wid">0.5dp</dimen>
+    <dimen name="five_line_lay1_pad_lef">10dp</dimen>
+    <dimen name="five_winjub_text_size">19sp</dimen>
+    <dimen name="five_tue_text_pa_top">-3dp</dimen>
+    <dimen name="five_tue_text_size">14sp</dimen>
+    <dimen name="five_three_more_pad_rig">5dp</dimen>
+    <dimen name="five_three_more_text_size">14sp</dimen>
+    <dimen name="five_bel_adv_men_hei">2.5dp</dimen>
+    <dimen name="five_bet_lay_pad">5dp</dimen>
+    <dimen name="five_scroll_size">14sp</dimen>
+    <dimen name="five_bet_name_size">22sp</dimen>
+    <dimen name="five_change_bet_type_pad">-10dp</dimen>
+    <dimen name="five_bel_change_bet_type_div_hei">1dp</dimen>
+    <dimen name="five_sel_num_pad">2dp</dimen>
+    <dimen name="five_bel_sel_num_heig">1dp</dimen>
+    <dimen name="five_fav_nos_wd">0dp</dimen>
+    <dimen name="five_fav_nos_pad_top">5dp</dimen>
+    <dimen name="five_fav_nos_text_size">13sp</dimen>
+    <dimen name="five_last_nos_text_size">18sp</dimen>
+    <dimen name="five_last_wd">0dp</dimen>
+    <dimen name="five_last_picked_pad_top">5dp</dimen>
+    <dimen name="five_last_picked_text_size">13sp</dimen>
+    <dimen name="five_quick_pick_wd">0dp</dimen>
+    <dimen name="five_quick_pick_p_top">5dp</dimen>
+    <dimen name="five_quic_pick_text_size">13sp</dimen>
+    <dimen name="five_select_nos_wd">0dp</dimen>
+    <dimen name="five_select_nos_text_size">13sp</dimen>
+    <dimen name="five_select_nos_p_top">5dp</dimen>
+    <dimen name="five_bel_select_nos_heig">0.5dp</dimen>
+    <dimen name="five_last_lay_pad">1dp</dimen>
+    <dimen name="five_last_lay_sub_pad">1dp</dimen>
+    <dimen name="five_nos_five_game_wid">45dp</dimen>
+    <dimen name="five_nos_five_game_hei">45dp</dimen>
+    <dimen name="five_second_selected_nos_heig">30dp</dimen>
+    <dimen name="five_color_divider_heig">0.5dp</dimen>
+    <dimen name="five_nol_sn_mar_bot">3dp</dimen>
+    <dimen name="five_nol_sn_mar_top">3dp</dimen>
+    <dimen name="five_nol_sn_pad_l">5dp</dimen>
+    <dimen name="five_nol_sn_pad_r">5dp</dimen>
+    <dimen name="five_select_five_game_text_size">15sp</dimen>
+    <dimen name="five_numb_five_game_text_size">15sp</dimen>
+    <dimen name="five_selected_nos_text_size">30sp</dimen>
+    <dimen name="five_number_text_size">15sp</dimen>
+    <dimen name="five_of_line_text_size">15sp</dimen>
+    <dimen name="five_no_of_lines_text_size">30sp</dimen>
+    <dimen name="five_number_qp_no_lines_mar_rig">14dp</dimen>
+    <dimen name="five_number_qp_no_lines_text_size">15sp</dimen>
+    <dimen name="five_qp_dec_wid">30dp</dimen>
+    <dimen name="five_qp_dec_hei">30dp</dimen>
+    <dimen name="five_qp_mar_rig">5dp</dimen>
+    <dimen name="five_qp_dec_pad">5dp</dimen>
+    <dimen name="five_qp_text_size">22sp</dimen>
+    <dimen name="five_qp_inc_hei">30dp</dimen>
+    <dimen name="five_qp_inc_wei">30dp</dimen>
+    <dimen name="five_qp_inc_m_le">5dp</dimen>
+    <dimen name="five_qp_inc_pad">5dp</dimen>
+    <dimen name="five_bel_qp_inc_hei">2.5dp</dimen>
+    <dimen name="five_unit_lay_pad">10dp</dimen>
+    <dimen name="five_unit_lay_m_lef">10dp</dimen>
+    <dimen name="five_unit_price_text_size">28sp</dimen>
+    <dimen name="five_unit_lay_tx_size">17sp</dimen>
+    <dimen name="five_unit_price_wid">110dp</dimen>
+    <dimen name="five_unit_price_hei">40dp</dimen>
+    <dimen name="five_unit_price_m_le">2dp</dimen>
+    <dimen name="five_unit_m_rig">2dp</dimen>
+    <dimen name="five_buy_lay_p_top">1dp</dimen>
+    <dimen name="five_final_amt_wid">0dp</dimen>
+    <dimen name="five_final_amt_text_size">32sp</dimen>
+    <dimen name="five_bel_final_amt_wid">0dp</dimen>
+    <dimen name="five_bel_final_amt_pad">2dp</dimen>
+    <dimen name="five_buy_text_size">21sp</dimen>
+    <dimen name="five_change_bet_size">14sp</dimen>
+
+    <!---->
+
+
+    <!--fastgamescr-->
+    <dimen name="fast_change_bet_size">14sp</dimen>
+    <dimen name="fast_aa_height">50dp</dimen>
+    <dimen name="fast_one_pd_bot">3dp</dimen>
+    <dimen name="fast_one_pd_lef">4dp</dimen>
+    <dimen name="fast_one_pd_rig">4dp</dimen>
+    <dimen name="fast_one_pd_top">4dp</dimen>
+    <dimen name="fast_fast_game_text_size">13sp</dimen>
+    <dimen name="fast_curr_qu_text_size">20sp</dimen>
+    <dimen name="fast_two_wid">0.5dp</dimen>
+    <dimen name="fast_line_lay_pad_lef">10dp</dimen>
+    <dimen name="fast_draw_name_text_size">19sp</dimen>
+    <dimen name="fast_tue_pa_top">-3dp</dimen>
+    <dimen name="fast_tue_text_size">14sp</dimen>
+    <dimen name="fast_more_pad_rig">5dp</dimen>
+    <dimen name="fast_three_more_text_size">14sp</dimen>
+    <dimen name="fast_bel_fast_thr_div_line">2.5dp</dimen>
+    <dimen name="fast_bet_lay_pad">5dp</dimen>
+    <dimen name="fast_scroll_te_size">14sp</dimen>
+    <dimen name="fast_bet_name_tex_size">22sp</dimen>
+    <dimen name="fast_change_bet_type_pad">-10dp</dimen>
+    <dimen name="fast_bel_change_bet_type_div_hei">1dp</dimen>
+    <dimen name="fast_sel_num_pad">2dp</dimen>
+    <dimen name="fast_bel_sel_num_pad_heig">1dp</dimen>
+    <dimen name="fast_fav_nos_wd">0dp</dimen>
+    <dimen name="fast_fav_nos_pad_top">5dp</dimen>
+    <dimen name="fast_fav_nos_tex_siz">13sp</dimen>
+    <dimen name="fast_last_tex_size">13sp</dimen>
+    <dimen name="fast_last_picked_wd">0dp</dimen>
+    <dimen name="fast_last_pad_top">5dp</dimen>
+    <dimen name="fast_quick_pick_wd">0dp</dimen>
+    <dimen name="fast_quick_pick_pad_top">5dp</dimen>
+    <dimen name="fast_quick_pick_text_siz">13sp</dimen>
+    <dimen name="fast_select_nos_wd">0dp</dimen>
+    <dimen name="fast_select_nos_tex_size">13sp</dimen>
+    <dimen name="fast_select_nos_pad_top">5dp</dimen>
+    <dimen name="fast_bel_select_nos">0.5dp</dimen>
+    <dimen name="fast_last_lay_pad">1dp</dimen>
+    <dimen name="fast_last_lay_sub_pad">1dp</dimen>
+    <dimen name="fast_first_selected_nos_wd">45dp</dimen>
+    <dimen name="fast_first_selected_nos_ht">45dp</dimen>
+    <dimen name="fast_second_selected_nos_height">30dp</dimen>
+    <dimen name="fast_nol_sn_pd_lf">5dp</dimen>
+    <dimen name="fast_nol_sn_pd_rt">5dp</dimen>
+    <dimen name="fast_select_fast_tx_siz">15sp</dimen>
+    <dimen name="fast_num_tex_size">15sp</dimen>
+    <dimen name="fast_selected_nos_mg_left">5dp</dimen>
+    <dimen name="fast_selected_nos_text_size">30sp</dimen>
+    <dimen name="fast_numb_tx_siz">15sp</dimen>
+    <dimen name="fast_of_lines_tx_size">15sp</dimen>
+    <dimen name="fast_no_of_lines_mg_lf">5dp</dimen>
+    <dimen name="fast_no_of_lines_tx_size">30sp</dimen>
+    <dimen name="fast_qp_no_lines_mg_rt">14dp</dimen>
+    <dimen name="fast_qp_no_lines_tx_size">15sp</dimen>
+    <dimen name="fast_qp_dec_wd">30dp</dimen>
+    <dimen name="fast_qp_dec_ht">30dp</dimen>
+    <dimen name="fast_qp_dec_rt">5dp</dimen>
+    <dimen name="fast_qp_dec_pad">5dp</dimen>
+    <dimen name="fast_qp_nos_wd">80dp</dimen>
+    <dimen name="fast_qp_nos_ht">40dp</dimen>
+    <dimen name="fast_qp_nos_tex_siz">22sp</dimen>
+    <dimen name="fast_qp_inc_wd">30dp</dimen>
+    <dimen name="fast_qp_inc_ht">30dp</dimen>
+    <dimen name="fast_qp_inc_mg_lf">5dp</dimen>
+    <dimen name="fast_qp_inc_pad">5dp</dimen>
+    <dimen name="fast_bel_qp_inc_ht">2.5dp</dimen>
+    <dimen name="fast_unit_lay_pd">10dp</dimen>
+    <dimen name="fast_unit_lay_mg_lf">10dp</dimen>
+    <dimen name="fast_unit_lay_tx_size">17sp</dimen>
+    <dimen name="fast_unit_price_wd">110dp</dimen>
+    <dimen name="fast_unit_price_ht">40dp</dimen>
+    <dimen name="fast_unit_price_mg_lf">2dp</dimen>
+    <dimen name="fast_unit_price_mg_rt">2dp</dimen>
+    <dimen name="fast_unit_price_tx_siz">28sp</dimen>
+    <dimen name="fast_okay_tx_size">22sp</dimen>
+    <dimen name="fast_buy_lay_pad_top">1dp</dimen>
+    <dimen name="fast_final_amt_wd">0dp</dimen>
+    <dimen name="fast_final_amt_tex_siz">32dp</dimen>
+    <dimen name="fast_bel_final_amt_wd">0dp</dimen>
+    <dimen name="fast_fast_bel_final_amt_pad">2dp</dimen>
+    <dimen name="fast_buy_now_tex_size">20sp</dimen>
+
+    <!---->
+
+
+    <!--bonusgamescr-->
+    <dimen name="bonus_change_bet_size">14sp</dimen>
+    <dimen name="bonus_aa_height">50dp</dimen>
+    <dimen name="bonus_one_pad_bot">3dp</dimen>
+    <dimen name="bonus_one_pad_lf">5dp</dimen>
+    <dimen name="bonus_one_pad_rt">5dp</dimen>
+    <dimen name="bonus_one_pad_top">4dp</dimen>
+    <dimen name="bonus_current_tx_siz">13sp</dimen>
+    <dimen name="bonus_current_quick_tx_size">20sp</dimen>
+    <dimen name="bonus_two_wd">0.5dp</dimen>
+    <dimen name="bonus_line_lay_pad_lf">10dp</dimen>
+    <dimen name="bonus_line_lay_tx_siz">19sp</dimen>
+    <dimen name="bonus_line_lay_pd_top">-3dp</dimen>
+    <dimen name="bonus_draw_time_tx_size">14sp</dimen>
+    <dimen name="bonus_rest_draws_pd_rt">5dp</dimen>
+    <dimen name="bonus_rest_draws_tx_siz">14sp</dimen>
+    <dimen name="bonus_bel_rest_draws_ht">2.5dp</dimen>
+    <dimen name="bonus_bet_lay_pd">5dp</dimen>
+    <dimen name="bonus_scroll_tx_siz">14sp</dimen>
+    <dimen name="bonus_bet_name_height">22sp</dimen>
+    <dimen name="bonus_change_bet_type_pd">-10dp</dimen>
+    <dimen name="bonus_bel_change_bet_type_divder">1dp</dimen>
+    <dimen name="bonus_sel_num_pd">2dp</dimen>
+    <dimen name="bonus_cust_divd">1dp</dimen>
+    <dimen name="bonus_fav_nos_wd">0dp</dimen>
+    <dimen name="bonus_fav_nos_pd_tp">5dp</dimen>
+    <dimen name="bonus_fav_nos_tx_siz">13sp</dimen>
+    <dimen name="bonus_last_picked_wd">0dp</dimen>
+    <dimen name="bonus_last_picked_pd_tp">5dp</dimen>
+    <dimen name="bonus_last_picked_tx_Sz">13sp</dimen>
+    <dimen name="bonus_quick_pick_wd">0dp</dimen>
+    <dimen name="bonus_quick_pick_pd_tp">5dp</dimen>
+    <dimen name="bonus_quick_pick_tx_sz">13sp</dimen>
+    <dimen name="bonus_select_nos_wd">0dp</dimen>
+    <dimen name="bonus_select_nos_pd_tp">5dp</dimen>
+    <dimen name="bonus_select_nos_tx_sz">13sp</dimen>
+    <dimen name="bonus_bel_select_nos_wd">0dp</dimen>
+    <dimen name="bonus_bel_select_nos_pd_tp">5dp</dimen>
+    <dimen name="bonus_bel_select_nos_tx_sz">13dp</dimen>
+    <dimen name="bonus_bel_select_nos_div">0.5dp</dimen>
+    <dimen name="bonus_last_lay_pd">1dp</dimen>
+    <dimen name="bonus_perm_six_lay_pd">1dp</dimen>
+    <dimen name="bonus_last_lay_sub_pd">1dp</dimen>
+    <dimen name="bonus_first_selected_nos_wd">45dp</dimen>
+    <dimen name="bonus_first_selected_nos_ht">45dp</dimen>
+    <dimen name="bonus_second_selected_nos">30dp</dimen>
+    <dimen name="bonus_direct_six_lay_pd">1dp</dimen>
+    <dimen name="bonus_no_one_wd">45dp</dimen>
+    <dimen name="bonus_no_one_ht">45dp</dimen>
+    <dimen name="bonus_first_direct_nos_wd">45dp</dimen>
+    <dimen name="bonus_first_direct_nos_ht">45sp</dimen>
+    <dimen name="bonus_no_two_wd">45dp</dimen>
+    <dimen name="bonus_no_two_ht">45dp</dimen>
+    <dimen name="bonus_second_direct_nos_mg_tp">2dp</dimen>
+    <dimen name="bonus_second_direct_nos_wd">45dp</dimen>
+    <dimen name="bonus_second_direct_nos_ht">45dp</dimen>
+    <dimen name="bonus_no_three_wd">45dp</dimen>
+    <dimen name="bonus_no_three_ht">45dp</dimen>
+    <dimen name="bonus_third_direct_nos_mg_tp">2dp</dimen>
+    <dimen name="bonus_third_direct_nos_wd">45dp</dimen>
+    <dimen name="bonus_third_direct_nos_ht">45dp</dimen>
+    <dimen name="bonus_no_four_wd">45dp</dimen>
+    <dimen name="bonus_no_four_ht">45dp</dimen>
+    <dimen name="bonus_fourth_direct_nos_mg_tp">2dp</dimen>
+    <dimen name="bonus_fourth_direct_nos_wd">45dp</dimen>
+    <dimen name="bonus_fourth_direct_nos_ht">45dp</dimen>
+    <dimen name="bonus_bel_fourth_direct_nos">0.5dp</dimen>
+    <dimen name="bonus_nol_sn_mg_bt">3dp</dimen>
+    <dimen name="bonus_nol_sn_mg_tp">3dp</dimen>
+    <dimen name="bonus_nol_sn_pd_lf">5dp</dimen>
+    <dimen name="bonus_nol_sn_pd_rt">5dp</dimen>
+    <dimen name="bonus_current_quick_tx_sz">15sp</dimen>
+    <dimen name="bonus_selected_nos_mg_lf">5dp</dimen>
+    <dimen name="bonus_numb_bonus_tx_sz">15sp</dimen>
+    <dimen name="bonus_selected_nos_tx_sz">30sp</dimen>
+    <dimen name="bonus_no_of_lines_mg_lf">5dp</dimen>
+    <dimen name="bonus_no_of_lines_tx_sz">30sp</dimen>
+    <dimen name="bonus_qp_no_lines_mg_rt">14dp</dimen>
+    <dimen name="bonus_qp_no_lines_tx_sz">15sp</dimen>
+    <dimen name="bonus_qp_dec_wd">30dp</dimen>
+    <dimen name="bonus_qp_dec_ht">30dp</dimen>
+    <dimen name="bonus_first_dir_nos_mg_tp">2dp</dimen>
+    <dimen name="bonus_quick_pick_tx_siz">13sp</dimen>
+    <dimen name="bonus_qp_dec_mg_rt">5dp</dimen>
+    <dimen name="bonus_qp_dec_pd">5dp</dimen>
+    <dimen name="bonus_qp_nos_wd">80dp</dimen>
+    <dimen name="bonus_qp_nos_ht">40dp</dimen>
+    <dimen name="bonus_qp_nos_tx_sz">22sp</dimen>
+    <dimen name="bonus_qp_inc_wd">30dp</dimen>
+    <dimen name="bonus_qp_inc_ht">30dp</dimen>
+    <dimen name="bonus_qp_inc_mg_lf">5dp</dimen>
+    <dimen name="bonus_qp_inc_pd">5dp</dimen>
+    <dimen name="bonus_bel_qp_inc_divd">2.5dp</dimen>
+    <dimen name="bonus_unit_lay_pd">10dp</dimen>
+    <dimen name="bonus_unit_lay_tx_sz">17sp</dimen>
+    <dimen name="bonus_unit_price_wd">110dp</dimen>
+    <dimen name="bonus_unit_price_ht">40dp</dimen>
+    <dimen name="bonus_unit_price_mg_lf">2dp</dimen>
+    <dimen name="bonus_unit_price_mg_rt">2dp</dimen>
+    <dimen name="bonus_unit_price_tx_sz">28sp</dimen>
+    <dimen name="bonus_okay_tx_sz">22sp</dimen>
+    <dimen name="bonus_abv_buy_no_wd">0dp</dimen>
+    <dimen name="bonus_buy_lay_pd_tp">1dp</dimen>
+    <dimen name="bonus_final_amt_wd">0dp</dimen>
+    <dimen name="bonus_final_amt_tx_sz">32sp</dimen>
+    <dimen name="bonus_abv_buy_no_pd">2dp</dimen>
+    <dimen name="bonus_buy_now_tx_sz">20sp</dimen>
+
+    <!---->
+
+    <dimen name="fast_frag_bal_padding">2dp</dimen>
+    <dimen name="bet_text">17sp</dimen>
+    <dimen name="draw_name_text">17sp</dimen>
+    <dimen name="draw_sub_text">14sp</dimen>
+    <dimen name="draw_row_height">40dp</dimen>
+    <dimen name="qp_hei">80dp</dimen>
+    <dimen name="qp_wid">40dp</dimen>
+
+    <dimen name="main_grid_text_size">17sp</dimen>
+    <dimen name="buy_now_text_size">25sp</dimen>
+    <dimen name="five_ball_bg">32dp</dimen>
+    <dimen name="select_no_text_size">14sp</dimen>
+    <dimen name="stats_ball_height">32dp</dimen>
+    <dimen name="stat_bal_parent_height">40dp</dimen>
+    <dimen name="stats_ball_text">17sp</dimen>
+    <!--8-6-->
+    <dimen name="result_ball_wh">38dp</dimen>
+    <dimen name="result_ball_tx_sz">20sp</dimen>
+
+    <dimen name="last_draw_res_list_row_height">45dp</dimen>
+
+
+    <dimen name="last_draw_res_list_row_tx_size">17sp</dimen>
+    <dimen name="bonus_lotto_res_frag_tx_sz">17sp</dimen>
+    <dimen name="five_by_nine_res_frag_tx_sz">17sp</dimen>
+
+
+    <dimen name="fast_draw_res_list_row_corner_tx_sz">15sp</dimen>
+    <dimen name="fast_draw_res_list_row_tx_sz">17sp</dimen>
+    <dimen name="fast_lotto_res_frag_tx_sz">17sp</dimen>
+    <dimen name="game_text_size">17sp</dimen>
+    <dimen name="status_exp">15sp</dimen>
+
+    <dimen name="expandable_grounp_text_size">18sp</dimen>
+    <dimen name="panel_text_size">22sp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <!---->
+</resources>

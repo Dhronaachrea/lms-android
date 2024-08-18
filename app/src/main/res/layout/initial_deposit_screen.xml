@@ -1,0 +1,205 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#fff">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/main_header"
+        android:visibility="gone" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <!-- The main content view -->
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <com.skilrock.customui.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="5dp"
+                        android:background="@color/deposit_screen_msg"
+                        android:gravity="center"
+                        android:paddingBottom="@dimen/_5sdp"
+                        android:paddingTop="@dimen/_5sdp"
+                        android:text="CHOOSE OR ENTER AMOUNT TO MAKE DEPOSIT"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_14sdp"
+                        android:typeface="normal" />
+
+                    <LinearLayout
+                        android:id="@+id/deposit_parent"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/radio_off"
+                            android:drawablePadding="@dimen/_25sdp"
+                            android:gravity="left"
+                            android:padding="8dp"
+                            android:text="$ 50"
+                            android:textColor="@color/txn_date_text_color"
+                            android:textSize="@dimen/_22sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="@color/view_pager_gap_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/radio_off"
+
+                            android:drawablePadding="@dimen/_25sdp"
+                            android:gravity="left"
+                            android:padding="8dp"
+                            android:text="$ 150"
+                            android:textColor="@color/txn_date_text_color"
+                            android:textSize="@dimen/_22sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="@color/view_pager_gap_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/radio_off"
+
+                            android:drawablePadding="@dimen/_25sdp"
+                            android:gravity="left"
+                            android:padding="8dp"
+                            android:text="$ 150"
+                            android:textColor="@color/txn_date_text_color"
+                            android:textSize="@dimen/_22sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="@color/view_pager_gap_color" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginLeft="25dp"
+                            android:layout_marginTop="5dp"
+                            android:drawableLeft="@drawable/radio_off"
+                            android:drawablePadding="@dimen/_25sdp"
+                            android:gravity="left"
+                            android:padding="8dp"
+                            android:text="$ 150"
+                            android:textColor="@color/txn_date_text_color"
+                            android:textSize="@dimen/_22sdp" />
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_1sdp"
+                            android:background="@color/view_pager_gap_color" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:layout_marginLeft="35dp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:orientation="horizontal">
+
+                            <com.skilrock.customui.CustomTextView
+                                android:id="@+id/enter_amt_view"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:drawableLeft="@drawable/radio_off"
+                                android:drawablePadding="@dimen/_25sdp"
+                                android:paddingBottom="8dp"
+                                android:paddingLeft="8dp"
+                                android:paddingTop="8dp"
+
+                                android:text="$"
+                                android:textColor="@color/txn_date_text_color"
+                                android:textSize="@dimen/_22sdp" />
+
+                            <EditText
+                                android:id="@+id/test"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:background="@drawable/withdraw_amnt_bg"
+                                android:cursorVisible="true"
+                                android:gravity="left"
+                                android:hint="enter amount"
+                                android:inputType="numberDecimal"
+                                android:longClickable="false"
+                                android:maxLength="12"
+                                android:minEms="6"
+                                android:paddingBottom="5dp"
+                                android:paddingLeft="3dp"
+                                android:paddingRight="5dp"
+                                android:paddingTop="5dp"
+                                android:textColor="@color/txn_date_text_color"
+                                android:textColorHint="@color/edit_text_underline_color_d"
+                                android:textCursorDrawable="@null"
+                                android:textSize="@dimen/_22sdp"
+                                android:typeface="normal" />
+                        </LinearLayout>
+
+
+                    </LinearLayout>
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/deposit"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginBottom="10dp"
+                        android:layout_marginLeft="35dp"
+                        android:layout_marginRight="35dp"
+                        android:layout_marginTop="20dp"
+                        android:background="@drawable/activity_button_bg"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/deposit_init_deposit_screen"
+                        android:textColor="@color/activity_button_text_color"
+                        android:textSize="@dimen/_18sdp" />
+                </LinearLayout>
+            </ScrollView>
+        </FrameLayout>
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/post_footer" />
+
+</RelativeLayout>

@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/hd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@color/five_color_three"
+            android:padding="5dp"
+            android:text="TICKET DETAILS"
+            android:textColor="#fff"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/gameName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:text="BONUS LOTTO"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/txn_cal_month"
+                android:textStyle="bold"
+                app:text_style="bold" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/free"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/btn_bg_red"
+                android:padding="@dimen/_3sdp"
+                android:text="FREE"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/white"
+                android:visibility="gone"
+                app:text_style="bold" />
+        </RelativeLayout>
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/txn_cal_month"
+            android:gravity="center"
+            android:text="BONUS LOTTO" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/tcktNoText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="TICKET NO."
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txn_cal_month"
+                android:textStyle="bold" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/tckt_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:text="0231156131561321"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/tkt_no_color"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/game_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:gravity="center"
+            android:text="Lucky Numers"
+            android:textColor="@color/five_color_one"
+            android:textSize="15sp"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="2dp"
+            android:orientation="horizontal">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/tckt_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="25 DEC 2014"
+
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:textColor="@color/tkt_no_color" />
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/mainV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/hd"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:id="@+id/ticketPanels"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"></LinearLayout>
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@+id/mainV"
+
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey" />
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="SUMMARY"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/tkt_text_color"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:paddingTop="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.skilrock.customui.CustomTextViewDown
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Number"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/ticket_descr_child" />
+
+                    <com.skilrock.customui.CustomTextViewTop
+                        android:id="@+id/txt_draw"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Of Draw(s)"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/ticket_descr_child" />
+                </LinearLayout>
+
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/no_of_draws"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="60"
+                    android:textAppearance="?android:attr/textAppearanceLarge"
+                    android:textColor="@color/tckt_desc_child_amt"
+                    android:textSize="@dimen/_16sdp"
+                    android:textStyle="bold"
+                    app:text_style="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <com.skilrock.customui.CustomTextViewDown
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Total"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/ticket_descr_child" />
+
+                    <com.skilrock.customui.CustomTextViewTop
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:text="Amount"
+                        android:textAppearance="?android:attr/textAppearanceSmall"
+                        android:textColor="@color/ticket_descr_child" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:scrollbars="none">
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/tot_amt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="GHs12120.00"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/tckt_desc_child_amt"
+                        android:textSize="@dimen/_16sdp"
+                        android:textStyle="bold"
+                        app:text_style="bold" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <View
+            android:id="@+id/sec_divider"
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey" />
+
+
+        <LinearLayout
+            android:id="@+id/payabale_amt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:paddingLeft="@dimen/_35sdp"
+            android:paddingRight="@dimen/_35sdp"
+            android:paddingTop="@dimen/_5sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_margin="5dp"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:gravity="center|right"
+                    android:orientation="vertical">
+
+                    <com.skilrock.customui.CustomTextViewTop
+                        android:id="@+id/payable_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="Payable"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/ticket_descr_child" />
+
+                    <com.skilrock.customui.CustomTextViewTop
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="left"
+                        android:text="Amount"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/ticket_descr_child" />
+                </LinearLayout>
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_weight="0.5"
+                    android:scrollbars="none">
+
+                    <com.skilrock.customui.CustomTextView
+                        android:id="@+id/pay_amt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:singleLine="true"
+                        android:text="GHs99999.99"
+                        android:textAppearance="?android:attr/textAppearanceLarge"
+                        android:textColor="@color/tckt_desc_child_amt"
+                        android:textSize="@dimen/_18sdp"
+                        android:textStyle="bold"
+                        app:text_style="bold" />
+                </HorizontalScrollView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ticket_shadow">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:background="@drawable/tkt_bottom" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

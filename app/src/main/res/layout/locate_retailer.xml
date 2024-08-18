@@ -1,0 +1,603 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/loc_white">
+
+    <include
+        android:id="@+id/lr_header"
+        layout="@layout/lr_header" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/lr_header">
+        <!-- The main content view -->
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+
+                <RelativeLayout
+                    android:id="@+id/mapLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <fragment
+                        android:id="@+id/map"
+                        android:name="com.google.android.gms.maps.SupportMapFragment"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent" />
+
+                    <LinearLayout
+                        android:id="@+id/linearLayout1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="10dip"
+                        android:layout_marginTop="10dip"
+                        android:gravity="center"
+                        android:orientation="vertical"
+                        android:padding="2dip">
+
+                        <ImageView
+                            android:id="@+id/imageView1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/ic_launcher"
+                            android:visibility="gone" />
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/location_desc_lay"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentBottom="true"
+                        android:background="#ffffff"
+                        android:visibility="gone">
+
+                        <ImageView
+                            android:id="@+id/ret_type"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:src="@drawable/instant" />
+
+                        <LinearLayout
+                            android:id="@+id/ll_retailer_info"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentTop="true"
+                            android:layout_toRightOf="@+id/ret_type"
+                            android:orientation="vertical">
+
+                            <com.skilrock.customui.CustomTextView
+                                android:id="@+id/ret_name"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Name"
+                                android:textColor="@color/five_color_one"
+                                android:textSize="17sp"
+                                android:textStyle="bold" />
+
+                            <com.skilrock.customui.CustomTextView
+                                android:id="@+id/ret_add"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Add"
+                                android:textColor="@color/five_color_one"
+                                android:textSize="14sp" />
+
+                            <com.skilrock.customui.CustomTextView
+                                android:id="@+id/ret_contact"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Contact"
+                                android:textColor="@color/five_color_one"
+                                android:textSize="14sp"
+                                android:visibility="gone" />
+
+                            <com.skilrock.customui.CustomTextView
+                                android:id="@+id/distance"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Distance : 5Km"
+                                android:textColor="@color/five_color_one"
+                                android:textSize="17sp"
+                                android:textStyle="bold"
+                                android:visibility="gone" />
+
+                            <LinearLayout
+                                android:id="@+id/service_view"
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/four_opns"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@android:color/transparent"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/_5sdp"
+                    android:weightSum="1.0">
+
+                    <com.skilrock.customui.CustomCheckedTextView
+                        android:id="@+id/ret_map"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/loc_left_tab_bg"
+                        android:checked="true"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/map_locate_retailer"
+                        android:textColor="@color/loc_white"
+                        android:textSize="@dimen/_16sdp" />
+
+                    <com.skilrock.customui.CustomCheckedTextView
+                        android:id="@+id/ret_list"
+                        android:layout_width="0dp"
+                        android:layout_height="fill_parent"
+                        android:layout_weight="0.5"
+                        android:background="@drawable/loc_right_tab_bg"
+                        android:drawablePadding="5dp"
+                        android:gravity="center"
+                        android:padding="@dimen/_5sdp"
+                        android:text="@string/list_locate_retailer"
+                        android:textColor="@color/loc_purple"
+                        android:textSize="@dimen/_16sdp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/listLay"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/four_opns"
+                    android:background="@color/five_color_bg"
+                    android:orientation="vertical"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        android:id="@+id/state_lay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <com.skilrock.customui.CustomTextView
+                            android:id="@+id/state"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:drawablePadding="5dp"
+                            android:text="Select State"
+                            android:textColor="@color/five_color_one"
+                            android:textSize="15sp" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:id="@+id/state_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:drawablePadding="-10dp"
+                            android:drawableRight="@drawable/bet_arrow"
+                            android:gravity="center|right"
+                            android:text="Select State"
+                            android:textColor="@color/loc_purple"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <com.skilrock.customui.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/five_color_divider" />
+
+                    <RelativeLayout
+                        android:id="@+id/city_lay"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp">
+
+                        <com.skilrock.customui.CustomTextView
+                            android:id="@+id/city"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:drawablePadding="5dp"
+                            android:text="Select City"
+                            android:textColor="@color/five_color_one"
+                            android:textSize="15sp" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:id="@+id/city_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:drawablePadding="-10dp"
+                            android:drawableRight="@drawable/bet_arrow"
+                            android:gravity="center|right"
+                            android:text="Select City"
+                            android:textColor="@color/loc_purple"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <com.skilrock.customui.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:background="@color/five_color_divider" />
+
+                    <RelativeLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:visibility="gone">
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentLeft="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:drawablePadding="5dp"
+                            android:text="Green Park"
+                            android:textColor="@color/five_color_one"
+                            android:textSize="15sp" />
+
+                        <com.skilrock.customui.CustomTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:drawablePadding="-10dp"
+                            android:drawableRight="@drawable/bet_arrow"
+                            android:gravity="center|right"
+                            android:text="Select City"
+                            android:textColor="@color/five_color_three"
+                            android:textSize="15sp" />
+                    </RelativeLayout>
+
+                    <com.skilrock.customui.CustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="2.5dp"
+                        android:background="@color/five_color_divider" />
+
+                    <ListView
+                        android:id="@+id/ret_list_view"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:layout_marginLeft="5dp"
+                        android:layout_marginRight="5dp"
+                        android:divider="@null"
+                        android:dividerHeight="0dp"
+                        android:fastScrollEnabled="true"
+                        android:listSelector="#00000000" />
+                </LinearLayout>
+
+            </RelativeLayout>
+        </FrameLayout>
+        <!-- The navigation drawer -->
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <RelativeLayout
+        android:id="@+id/info_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#fff"
+        android:visibility="gone">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/okay">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:orientation="vertical">
+
+                <com.skilrock.customui.CustomTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/five_color_three"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Types"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/locate_retailer_types" />
+
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/typelist1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/agent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Agent"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_types"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/typelist1_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/typelist2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/agent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Agent"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_types"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/typelist2_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/typelist3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/agent"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Agent"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_types"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="5dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/five_color_three"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:padding="5dp"
+                    android:text="Services"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/locate_retailer_services" />
+
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist1"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/sports_lot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sports Lottery"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_services"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist1_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist2"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/sports_lot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sports Lottery"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_services"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist2_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist3"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/sports_lot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sports Lottery"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_services"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist3_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist4"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/sports_lot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sports Lottery"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_services"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist4_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist5"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/sports_lot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sports Lottery"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_services"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist5_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist6"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/sports_lot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sports Lottery"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_services"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist6_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist7"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/sports_lot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sports Lottery"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_services"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist7_divider"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginBottom="2dp"
+                    android:layout_marginTop="2dp"
+                    android:background="@color/five_color_divider"
+                    android:visibility="gone" />
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/servicelist8"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:drawableLeft="@drawable/sports_lot"
+                    android:drawablePadding="5dp"
+                    android:gravity="center_vertical"
+                    android:text="Sports Lottery"
+                    android:textColor="#000"
+                    android:textSize="@dimen/locate_retailer_services"
+                    android:visibility="gone" />
+            </LinearLayout>
+        </ScrollView>
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/okay"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_margin="10dp"
+            android:background="@drawable/button_bg_login_s"
+            android:gravity="center"
+            android:padding="5dp"
+            android:text="Okay"
+            android:textColor="#fff"
+            android:textSize="@dimen/locate_retailer_okay_button" />
+    </RelativeLayout>
+
+</RelativeLayout>

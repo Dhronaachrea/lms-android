@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/main_header" />
+
+    <android.support.v4.widget.DrawerLayout
+        android:id="@+id/drawer_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/header">
+
+        <!-- The main content view -->
+
+        <FrameLayout
+            android:id="@+id/content_frame"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:id="@+id/rl_profile"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:background="@color/profile_bg_upper">
+
+                    <ImageView
+                        android:id="@+id/img_notification"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="@dimen/_15sdp"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:src="@drawable/ic_launcher"
+                        android:visibility="gone" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:layout_marginLeft="15dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <com.skilrock.customui.CircleImageView
+                            android:id="@+id/img_profile"
+                            android:layout_width="@dimen/profile_pic_size"
+                            android:layout_height="@dimen/profile_pic_size"
+                            android:src="@drawable/no_img"
+                            app:border_color="@color/profile_border_image"
+                            app:border_width="5dp" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="8dp"
+                            android:orientation="vertical">
+
+                            <com.skilrock.customui.RobotoTextView
+                                android:id="@+id/txt_first_name"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Keira"
+                                android:textColor="@color/profile_text_name"
+                                android:textSize="@dimen/_22sdp"
+                                app:typeface="roboto_medium" />
+
+                            <com.skilrock.customui.RobotoTextView
+                                android:id="@+id/mobileNo"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Knightley"
+                                android:textColor="@color/profile_text_name"
+                                android:textSize="@dimen/_18sdp"
+                                app:typeface="roboto_light" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="15dp"
+                        android:src="@drawable/edit_icon" />
+                </RelativeLayout>
+
+                <com.skilrock.customui.Divider
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_5sdp"
+                    android:background="@color/profile_divider" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="4"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <com.skilrock.customui.AmountTextView
+                            android:id="@+id/txt_avail_balance"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_minus5sdp"
+                            android:ellipsize="marquee"
+                            android:fadingEdge="horizontal"
+                            android:gravity="center_vertical|center"
+                            android:includeFontPadding="false"
+                            android:lines="1"
+                            android:marqueeRepeatLimit="marquee_forever"
+                            android:scrollHorizontally="true"
+                            android:singleLine="true"
+                            android:text="1502.00"
+                            android:textColor="@color/profile_text_green"
+                            android:textSize="@dimen/_38sdp"
+                            app:currency_symbol="$"
+                            app:currency_text_color="#878787"
+                            app:currency_text_size="@dimen/_30sdp"
+                            app:isTransaction="false"
+                            app:penny_text_size="@dimen/_25sdp"
+                            app:typeface="roboto_light" />
+
+                        <com.skilrock.customui.RobotoTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/_minus6sdp"
+                            android:includeFontPadding="false"
+                            android:text="Available Balance"
+                            android:textSize="@dimen/_14sdp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="6">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/img_bonus_balance" />
+
+                            <HorizontalScrollView
+                                android:id="@+id/bonus_scroll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <com.skilrock.customui.AmountTextView
+                                    android:id="@+id/txt_bonus_balance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:text="20.05"
+                                    android:textColor="@color/profile_text_green"
+                                    android:textSize="@dimen/_14sdp"
+                                    app:currency_symbol="$"
+                                    app:isTransaction="false"
+                                    app:penny_text_size="@dimen/_11sdp"
+                                    app:typeface="roboto_medium" />
+                            </HorizontalScrollView>
+
+                            <com.skilrock.customui.RobotoTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Bonus\nBalance"
+                                android:textSize="@dimen/_10sdp"
+                                app:typeface="roboto_light" />
+                        </LinearLayout>
+
+                        <include layout="@layout/profile_divider" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/img_deposit_balance" />
+
+                            <HorizontalScrollView
+                                android:id="@+id/deposit_scroll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <com.skilrock.customui.AmountTextView
+                                    android:id="@+id/txt_deposit_balance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="true"
+                                    android:text="20.05"
+                                    android:textColor="@color/profile_text_green"
+                                    android:textSize="@dimen/_14sdp"
+                                    app:currency_symbol="$"
+                                    app:isTransaction="false"
+                                    app:penny_text_size="@dimen/_11sdp"
+                                    app:typeface="roboto_medium" />
+                            </HorizontalScrollView>
+
+                            <com.skilrock.customui.RobotoTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Deposit\nBalance"
+                                android:textSize="@dimen/_10sdp"
+                                app:typeface="roboto_light" />
+                        </LinearLayout>
+
+                        <include layout="@layout/profile_divider" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/img_winning_balance" />
+
+                            <HorizontalScrollView
+                                android:id="@+id/winning_scroll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <com.skilrock.customui.AmountTextView
+                                    android:id="@+id/txt_winning_balance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="marquee"
+                                    android:focusable="true"
+                                    android:focusableInTouchMode="true"
+
+                                    android:marqueeRepeatLimit="marquee_forever"
+
+                                    android:scrollHorizontally="true"
+                                    android:text="20.05"
+                                    android:textColor="@color/profile_text_green"
+                                    android:textSize="@dimen/_14sdp"
+                                    app:currency_symbol="$"
+
+                                    app:isTransaction="false"
+                                    app:penny_text_size="@dimen/_11sdp"
+                                    app:typeface="roboto_medium" />
+                            </HorizontalScrollView>
+
+                            <com.skilrock.customui.RobotoTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Winning\nBalance"
+                                android:textSize="@dimen/_10sdp"
+                                app:typeface="roboto_light" />
+                        </LinearLayout>
+
+                        <include layout="@layout/profile_divider" />
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:gravity="center"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:src="@drawable/img_redeemable_balance" />
+
+                            <HorizontalScrollView
+                                android:id="@+id/redeem_scroll"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:scrollbars="none">
+
+                                <com.skilrock.customui.AmountTextView
+                                    android:id="@+id/txt_redeemable_balance"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:ellipsize="marquee"
+                                    android:fadingEdge="horizontal"
+                                    android:marqueeRepeatLimit="marquee_forever"
+                                    android:scrollHorizontally="false"
+                                    android:text="20.05"
+                                    android:textColor="@color/profile_text_green"
+                                    android:textSize="@dimen/_14sdp"
+                                    app:currency_symbol="$"
+                                    app:isTransaction="false"
+                                    app:penny_text_size="@dimen/_11sdp"
+                                    app:typeface="roboto_medium" />
+                            </HorizontalScrollView>
+
+                            <com.skilrock.customui.RobotoTextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:text="Redeemable\nBalance"
+                                android:textSize="@dimen/_10sdp"
+                                app:typeface="roboto_light" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <com.skilrock.customui.RobotoButton
+                    android:id="@+id/btn_deposit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@drawable/deposite_btn_bg"
+                    android:padding="@dimen/_5sdp"
+                    android:text="DEPOSIT"
+                    android:textColor="@color/deposite_text_color"
+                    android:textSize="@dimen/_18sdp"
+                    app:typeface="roboto_medium" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:orientation="horizontal">
+
+                    <com.skilrock.customui.RobotoButton
+                        android:id="@+id/btn_my_tickets"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:layout_weight="4.5"
+                        android:background="@drawable/myticket_button_bg"
+                        android:padding="@dimen/_5sdp"
+                        android:text="MY TICKETS"
+                        android:textColor="@color/profile_text_btn"
+                        android:textSize="@dimen/_15sdp"
+                        app:typeface="roboto_light" />
+
+                    <com.skilrock.customui.RobotoButton
+                        android:id="@+id/btn_my_transactions"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="@dimen/_2sdp"
+                        android:layout_weight="5.5"
+                        android:background="@drawable/mytransactions_button_bg"
+                        android:padding="@dimen/_5sdp"
+                        android:text="MY TRANSACTIONS"
+                        android:textColor="@color/profile_text_btn"
+                        android:textSize="@dimen/_15sdp"
+                        app:typeface="roboto_light" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </FrameLayout>
+
+        <include layout="@layout/drawer_layout_main" />
+    </android.support.v4.widget.DrawerLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/post_footer" />
+
+</RelativeLayout>

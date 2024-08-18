@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="AppBaseTheme" parent="@android:style/Theme.Light" />
+
+    <style name="AppTheme" parent="@style/AppBaseTheme" />
+
+    <style name="CaldroidBaseTheme" parent="@android:style/Theme.Light" />
+
+    <style name="CaldroidDefault" parent="@style/CaldroidBaseTheme">
+        <item name="styleCaldroidGridView">@style/CaldroidDefaultGridView</item>
+        <item name="styleCaldroidLeftArrow">@style/CaldroidDefaultLeftButton</item>
+        <item name="styleCaldroidMonthName">@style/CaldroidDefaultMonthName</item>
+        <item name="styleCaldroidNormalCell">@style/CaldroidDefaultNormalCell</item>
+        <item name="styleCaldroidRightArrow">@style/CaldroidDefaultRightButton</item>
+        <item name="styleCaldroidSquareCell">@style/CaldroidDefaultSquareCell</item>
+        <item name="styleCaldroidViewLayout">@style/CaldroidDefaultCalendarViewLayout</item>
+        <item name="styleCaldroidWeekdayView">@style/CaldroidDefaultWeekday</item>
+    </style>
+
+    <style name="CaldroidDefaultArrowButton">
+        <item name="android:layout_width">50.0dip</item>
+        <item name="android:layout_height">44.0dip</item>
+    </style>
+
+    <style name="CaldroidDefaultCalendarViewLayout">
+        <item name="android:background">@color/caldroid_white</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="CaldroidDefaultCell">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">#ffffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/cell_bg_color</item>
+    </style>
+
+    <style name="CaldroidDefaultDark" parent="@style/CaldroidDefault">
+        <item name="styleCaldroidGridView">@style/CaldroidDefaultDarkGridView</item>
+        <item name="styleCaldroidMonthName">@style/CaldroidDefaultDarkMonthName</item>
+        <item name="styleCaldroidViewLayout">@style/CaldroidDefaultDarkCalendarViewLayout</item>
+    </style>
+
+    <style name="CaldroidDefaultDarkCalendarViewLayout">
+        <item name="android:background">@android:color/black</item>
+    </style>
+
+    <style name="CaldroidDefaultDarkGridView" parent="@style/CaldroidDefaultGridView">
+        <item name="android:background">@color/caldroid_middle_gray</item>
+    </style>
+
+    <style name="CaldroidDefaultDarkMonthName" parent="@style/CaldroidDefaultMonthName">
+        <item name="android:textColor">@color/caldroid_white</item>
+    </style>
+
+    <style name="CaldroidDefaultGridView">
+        <item name="android:background">@color/caldroid_lighter_gray</item>
+        <item name="android:padding">1.0dip</item>
+        <item name="android:listSelector">@null</item>
+        <item name="android:horizontalSpacing">1.0dip</item>
+        <item name="android:verticalSpacing">1.0dip</item>
+    </style>
+
+    <style name="CaldroidDefaultLeftButton" parent="@style/CaldroidDefaultArrowButton">
+        <item name="android:background">@drawable/left_arrow</item>
+        <item name="android:layout_alignParentLeft">true</item>
+    </style>
+
+    <style name="CaldroidDefaultMonthName">
+        <item name="android:textSize">21.0sp</item>
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:gravity">center_horizontal</item>
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">6.0dip</item>
+    </style>
+
+    <style name="CaldroidDefaultNormalCell" parent="@style/CaldroidDefaultCell">
+        <item name="android:padding">5.0dip</item>
+    </style>
+
+    <style name="CaldroidDefaultRightButton" parent="@style/CaldroidDefaultArrowButton">
+        <item name="android:background">@drawable/right_arrow</item>
+        <item name="android:layout_alignParentRight">true</item>
+    </style>
+
+    <style name="CaldroidDefaultSquareCell" parent="@style/CaldroidDefaultCell" />
+
+    <style name="CaldroidDefaultWeekday">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:textColor">@color/caldroid_middle_gray</item>
+        <item name="android:gravity">center</item>
+        <item name="android:paddingTop">6.0dip</item>
+        <item name="android:paddingBottom">5.0dip</item>
+    </style>
+
+    <style name="MyDialog" parent="@android:style/Theme.Dialog">
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowContentOverlay">@null</item>
+        <item name="android:windowTitleStyle">@null</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Dialog</item>
+        <item name="android:gravity">center</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+    </style>
+</resources>

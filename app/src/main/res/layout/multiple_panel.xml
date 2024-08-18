@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.skilrock.customui.CustomTextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="SELECTED NUMBERS"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="@color/tkt_selected_nos"
+        android:textStyle="normal" />
+
+    <RelativeLayout
+        android:id="@+id/bet_details_data_mul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/bet_name_mul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:gravity="center"
+            android:text="Direct 6"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textColor="@color/txn_cal_month"
+            android:textStyle="bold"
+            app:text_style="bold" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/fivebynineResult_mul"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/last_lay_mul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/five_color_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+            <LinearLayout
+                android:id="@+id/last_lay_sub_mul"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@color/five_color_bg"
+                android:gravity="left"
+                android:orientation="vertical"
+                android:padding="1dp">
+
+                <LinearLayout
+                    android:id="@+id/first_selected_nos_mul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@color/five_color_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.skilrock.customui.CustomTextView
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/tkt_circle"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:text="00"
+                        android:textColor="@color/tkt_selected_nos" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/second_selected_nos_mul"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_weight="1"
+                    android:background="@color/five_color_bg"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:visibility="gone"></LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/bonus_panel_lay_mul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/five_color_bg"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:padding="1dp">
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey" />
+
+        <LinearLayout
+            android:id="@+id/panel_detail_lay"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/_4sdp">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_minus3sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="Number of Lines"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/tkt_text_color" />
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/no_of_lines"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="1140"
+                    android:textColor="@color/tckt_desc_child_amt"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:text_style="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/bet_amount_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_minus3sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="Bet Amount"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/tkt_text_color" />
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/unit_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:text="500.00"
+                    android:textColor="@color/tckt_desc_child_amt"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:text_style="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:lineSpacingExtra="@dimen/_minus3sdp"
+                    android:paddingBottom="@dimen/_2sdp"
+                    android:text="Panel Price"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/tkt_text_color" />
+
+                <!--<HorizontalScrollView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_gravity="center"-->
+                <!--android:layout_weight="0.5"-->
+                <!--android:foregroundGravity="center_vertical"-->
+                <!--android:scrollbars="none">-->
+
+                <com.skilrock.customui.RobotoTextView
+                    android:id="@+id/panel_price"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:gravity="center"
+                    android:singleLine="true"
+                    android:text="GHs1000099.99"
+                    android:textColor="@color/tckt_desc_child_amt"
+                    android:textSize="@dimen/_14sdp"
+                    android:textStyle="bold"
+                    app:text_style="bold" />
+                <!--</HorizontalScrollView>-->
+            </LinearLayout>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/grey" />
+    </LinearLayout>
+
+</LinearLayout>

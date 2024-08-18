@@ -1,0 +1,16 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.skilrock.myaccount.deposit.AfricaOutletsFragment">
+
+
+    <com.skilrock.customui.AnimatedExpandableListView
+        android:id="@+id/list_view_mob_mony"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:cacheColorHint="#00000000"
+        android:groupIndicator="@null"
+        android:visibility="gone" />
+
+
+</FrameLayout>

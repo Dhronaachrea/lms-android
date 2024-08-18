@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+    <!-- Game Load progress -->
+    <ProgressBar
+        android:id="@+id/txn_progres"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone" />
+
+
+    <RelativeLayout
+        android:id="@+id/parentView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/cal_lay"
+        android:background="@color/grey"
+        android:visibility="visible">
+
+        <com.skilrock.customui.RobotoTextView
+            android:id="@+id/txt_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/ll_bottom"
+            android:gravity="center"
+            android:text="@string/withdrawal_rep_data"
+            android:textSize="@dimen/_24sdp"
+            android:visibility="gone"
+            app:typeface="roboto_bold" />
+
+
+        <ListView
+            android:id="@+id/tickets_list"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/linearLayout1"
+            android:layout_below="@+id/cal_bottom_bar"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@android:color/transparent"
+            android:divider="@null"
+            android:listSelector="@android:color/transparent"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:scrollbars="none" />
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentLeft="true"
+            android:background="#80000000"
+            android:gravity="center"
+            android:visibility="gone">
+
+            <Button
+                android:id="@+id/filter"
+                android:layout_width="wrap_content"
+                android:layout_height="fill_parent"
+                android:layout_margin="5dp"
+                android:background="@drawable/button_bg_login"
+                android:gravity="center"
+                android:padding="5dp"
+                android:text="FILTER"
+                android:textColor="#fff"
+                android:textSize="17sp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

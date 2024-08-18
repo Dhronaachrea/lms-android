@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/footer"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/_30sdp">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/pre_header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="20dp"
+            android:text="@string/enter_verification_code"
+            android:textColor="@color/text_view_text_color"
+            android:textSize="20sp" />
+
+        <com.weidget.LotteryEditText
+            android:id="@+id/verification_code"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="25dp"
+            android:hint="@string/verification_code"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColor="@color/edit_text_underline_color"
+            android:textColorHint="@color/edit_text_underline_color_d"
+            app:met_floatingLabel="normal"
+            app:met_primaryColor="@color/edit_text_underline_color"
+            app:met_underlineColor="@color/edit_text_underline_color_d">
+
+            <requestFocus />
+        </com.weidget.LotteryEditText>
+
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="@string/sms_sent"
+            android:textColor="@color/text_view_text_color"
+            android:textSize="12sp" />
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/resend_verification"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:nextFocusDown="@+id/login"
+            android:text="@string/resend_verification"
+            android:textColor="@color/text_view_text_color" />
+
+        <Button
+            android:id="@+id/verification_done"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/dialog_button_bg"
+            android:text="@string/done"
+            android:textColor="@color/basic_btn_text_color"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <include
+        android:id="@+id/footer"
+        layout="@layout/pre_footer"
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true" />
+
+</RelativeLayout>

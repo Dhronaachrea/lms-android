@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/screen_bg_color"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/input_dialog_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/dialog_header_bg"
+        android:orientation="horizontal">
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/header_name"
+            android:layout_width="fill_parent"
+            android:layout_height="@dimen/dialog_heder_height"
+            android:layout_toLeftOf="@+id/close"
+            android:layout_toRightOf="@+id/done"
+            android:gravity="center"
+            android:text="@string/header_dialog"
+            android:textAllCaps="true"
+            android:textColor="@color/dialog_header_text_color"
+            android:textSize="@dimen/dialog_heder_height_textsize" />
+
+        <ImageView
+            android:id="@+id/close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/close" />
+
+        <ImageView
+            android:id="@+id/done"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/done" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/input_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:splitMotionEvents="true"
+        android:visibility="visible">
+
+        <EditText
+            android:id="@+id/input_box"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/withdraw_amnt_bg"
+            android:hint="@string/pseudoName"
+            android:imeOptions="actionDone"
+            android:maxLength="20"
+            android:padding="@dimen/_6sdp"
+            android:singleLine="true"
+            android:textColor="@color/txn_date_text_color"
+            android:textColorHint="@color/edit_text_underline_color_d"
+            android:textCursorDrawable="@null"
+            android:textSize="@dimen/_20sdp">
+
+            <requestFocus />
+        </EditText>
+
+        <com.skilrock.customui.CustomTextView
+            android:layout_width="match_parent"
+            android:layout_height="0.2dp"
+            android:background="@color/header_text_color" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:splitMotionEvents="true">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/dialog_logout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/input_logout"
+                android:textColor="@color/dialog_header_color"
+                android:textSize="@dimen/wid_dia_text_size"
+                android:textStyle="bold" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/lineHoriz"
+                android:layout_width="0.2dp"
+                android:layout_height="match_parent"
+                android:background="@color/header_text_color" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/txt_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/input_ok"
+                android:textColor="@color/dialog_header_color"
+                android:textSize="@dimen/wid_dia_text_size"
+                android:textStyle="bold" />
+        </LinearLayout>
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/txt_submit_old"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/activity_button_bg"
+            android:gravity="center_horizontal"
+            android:padding="@dimen/_5sdp"
+            android:text="Submit"
+            android:textColor="@color/activity_button_text_color"
+            android:textSize="@dimen/_18sdp"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+</LinearLayout>

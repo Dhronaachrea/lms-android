@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center_vertical"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/draw_res_main_lay"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingTop="1dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:orientation="horizontal"
+            android:weightSum="1.0">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.4"
+                android:orientation="horizontal"
+                android:weightSum="1.0">
+
+                <com.skilrock.customui.CustomTextView
+                    android:id="@+id/hour"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/hour_bg"
+                    android:padding="1dp"
+                    android:text="@string/text"
+                    android:textColor="#fff"
+                    android:textSize="@dimen/fast_draw_res_list_row_corner_tx_sz" />
+            </LinearLayout>
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/time"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="0.6"
+                android:gravity="center"
+                android:text="25:25"
+                android:textColor="#969696"
+                android:textSize="@dimen/fast_draw_res_list_row_tx_sz" />
+        </LinearLayout>
+
+        <com.skilrock.customui.CustomTextView
+            android:id="@+id/winner"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:gravity="center"
+            android:text="10"
+            android:textColor="#4C4C4C"
+            android:textSize="@dimen/fast_draw_res_list_row_tx_sz" />
+
+        <LinearLayout
+            android:id="@+id/match"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingTop="5dp">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/fast_res_num_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/fast_img_back"
+                android:gravity="center"
+                android:padding="2dp"
+                android:text="08"
+                android:textColor="#fff"
+                android:textSize="@dimen/fast_draw_res_list_row_tx_sz" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/fast_res_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="EIGHT"
+                android:textColor="@color/fast_ball_text_color" />
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

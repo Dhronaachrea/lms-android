@@ -1,0 +1,158 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+    defaultConfig {
+//        applicationId "com.skilrock.lms.ui"  //zim
+//        applicationId "com.skilrock.lms.ghana.ui" //ghana
+//        applicationId "com.skilrock.lms" //lagos
+//        applicationId "com.skilrock.lms.ui.lagos" //extra
+//        multiDexEnabled true
+        minSdkVersion 9
+        targetSdkVersion 22
+        versionCode 1
+//        versionName "3.4"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+//    dexOptions {
+//        javaMaxHeapSize "4g"
+//    }
+    sourceSets { main { assets.srcDirs = ['src/main/assets', 'src/main/assets/'] } }
+    productFlavors {
+        zimQA {
+            applicationId = "com.skilrock.lms.ui"
+            versionName "4.6"
+            buildConfigField 'String', 'FIVE_GAME', '"KenoTwo"'
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.134.13:8081/PMS"'
+            //192.168.134.13:8081/PMS
+            //old 27dec2016 http://192.168.124.73:8082/PMS
+            //http://125.63.93.133:8080
+            //http://115.111.246.156:8082/PMS/
+            //http://125.63.93.133:8080/PMS/
+            //qa http://192.168.124.87:8080/PMS
+            //ice http://162.13.131.240:8081/PMS
+            //shreya  http://115.111.246.156:8082/PMS/
+            //varun qa http://115.111.246.156:8180/PMS
+            //shreya qa http://192.168.124.87:8080
+//zim qa http://192.168.124.73:8082//old one//http://192.168.124.94:8081/PMS////intergation http://192.168.124.94:8081///for demo ice http://162.13.131.240:8081/PMS
+            buildConfigField 'boolean', 'IS_DEBUG', 'true'
+            buildConfigField 'String', 'APP_NAME', '"AfricaLotto.apk"'
+        }
+        zimUAT {
+            applicationId = "com.skilrock.lms.ui"
+            versionName "4.6"
+            buildConfigField 'String', 'FIVE_GAME', '"KenoTwo"'
+            buildConfigField 'String', 'BASE_URL', '"http://41.190.38.202:8081/PMS"'
+            //http://41.190.38.202:8081/
+            //old http://41.190.38.202:8081/PMS
+            // sneha http://41.190.38.202:8085/PMS
+//            http://54.93.189.77:8081/PMS demo
+//uat http://41.190.38.202:8081/PMS
+            buildConfigField 'boolean', 'IS_DEBUG', 'true'
+            buildConfigField 'String', 'APP_NAME', '"AfricaLotto.apk"'
+        }
+        zimPRO {
+            applicationId = "com.skilrock.lms.ui"
+            versionName "4.6"
+            buildConfigField 'String', 'FIVE_GAME', '"KenoTwo"'
+            buildConfigField 'String', 'BASE_URL', '"http://41.190.38.202:8080/PMS"'
+            buildConfigField 'boolean', 'IS_DEBUG', 'false'
+            buildConfigField 'String', 'APP_NAME', '"AfricaLotto.apk"'
+        }
+        ghanaQA {
+            applicationId = "com.skilrock.lms.ghana.ui"
+            versionName "4.3"
+            buildConfigField 'String', 'FIVE_GAME', '"Keno"'
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.134.14:8081/PMS"'
+            buildConfigField 'boolean', 'IS_DEBUG', 'true'
+            buildConfigField 'String', 'APP_NAME', '"NLA.apk"'
+        }
+        ghanaUAT {
+            applicationId = "com.skilrock.lms.ghana.ui"
+            versionName "4.3"
+            buildConfigField 'String', 'FIVE_GAME', '"Keno"'
+            buildConfigField 'String', 'BASE_URL', '"http://41.77.66.22:8180/PMS"'
+            buildConfigField 'boolean', 'IS_DEBUG', 'true'
+            buildConfigField 'String', 'APP_NAME', '"NLA.apk"'
+        }
+        ghanaPRO {
+            applicationId = "com.skilrock.lms.ghana.ui"
+            versionName "4.4"
+            buildConfigField 'String', 'FIVE_GAME', '"Keno"'
+            buildConfigField 'String', 'BASE_URL', '"http://41.77.66.31/PMS"'
+            buildConfigField 'boolean', 'IS_DEBUG', 'false'
+            buildConfigField 'String', 'APP_NAME', '"NLA.apk"'
+        }
+        ghanaPROS {
+            applicationId = "com.skilrock.lms.ghana.ui"
+            versionName "4.4"
+            buildConfigField 'String', 'FIVE_GAME', '"Keno"'
+            buildConfigField 'String', 'BASE_URL', '"https://apps.nlamobile.com/PMS"'
+            buildConfigField 'boolean', 'IS_DEBUG', 'false'
+            buildConfigField 'String', 'APP_NAME', '"NLA.apk"'
+        }
+        lagosQA {
+            applicationId = "com.skilrock.lms"
+            versionName "3.91"
+            buildConfigField 'String', 'FIVE_GAME', '"KenoFour"'
+            buildConfigField 'String', 'BASE_URL', '"http://192.168.124.61:8180/PMSLagos"'
+//intergation http://125.63.93.132:8082/PMS// qa http://192.168.124.61:8180/PMSLagos
+            buildConfigField 'boolean', 'IS_DEBUG', 'true'
+            buildConfigField 'String', 'APP_NAME', '"Winlot.apk"'
+        }
+        lagosUAT {
+            applicationId = "com.skilrock.lms"
+            versionName "4.2"
+            buildConfigField 'String', 'FIVE_GAME', '"KenoFour"'
+            buildConfigField 'String', 'BASE_URL', '"http://41.86.152.243:80/PMS"'
+            buildConfigField 'boolean', 'IS_DEBUG', 'true'
+            buildConfigField 'String', 'APP_NAME', '"Winlot.apk"'
+        }
+        lagosPRO {
+            applicationId = "com.skilrock.lms"
+            versionName "4.2"
+            buildConfigField 'String', 'FIVE_GAME', '"KenoFour"'
+            buildConfigField 'String', 'BASE_URL', '"http://41.86.152.249/PMS"'
+            buildConfigField 'boolean', 'IS_DEBUG', 'false'
+            buildConfigField 'String', 'APP_NAME', '"Winlot.apk"'
+        }
+    }
+}
+
+dependencies {
+    compile 'com.google.code.gson:gson:2.2.4'
+    testCompile 'junit:junit:4.12'
+//    compile 'com.android.support:support-annotations:22.0.0'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.android.support:appcompat-v7:22.1.0'
+//    compile 'com.google.android.gms:play-services:7.5.0'
+    compile 'com.google.android.gms:play-services-analytics:7.5.0'
+    compile 'com.google.android.gms:play-services-gcm:7.5.0'
+    compile 'com.google.android.gms:play-services-maps:7.5.0'
+    compile 'com.android.support:support-v4:22.1.1'
+    compile 'me.dm7.barcodescanner:zbar:1.8.2'
+
+
+    ghanaQACompile project(':ghana_res')
+    ghanaUATCompile project(':ghana_res')
+    ghanaPROSCompile project(':ghana_res')
+    ghanaPROCompile project(':ghana_res')
+    zimQACompile project(':zim_res')
+    zimUATCompile project(':zim_res')
+    zimPROCompile project(':zim_res')
+    lagosQACompile project(':lagos_res')
+    lagosUATCompile project(':lagos_res')
+    lagosPROCompile project(':lagos_res')
+    compile files('libs/picasso-2.5.2.jar')
+//    compile files('libs/gcm.jar')
+    compile files('libs/LeonidsLib.jar')
+    compile files('libs/FlurryAnalytics-5.5.0.jar')
+    compile project(':sdp-android')
+    compile project(':caldroid')
+}

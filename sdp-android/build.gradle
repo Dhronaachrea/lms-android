@@ -1,0 +1,73 @@
+apply plugin: 'com.android.library'
+apply plugin: 'maven'
+apply plugin: 'signing'
+
+buildscript {
+    repositories {
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:1.3.0'
+    }
+}
+
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion "22.0.1"
+
+    defaultConfig {
+        minSdkVersion 8
+        targetSdkVersion 22
+    }
+}
+
+//signing {
+//    required { gradle.taskGraph.hasTask("uploadArchives") }
+//    sign configurations.archives
+//}
+
+//uploadArchives {
+//    configuration = configurations.archives
+//    repositories.mavenDeployer {
+//        beforeDeployment { MavenDeployment deployment -> signing.signPom(deployment) }
+//
+//        repository(url: sonatypeRepo) {
+//            authentication(userName: sonatypeUsername,
+//                    password: sonatypePassword)
+//        }
+//
+//        pom.groupId = 'com.intuit.sdp'
+//        pom.artifactId = 'sdp-android'
+//        pom.version = '1.0.2'
+//
+//        pom.project {
+//            name 'sdp'
+//            packaging 'aar'
+//            description 'A scalable size unit for Andorid'
+//            url 'https://github.com/intuit/sdp'
+//
+//            scm {
+//                url 'https://github.com/intuit/sdp'
+//                connection 'scm:git@github.com:intuit/sdp.git'
+//                developerConnection 'scm:git@github.com:intuit/sdp.git'
+//            }
+//
+//            licenses {
+//                license {
+//                    name 'The MIT License (MIT)'
+//                    url 'https://github.com/intuit/sdp/blob/master/LICENSE'
+//                    distribution 'repo'
+//                }
+//            }
+//
+//            developers {
+//                developer {
+//                    id developerID
+//                    name developerName
+//                    email developerEmail
+//                }
+//            }
+//        }
+//    }
+//}

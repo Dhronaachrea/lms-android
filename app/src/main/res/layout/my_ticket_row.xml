@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical"
+    android:padding="@dimen/_2sdp">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_5sdp"
+        android:layout_below="@+id/tic_data"
+        android:layout_marginTop="@dimen/_minus4sdp"
+        android:background="@drawable/ticket_shadow"
+
+        />
+
+    <LinearLayout
+
+        android:id="@+id/tic_data"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="0.80"
+            android:background="@drawable/my_tkt_game_bg"
+            android:gravity="center"
+            android:padding="@dimen/_2sdp">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@drawable/draw_game"
+                android:gravity="center"
+                android:lineSpacingExtra="@dimen/_minus1sdp"
+                android:text="DRAW\nGAME" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="0.5dp"
+            android:layout_toRightOf="@+id/txn_desc"
+            android:layout_weight="0.30"
+            android:background="@drawable/my_tkt_game_detail_bg"
+            android:padding="@dimen/_5sdp">
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/txnId"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_gravity="right"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:gravity="left"
+                android:text="0344343403"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txn_date_bg_color"
+                app:text_style="light" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/gameDisplayName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/txnId"
+                android:layout_gravity="left"
+                android:gravity="left"
+                android:text="BONUS LOTTO"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txn_cal_month"
+                android:typeface="normal"
+                app:text_style="bold" />
+
+            <com.skilrock.customui.CustomTextView
+                android:id="@+id/txnDateTime"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_below="@+id/gameDisplayName"
+                android:layout_gravity="right"
+                android:gravity="left"
+                android:text="12-11-2014 12:30"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txn_date_bg_color"
+                app:text_style="light" />
+
+            <com.skilrock.customui.AmountTextView
+                android:id="@+id/ticketAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:ellipsize="marquee"
+                android:ems="7"
+                android:fadingEdge="horizontal"
+                android:gravity="right"
+                android:lines="1"
+                android:marqueeRepeatLimit="marquee_forever"
+                android:maxLength="12"
+                android:scrollHorizontally="true"
+                android:singleLine="true"
+                android:text="1212"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/ticket_amnt_color"
+                android:textStyle="bold"
+                app:isTransaction="true"
+                app:typeface="roboto_medium" />
+
+            <ImageView
+                android:id="@+id/isWinning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentRight="true"
+                android:src="@drawable/money_icon_ticket" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

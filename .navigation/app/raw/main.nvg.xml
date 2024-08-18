@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<navigationModel
+  ns = "http://schemas.android.com?import=com.android.tools.idea.editors.navigation.model.*">
+  <locations  
+    class = "java.util.ArrayList">
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.RegisterActivity"/>
+      <point      
+        x = "1450"      
+        y = "7110"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.Terms"/>
+      <point      
+        x = "1050"      
+        y = "6710"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.LoginActivity"/>
+      <point      
+        x = "750"      
+        y = "6410"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.myaccount.ProfileEditActivity"/>
+      <point      
+        x = "2204"      
+        y = "72"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.ForgotPassActivity"/>
+      <point      
+        x = "1200"      
+        y = "6860"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SLGameListActivity"/>
+      <point      
+        x = "1150"      
+        y = "6810"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SLGameTypeOptionActivity"/>
+      <point      
+        x = "500"      
+        y = "6160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.ChangePassActivity"/>
+      <point      
+        x = "88"      
+        y = "148"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.escratch.EScratchCards"/>
+      <point      
+        x = "500"      
+        y = "4140"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.escratch.IGEGameListActivity"/>
+      <point      
+        x = "2956"      
+        y = "-20"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.VerificationActivity"/>
+      <point      
+        x = "650"      
+        y = "250"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.escratch.EScratchCardsPlay"/>
+      <point      
+        x = "2080"      
+        y = "4140"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.myaccount.TrackTicketActivity"/>
+      <point      
+        x = "700"      
+        y = "300"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.myaccount.PaymentGatewayWeb"/>
+      <point      
+        x = "750"      
+        y = "350"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SportsLotteryMatchActivity"/>
+      <point      
+        x = "800"      
+        y = "400"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.escratch.IGETicketActivity"/>
+      <point      
+        x = "850"      
+        y = "450"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.myaccount.TicketDescActivity"/>
+      <point      
+        x = "1100"      
+        y = "6760"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SportsTicketActivity"/>
+      <point      
+        x = "1000"      
+        y = "6660"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.myaccount.MyAccountActivity"/>
+      <point      
+        x = "1300"      
+        y = "6960"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SLActivity"/>
+      <point      
+        x = "900"      
+        y = "500"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.drawgame.DGActivity"/>
+      <point      
+        x = "1350"      
+        y = "7010"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.FakeLogin"/>
+      <point      
+        x = "800"      
+        y = "6460"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.MainScreen"/>
+      <point      
+        x = "600"      
+        y = "6260"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SLGameTypeActivity"/>
+      <point      
+        x = "500"      
+        y = "2120"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.notification.GCMDialogActivity"/>
+      <point      
+        x = "950"      
+        y = "6610"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.escratch.IGEScratchGameActivity"/>
+      <point      
+        x = "950"      
+        y = "550"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SportsLotteryResultActivity"/>
+      <point      
+        x = "1000"      
+        y = "600"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.drawgame.StatisticScreen"/>
+      <point      
+        x = "850"      
+        y = "6510"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.customui.DrawerBaseActivity"/>
+      <point      
+        x = "700"      
+        y = "6360"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.Weaver"/>
+      <point      
+        x = "1250"      
+        y = "6910"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SportsLotteryActivity"/>
+      <point      
+        x = "1050"      
+        y = "650"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.customui.HeaderBaseActivity"/>
+      <point      
+        x = "1550"      
+        y = "7210"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.locateretailer.LocateRetailer"/>
+      <point      
+        x = "900"      
+        y = "6560"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.drawgame.ResultScreen"/>
+      <point      
+        x = "650"      
+        y = "6310"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SportsLotteryTicketActivity"/>
+      <point      
+        x = "1100"      
+        y = "700"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.drawgame.DGPlayActivity"/>
+      <point      
+        x = "1500"      
+        y = "7160"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.sportslottery.SportsActivity"/>
+      <point      
+        x = "2080"      
+        y = "2120"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.MenuState"      
+        className = "com.skilrock.lms.ui.LR"/>
+      <point      
+        x = "2160"      
+        y = "-96"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.LR"/>
+      <point      
+        x = "580"      
+        y = "-96"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.scratch.ScratchCards"/>
+      <point      
+        x = "550"      
+        y = "6210"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.myaccount.deposit.DepositScreen"/>
+      <point      
+        x = "1150"      
+        y = "750"/>
+    </statePointEntry>
+    <statePointEntry>
+      <state      
+        class = "com.android.tools.idea.editors.navigation.model.ActivityState"      
+        className = "com.skilrock.lms.ui.Splash"/>
+      <point      
+        x = "1400"      
+        y = "7060"/>
+    </statePointEntry>
+  </locations>
+</navigationModel>
